@@ -47,16 +47,17 @@ header {
 </style> -->
 <script>
   import NavBar from './components/NavBar.vue';
+  import SearchIndex from './components/SearchIndex.vue';
 
   export default {
     name: "App",
-    components: {NavBar}
+    components: {NavBar, SearchIndex}
   }
 </script>
 
 <template>
   <NavBar/>
-  
+  <SearchIndex/>
 </template>
 
 <style>
