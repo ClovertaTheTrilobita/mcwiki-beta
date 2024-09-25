@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 </script>
@@ -44,4 +44,30 @@ header {
     flex-wrap: wrap;
   }
 }
+</style> -->
+<script>
+  import NavBar from './components/NavBar.vue';
+
+  export default {
+    name: "App",
+    components: {NavBar}
+  }
+</script>
+
+<template>
+  <NavBar/>
+  
+</template>
+
+<style>
+  #app {
+    text-align: center;
+    margin-top: 0px;
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+  }
+  
 </style>
