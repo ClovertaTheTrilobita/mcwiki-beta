@@ -3,26 +3,26 @@
       <div class="header">
           <div class="box">
               <h1>
-                  <img src="../assets/logo.svg" class="img_title">
-                  <span>Sun</span>
+                  <img src="../assets/Minecraft_logo.png" class="img_title">
+                  <span class="WebHeader">Mincraft Wikipedia</span>
               </h1>
           </div>
           <div class="box">
               <nav class="nav_link">
                   <!-- <img src="../assets/home.png" class="img_btn"> -->
-                  <router-link class="link_btn" active-class="active" to="/home">首页</router-link>
+                  <router-link class="link_btn" active-class="active" to="/home">Home</router-link>
               </nav>
               <nav class="nav_link">
                   <!-- <img src="../assets/data.png" class="img_btn"> -->
-                  <router-link class="link_btn" active-class="active" to="/data">个人介绍</router-link>
+                  <router-link class="link_btn" active-class="active" to="/data">Search</router-link>
               </nav>
               <nav class="nav_link">
                   <!-- <img src="../assets/work.png" class="img_btn"> -->
-                  <router-link class="link_btn" active-class="active" to="/work">作品介绍</router-link>
+                  <router-link class="link_btn" active-class="active" to="/work">Blog</router-link>
               </nav>
               <nav class="nav_link">
                   <!-- <img src="../assets/power.png" class="img_btn"> -->
-                  <router-link class="link_btn" active-class="active" to="/power">能力介绍</router-link>
+                  <router-link class="link_btn" active-class="active" to="/power">Account</router-link>
               </nav>
           </div>
       </div>
@@ -36,12 +36,18 @@
 </script>
 
 <style>
+  .WebHeader{
+    display: inline;
+    color: rgb(89, 85, 85);
+    font-style: italic;
+    margin-left: 10px;
+  }
   .header{
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 70px;
-      background-color:#ffffff;
+      background-color: white;
       color: #ffffff;
       border: 1px solid #2c2c2c;
   }
