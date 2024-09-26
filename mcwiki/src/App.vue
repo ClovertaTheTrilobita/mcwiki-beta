@@ -56,7 +56,7 @@ header {
     components: {NavBar, SearchIndex, HomeIndex, BlogIndex},
     data() {
       return{
-        comName: '#/',  // Initalize comName
+        comName: 'HomeIndex',  // Initalize comName
       }
     },
     created(){
@@ -75,8 +75,14 @@ header {
 </script>
 
 <template>
-  <NavBar/>
-  <component :is="comName"></component>
+  <div>
+    <NavBar/>
+  </div>
+  <div>
+    
+    <component :is="comName"></component>
+  </div>
+  
 </template>
 
 <style>
