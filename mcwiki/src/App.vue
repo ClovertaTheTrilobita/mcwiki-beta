@@ -50,10 +50,14 @@ header {
   import SearchIndex from './components/SearchIndex.vue';
   import HomeIndex from './components/HomeIndex.vue';
   import BlogIndex from './components/BlogIndex.vue';
+  import AccMessageIndex from './components/AccMessageIndex.vue';
+  import SysMessageIndex from './components/SysMessageIndex.vue';
+  import ContactIndex from './components/ContactIndex.vue';
+  import SpaceIndex from './components/SpaceIndex.vue';
 
   export default {
     name: "App",
-    components: {NavBar, SearchIndex, HomeIndex, BlogIndex},
+    components: {NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex},
     data() {
       return{
         comName: 'HomeIndex',  // Initalize comName
@@ -67,6 +71,18 @@ header {
             break
           case '#/blogs':
             this.comName = 'BlogIndex'
+            break
+          case '#/sysmessage':
+            this.comName = 'SysMessageIndex'
+            break
+          case '#/accmessage':
+            this.comName = 'AccMessageIndex'
+            break
+          case '#/contact':
+            this.comName = 'ContactIndex'
+            break
+          case '#/space':
+            this.comName = 'SpaceIndex'
             break
         }
       }
