@@ -48,16 +48,35 @@ header {
 <script>
   import NavBar from './components/NavBar.vue';
   import SearchIndex from './components/SearchIndex.vue';
+  import HomeIndex from './components/HomeIndex.vue';
+  import BlogIndex from './components/BlogIndex.vue';
 
   export default {
     name: "App",
-    components: {NavBar, SearchIndex}
+    components: {NavBar, SearchIndex, HomeIndex, BlogIndex},
+    data() {
+      return{
+        comName: '#/',  // Initalize comName
+      }
+    },
+    created(){
+      window.onhashchange = () => {
+        switch (location.hash){
+          case '#/home':
+            this.comName = 'HomeIndex'
+            break
+          case '#/blogs':
+            this.comName = 'BlogIndex'
+            break
+        }
+      }
+    }
   }
 </script>
 
 <template>
   <NavBar/>
-  <SearchIndex/>
+  <component :is="comName"></component>
 </template>
 
 <style>
