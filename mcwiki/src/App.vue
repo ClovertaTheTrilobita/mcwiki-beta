@@ -54,10 +54,11 @@ header {
   import SysMessageIndex from './components/SysMessageIndex.vue';
   import ContactIndex from './components/ContactIndex.vue';
   import SpaceIndex from './components/SpaceIndex.vue';
+  import i404NotFound from './components/i404NotFound.vue';
 
   export default {
     name: "App",
-    components: {NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex},
+    components: {NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound},
     data() {
       return{
         comName: 'HomeIndex',  // Initalize comName
@@ -83,6 +84,9 @@ header {
             break
           case '#/space':
             this.comName = 'SpaceIndex'
+            break
+          default:
+            this.comName = 'i404NotFound'
             break
         }
       }

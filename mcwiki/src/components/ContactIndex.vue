@@ -2,9 +2,9 @@
   <h1>Contact us here.</h1>
   <address>
   <strong>Hainan University</strong><br>
-  RenMing Rd NO.58<br>
+  No.58 RenMin Rd.<br>
   Haikou, Hainan<br>
-  <abbr title="Phone">P:</abbr> 114514-1919810
+  <abbr title="Phone">Phone:</abbr> 114514-1919810
 </address>
 <address>
   <strong>ClovertaTheTrilobita</strong><br>
