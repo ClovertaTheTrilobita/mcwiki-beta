@@ -1,10 +1,16 @@
 ﻿<template>
-  <div class=""></div>
+  <div>
+    <SearchList/>
+  </div>
+
 </template>
 
 <script>
+import SearchList from './search_components/SearchList.vue';
+
   export default{
-    name: "SearchIndex"
+    name: "SearchIndex",
+    components: {SearchList}
   }
 </script>
 
