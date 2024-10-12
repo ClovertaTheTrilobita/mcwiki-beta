@@ -2,7 +2,7 @@
   import Carousel from './home_components/Carousel.vue';
   import Accordion from './home_components/Accordion.vue';
   import tabsCard from './home_components/tabsCard.vue';
-  import About from './home_components/About.vue';
+  import About from './About.vue';
   import placeHolders from './home_components/placeHolders.vue';
   import Card from './home_components/Card.vue';
 
