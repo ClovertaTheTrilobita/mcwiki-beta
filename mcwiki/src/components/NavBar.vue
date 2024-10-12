@@ -4,7 +4,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
 
-          <a class="navbar-brand" id="WebHeader" href="#/home">
+          <a class="navbar-brand" href="#/home">
             <img src="./home_components/images/Minecraft_logo.png" class="mb-1 img_title">
             Mincraft Wikipedia
           </a>
@@ -84,36 +84,6 @@ export default {
 </script>
 
 <style>
-#WebHeader {
-  /* display: inline;
-    color: rgb(89, 85, 85);
-    font-style: italic; */
-  margin-left: 10px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-  background-color: white;
-  color: #ffffff;
-  border: 1px solid #2c2c2c;
-}
-
-.box {
-  display: flex;
-  align-items: center;
-}
-
-h1 {
-  display: flex;
-  align-items: center;
-  font: normal 30px Cookie;
-  padding: 0px 20px;
-  color: #2c2c2c;
-  font-family: "Microsoft YaHei";
-}
 
 .img_title {
   width: 30px;
@@ -121,21 +91,4 @@ h1 {
   margin-left: 12px;
 }
 
-.nav_link {
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-}
-
-.link_btn {
-  text-decoration: none;
-  color: #7F7F7F;
-  font-size: 25px;
-  font-weight: normal;
-}
-
-.img_btn {
-  width: 30px;
-  height: 30px;
-}
 </style>
