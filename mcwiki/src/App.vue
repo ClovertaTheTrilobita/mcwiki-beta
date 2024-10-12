@@ -75,7 +75,4 @@ export default {
     right: 0;
     bottom: 0; */
 }
-.accordion-body{
-  background-color: aliceblue;
-}
 </style>
