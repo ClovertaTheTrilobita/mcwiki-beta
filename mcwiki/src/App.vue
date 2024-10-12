@@ -9,10 +9,11 @@ import ContactIndex from './components/Index_components/ContactIndex.vue';
 import SpaceIndex from './components/Index_components/SpaceIndex.vue';
 import i404NotFound from './components/public_components/i404NotFound.vue';
 import Margin from './components/public_components/Margin.vue';
+import About from './components/public_components/About.vue';
 
 export default {
   name: "App",
-  components: { Margin, NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound },
+  components: { Margin, NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About },
   data() {
     return {
       comName: 'HomeIndex',  // Initalize comName
@@ -53,16 +54,10 @@ export default {
 </script>
 
 <template>
-  <div>
-    <NavBar />
-  </div>
-  <div>
-    <Margin />
-  </div>
-  <div>
-    <component :is="comName"></component>
-  </div>
-
+  <NavBar/>
+  <Margin/>
+  <component :is="comName"></component>
+  <About/>
 </template>
 
 <style scoped>

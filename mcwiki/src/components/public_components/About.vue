@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="container mt-4" style="text-align: center;">
+    <div class="container mt-4 text-center">
       <div class="row">
         <div class="col-lg-12">
           <p class="copyright">
