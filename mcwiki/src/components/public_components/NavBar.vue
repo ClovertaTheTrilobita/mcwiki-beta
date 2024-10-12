@@ -1,6 +1,6 @@
 ﻿<template>
   <div class="container-fluid sticky-top bg-body-tertiary" style="background-color: #ffffff;">
-    <!-- wdf? Why is that? sticky->fixed->sticky??? No way... It just fking worked -->
+    <!-- wdf? Why is that? sticky->fixed->sticky??? No way... It just fking works -->
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
