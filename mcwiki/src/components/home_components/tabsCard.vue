@@ -17,7 +17,7 @@
       <div class="card-body" style="text-align: left;">
         <div class="tab-content">
           <div id="home" class="container tab-pane active show"> 
-            <div class="row row-cols-1 row-cols-md-4 g-3 ">
+            <div class="row row-cols-2 row-cols-lg-4">
               <div class="col"><Card/></div>
               <div class="col"><Card/></div>
               <div class="col"><Card/></div>
@@ -27,7 +27,7 @@
               <div class="col"><Card/></div>
               <div class="col"><Card/></div>
               <div class="col"><Card/></div>
-
+              <div class="col"><placeHolders/></div>
             </div>
           </div>
           <div id="menu1" class="container tab-pane">
@@ -44,10 +44,12 @@
 
 <script>
   import Card from './Card.vue';
+  import placeHolders from './placeHolders.vue';
   export default {
     name: "tabsCard",
     components: {
       Card,
+      placeHolders,
     }
   }
 </script>

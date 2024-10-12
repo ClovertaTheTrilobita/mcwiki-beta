@@ -1,11 +1,11 @@
 ﻿<template>
-  <div class="container-fluid sticky-top bg-body-tertiary" style="background-color: #ffffff;">
+  <div class="container-fluid fixed-top bg-body-tertiary" style="background-color: #ffffff;">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
 
           <a class="navbar-brand" href="#/home">
-            <img src="./home_components/images/Minecraft_logo.png" class="mb-1 img_title">
+            <img src="./icons/Minecraft_logo.png" class="mb-1 img_title">
             Mincraft Wikipedia
           </a>
 

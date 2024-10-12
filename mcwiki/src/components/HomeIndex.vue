@@ -25,7 +25,6 @@
   <Accordion/>
   <tabsCard/>
   <About/>
-  <placeHolders/>
 </template>
 
 <style>
