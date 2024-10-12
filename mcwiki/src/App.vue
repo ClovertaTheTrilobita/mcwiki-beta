@@ -8,12 +8,11 @@ import SysMessageIndex from './components/Index_components/SysMessageIndex.vue';
 import ContactIndex from './components/Index_components/ContactIndex.vue';
 import SpaceIndex from './components/Index_components/SpaceIndex.vue';
 import i404NotFound from './components/public_components/i404NotFound.vue';
-import Margin from './components/public_components/Margin.vue';
 import About from './components/public_components/About.vue';
 
 export default {
   name: "App",
-  components: { Margin, NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About },
+  components: { NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About },
   data() {
     return {
       comName: 'HomeIndex',  // Initalize comName
