@@ -8,7 +8,7 @@ import SysMessageIndex from './components/SysMessageIndex.vue';
 import ContactIndex from './components/ContactIndex.vue';
 import SpaceIndex from './components/SpaceIndex.vue';
 import i404NotFound from './components/i404NotFound.vue';
-import Margin from './components/margin.vue';
+import Margin from './components/Margin.vue';
 
 export default {
   name: "App",
