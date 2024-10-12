@@ -1,5 +1,5 @@
 ﻿<template>
-  <div class="container-fluid sticky-top bg-body-tertiary" style="background-color: #ffffff;">
+  <div class="container-fluid fixed-top bg-body-tertiary" style="background-color: #ffffff;">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
