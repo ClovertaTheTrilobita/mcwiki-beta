@@ -54,8 +54,7 @@ export default {
 </script>
 
 <template>
-  <NavBar/>
-  <Margin/>
+  <NavBar />
   <component :is="comName"></component>
   <About/>
 </template>

@@ -1,5 +1,6 @@
 ﻿<template>
-  <div class="container-fluid fixed-top bg-body-tertiary" style="background-color: #ffffff;">
+  <div class="container-fluid sticky-top bg-body-tertiary" style="background-color: #ffffff;">
+    <!-- wdf? Why is that? sticky->fixed->sticky??? No way... It just fking worked -->
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -83,7 +84,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
 .img_title {
   width: 30px;

@@ -1,6 +1,6 @@
 <template>
-  <div class="container mt-1" style="--bs-focus-ring-color: #5a5a5a85;">
-    <div class="accordion accordion-flush" style="--bs-accordion-active-bg: #ffffff;" id="accordionExample" >
+  <div class="container mt-1">
+    <div class="accordion accordion-flush" style="--bs-accordion-active-bg: #ffffff; --bs-focus-ring-color: #5a5a5a85;" id="accordionExample" >
       <div class="accordion-item">
         <h2 class="accordion-header" >
           <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
