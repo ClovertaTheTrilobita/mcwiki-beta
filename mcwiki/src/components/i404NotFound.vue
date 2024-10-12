@@ -4,7 +4,7 @@
     <hr>
     <h4>Please check your URL for possible typos.</h4>
     <br><br>
-    <img class='image' src="./icons/Minecraft_logo.png" alt="img">
+    <img class='image' src="./404_components/images/Ghast.png" alt="img">
   </div>
 
 </template>
@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .notfound {
   text-align: center;
   

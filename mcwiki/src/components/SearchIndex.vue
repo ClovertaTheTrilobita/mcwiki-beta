@@ -14,8 +14,8 @@ import SearchList from './search_components/SearchList.vue';
   }
 </script>
 
-
-
-<style>
-
+<style scoped>
+.accordion-body{
+  background-color: aliceblue;
+}
 </style>
