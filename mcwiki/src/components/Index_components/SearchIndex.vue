@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import SearchList from './search_components/SearchList.vue';
+import SearchList from '../search_components/SearchList.vue';
 
   export default{
     name: "SearchIndex",

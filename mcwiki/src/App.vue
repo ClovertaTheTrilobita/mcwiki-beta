@@ -1,14 +1,14 @@
 <script>
-import NavBar from './components/NavBar.vue';
-import SearchIndex from './components/SearchIndex.vue';
-import HomeIndex from './components/HomeIndex.vue';
-import BlogIndex from './components/BlogIndex.vue';
-import AccMessageIndex from './components/AccMessageIndex.vue';
-import SysMessageIndex from './components/SysMessageIndex.vue';
-import ContactIndex from './components/ContactIndex.vue';
-import SpaceIndex from './components/SpaceIndex.vue';
-import i404NotFound from './components/i404NotFound.vue';
-import Margin from './components/Margin.vue';
+import NavBar from './components/public_components/NavBar.vue';
+import SearchIndex from './components/Index_components/SearchIndex.vue';
+import HomeIndex from './components/Index_components/HomeIndex.vue';
+import BlogIndex from './components/Index_components/BlogIndex.vue';
+import AccMessageIndex from './components/Index_components/AccMessageIndex.vue';
+import SysMessageIndex from './components/Index_components/SysMessageIndex.vue';
+import ContactIndex from './components/Index_components/ContactIndex.vue';
+import SpaceIndex from './components/Index_components/SpaceIndex.vue';
+import i404NotFound from './components/public_components/i404NotFound.vue';
+import Margin from './components/public_components/Margin.vue';
 
 export default {
   name: "App",
