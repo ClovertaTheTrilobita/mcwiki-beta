@@ -8,10 +8,11 @@ import SysMessageIndex from './components/SysMessageIndex.vue';
 import ContactIndex from './components/ContactIndex.vue';
 import SpaceIndex from './components/SpaceIndex.vue';
 import i404NotFound from './components/i404NotFound.vue';
+import NavBar2 from './components/NavBar2.vue';
 
 export default {
   name: "App",
-  components: { NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound },
+  components: { NavBar2, NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound },
   data() {
     return {
       comName: 'HomeIndex',  // Initalize comName
@@ -56,12 +57,15 @@ export default {
     <NavBar />
   </div>
   <div>
+    <NavBar2 />
+  </div>
+  <div>
     <component :is="comName"></component>
   </div>
 
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 #app {
   text-align: center;
   margin-top: 0px;
@@ -70,5 +74,8 @@ export default {
     left: 0;
     right: 0;
     bottom: 0; */
+}
+.accordion-body{
+  background-color: aliceblue;
 }
 </style>
