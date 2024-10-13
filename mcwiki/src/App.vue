@@ -1,18 +1,18 @@
 <script>
-import NavBar from './components/NavBar.vue';
-import SearchIndex from './components/SearchIndex.vue';
-import HomeIndex from './components/HomeIndex.vue';
-import BlogIndex from './components/BlogIndex.vue';
-import AccMessageIndex from './components/AccMessageIndex.vue';
-import SysMessageIndex from './components/SysMessageIndex.vue';
-import ContactIndex from './components/ContactIndex.vue';
-import SpaceIndex from './components/SpaceIndex.vue';
-import i404NotFound from './components/i404NotFound.vue';
-import NavBar2 from './components/NavBar2.vue';
+import NavBar from './components/public_components/NavBar.vue';
+import SearchIndex from './components/Index_components/SearchIndex.vue';
+import HomeIndex from './components/Index_components/HomeIndex.vue';
+import BlogIndex from './components/Index_components/BlogIndex.vue';
+import AccMessageIndex from './components/Index_components/AccMessageIndex.vue';
+import SysMessageIndex from './components/Index_components/SysMessageIndex.vue';
+import ContactIndex from './components/Index_components/ContactIndex.vue';
+import SpaceIndex from './components/Index_components/SpaceIndex.vue';
+import i404NotFound from './components/public_components/i404NotFound.vue';
+import About from './components/public_components/About.vue';
 
 export default {
   name: "App",
-  components: { NavBar2, NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound },
+  components: { NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About },
   data() {
     return {
       comName: 'HomeIndex',  // Initalize comName
@@ -53,16 +53,9 @@ export default {
 </script>
 
 <template>
-  <div>
-    <NavBar />
-  </div>
-  <div>
-    <NavBar2 />
-  </div>
-  <div>
-    <component :is="comName"></component>
-  </div>
-
+  <NavBar />
+  <component :is="comName"></component>
+  <About/>
 </template>
 
 <style scoped>
@@ -74,8 +67,5 @@ export default {
     left: 0;
     right: 0;
     bottom: 0; */
-}
-.accordion-body{
-  background-color: aliceblue;
 }
 </style>

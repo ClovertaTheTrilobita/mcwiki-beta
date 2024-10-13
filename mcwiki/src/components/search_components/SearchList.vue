@@ -153,8 +153,8 @@ export default {
 
 </script>
 
-<style>
-.accordion-body{
-  background-color: aliceblue;
-}
+<style scoped>
+  .accordion-body{
+    background-color: aliceblue;
+  }
 </style>
