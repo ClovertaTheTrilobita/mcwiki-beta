@@ -2,7 +2,6 @@
 import NavBar from './components/public_components/NavBar.vue';
 import SearchIndex from './components/Index_components/SearchIndex.vue';
 import HomeIndex from './components/Index_components/HomeIndex.vue';
-import BlogIndex from './components/Index_components/BlogIndex.vue';
 import AccMessageIndex from './components/Index_components/AccMessageIndex.vue';
 import SysMessageIndex from './components/Index_components/SysMessageIndex.vue';
 import ContactIndex from './components/Index_components/ContactIndex.vue';
@@ -10,10 +9,11 @@ import SpaceIndex from './components/Index_components/SpaceIndex.vue';
 import i404NotFound from './components/public_components/i404NotFound.vue';
 import About from './components/public_components/About.vue';
 import TestIndex from './components/Index_components/TestIndex.vue';
+import MenuIndex from './components/Index_components/MenuIndex.vue';
 
 export default {
   name: "App",
-  components: { NavBar, SearchIndex, HomeIndex, BlogIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About, TestIndex,},
+  components: { NavBar, SearchIndex, HomeIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About, TestIndex, MenuIndex},
   data() {
     return {
       comName: 'HomeIndex',  // Initalize comName
@@ -22,12 +22,15 @@ export default {
   created() {
     window.onhashchange = () => {
       switch (location.hash) {
+        case '':
+          this.comName = 'HomeIndex'
+          break
         case '#/home':
           this.comName = 'HomeIndex'
           console.log(this.comName)
           break
-        case '#/blogs':
-          this.comName = 'BlogIndex'
+        case '#/menu':
+          this.comName = 'MenuIndex'
           break
         case '#/sysmessage':
           this.comName = 'SysMessageIndex'
