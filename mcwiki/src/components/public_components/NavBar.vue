@@ -34,7 +34,8 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#/sysmessage">System Message</a></li>
-                  <li><a class="dropdown-item" href="#/accmessage">Account Message</a></li>
+                  <li><a class="dropdown-item" href="#/test">Account Message</a></li>
+                  <!-- TestIndex -->
                   <li>
                     <hr class="dropdown-divider">
                   </li>
