@@ -78,7 +78,7 @@ export default {
   name: "NavBar",
   methods: {
     SearchPushed() {
-      window.location.href = "#/search"
+      window.location.href = '#/search'
     }
   }
 }

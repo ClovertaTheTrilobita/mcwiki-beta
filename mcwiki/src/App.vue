@@ -20,6 +20,9 @@ export default {
     }
   },
   created() {
+    if (location.hash == '#/search'){
+      this.comName = 'SearchIndex'
+    }
     window.onhashchange = () => {
       switch (location.hash) {
         case '':
