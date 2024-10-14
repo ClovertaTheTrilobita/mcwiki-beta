@@ -6,7 +6,7 @@
         <div class="container-fluid">
 
           <a class="navbar-brand" href="#/home">
-            <img src="../icons/Minecraft_logo.png" class="mb-1 img_title" alt="logo">
+            <img src="../images/Minecraft_logo.png" class="mb-1 img_title" alt="logo">
             Mincraft Wikipedia
           </a>
 

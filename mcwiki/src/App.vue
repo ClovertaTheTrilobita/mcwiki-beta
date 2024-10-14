@@ -81,9 +81,11 @@ export default {
 </script>
 
 <template>
-  <NavBar />
-  <component :is="comName"></component>
-  <About/>
+  <div class="content">
+    <NavBar />
+    <component :is="comName"></component>
+    <About/>
+  </div>
 </template>
 
 <style scoped>

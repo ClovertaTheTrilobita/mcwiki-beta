@@ -6,7 +6,7 @@
           <p class="copyright">
             ©Copyright Mincraft Wikipedia 2024
             <a href="#/home">mcwiki.cn</a> &nbsp;|&nbsp;
-            <img src="../icons/Minecraft_logo.png" width="15" height="14" alt="icp">&nbsp;
+            <img src="../images/Minecraft_logo.png" width="15" height="14" alt="icp">&nbsp;
             <a href="https://github.com/ClovertaTheTrilobita/mcwiki-beta" target="_blank" rel="nofollow noreferrer">Github repository</a>&nbsp; 
             Developed by
           </p>
