@@ -86,7 +86,7 @@ export default {
   methods: {
     SearchPushed() {
       window.location.href = '#/search'
-    }
+    },
   }
 }
 

@@ -11,12 +11,16 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
+    "element-plus": "^2.8.5",
+    "jschardet": "^3.1.4",
+    "papaparse": "^5.4.1",
     "sass-embedded": "^1.79.5",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "sass-embedded": "^1.79.5",
-    "vite": "^5.3.1"
+    "vite": "^5.4.9"
   }
 }
