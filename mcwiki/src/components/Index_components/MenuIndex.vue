@@ -11,7 +11,7 @@ import MenuList from '../menu_components/MenuList.vue';
 
 </script>
 
-<style scoped>
+<style>
     .accordion-body{
     background-color: aliceblue;
   }
