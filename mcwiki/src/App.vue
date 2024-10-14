@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       comName: 'HomeIndex',  // Initalize comName
-      flag: true,
     }
   },
   created() {
@@ -24,6 +23,7 @@ export default {
       switch (location.hash) {
         case '#/home':
           this.comName = 'HomeIndex'
+          console.log(this.comName)
           break
         case '#/blogs':
           this.comName = 'BlogIndex'
@@ -42,6 +42,7 @@ export default {
           break
         case '#/search':
           this.comName = 'SearchIndex'
+          console.log(this.comName)
           break
         default:
           this.comName = 'i404NotFound'
@@ -62,10 +63,5 @@ export default {
 #app {
   text-align: center;
   margin-top: 0px;
-  /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
 }
 </style>
