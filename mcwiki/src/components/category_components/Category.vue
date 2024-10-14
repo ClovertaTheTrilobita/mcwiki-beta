@@ -6,13 +6,14 @@
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           Blocks&Items
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div class="accordion-body" style="text-align: left;" >
-          Items will display here.
+          <!-- <a href="#/test1" >111</a> -->
+           test
         </div>
       </div>
     </div>
@@ -143,8 +144,10 @@
 </template>
 
 <script>
+  
   export default{
-      name: 'MenuList'
+      name: 'Category',
+      
   }
 
 </script>
