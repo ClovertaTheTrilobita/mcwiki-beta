@@ -63,7 +63,17 @@
             <div class="avater-container">
               <img src="../home_components/images/95122414.jpg" alt="Avater" class="avater">
               <div class="menu">
-                <p>Profile</p>
+                <div class="container text-center mt-4 mb-3">
+                  <p>{{ username }}</p>
+                </div>
+                <div class="Bottom">
+                  <nav class="nav flex-column">
+                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">个人中心</a>
+                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">收藏</a>
+                    <hr>
+                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">退出登录</a>
+                  </nav>
+                </div>
               </div>
             </div>
 
@@ -87,6 +97,11 @@ export default {
     SearchPushed() {
       window.location.href = '#/search'
     }
+  },
+  data() {
+    return {
+      username: 'Welcome'
+    };
   }
 }
 
@@ -100,6 +115,9 @@ export default {
 }
 
 .avater {
+  position: absolute;
+  top: 8px;
+  right: 298px;
   max-width: 40px;
   max-height: 40px;
   border-radius: 50%;
@@ -107,29 +125,39 @@ export default {
   object-fit: cover;
   border: 2px solid #1d880e;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000
+  cursor: pointer;
+  z-index: 2;
 }
 
 .menu {
-  display: none;
   position: absolute;
   top: 50px;
-  right: 301.5px;
+  right: 224px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 245px;
+  width: 230px;
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
   border-radius: 5px;
-  z-index: 999
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .avater-container:hover .avater {
-  transform: translateY(10px) translateX(-6px) scale(1.5);
+  transform: translateY(10px) translateX(-11px) scale(1.5);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .avater-container:hover .menu {
-  display: block;
+  transform: translate(0);
+  opacity: 1;
+}
+
+.avater-link {
+  text-align: left;
 }
 
 </style>
