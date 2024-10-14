@@ -18,42 +18,52 @@
 </template>
 
 <script>
-// 通过 import 导入资源
-import imageSrc from './images/a15.jpg';
-import videoSrc from './images/b11.mp4';
 
-export default {
-  data() {
-    return {
-      items: [
-        { type: 'image', text: 'highlight', likes: 0, liked: false },
-        { type: 'video', text: 'Amazing adventure', likes: 0, liked: false },
-        { type: 'text', text: 'HAVE FUN!!!!!', likes: 0, liked: false },
-      ],
-    };
-  },
-  methods: {
-    toggleLike(index) {
-      this.items[index].liked = !this.items[index].liked;
-      if (this.items[index].liked) {
-        this.items[index].likes++;
-      } else {
-        this.items[index].likes--;
-      }
+// 通过 import 导入资源
+  import imageSrc from './media/a15.jpg';
+  import videoSrc from './media/b11.mp4';
+
+  export default {
+    data() {
+      return {
+        items: [
+          { type: 'image', text: 'highlight', likes: 0, liked: false },
+          { type: 'video', text: 'Amazing adventure', likes: 0, liked: false },
+          { type: 'text', text: 'HAVE FUN!!!!!', likes: 0, liked: false },
+        ],
+      };
     },
-  },
-  computed: {
-    imageSrc() {
-      return imageSrc;
+    methods: {
+      toggleLike(index) {
+        this.items[index].liked = !this.items[index].liked;
+        if (this.items[index].liked) {
+          this.items[index].likes++;
+        } else {
+          this.items[index].likes--;
+        }
+      },
     },
-    videoSrc() {
-      return videoSrc;
+    computed: {
+      imageSrc() {
+        return imageSrc;
+      },
+      videoSrc() {
+        return videoSrc;
+      },
     },
-  },
 };
+
 </script>
 
 <style scoped>
+
+/* 添加自定义字体 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* 主要容器样式 */
 .preference-container {
   display: flex;
@@ -136,11 +146,4 @@ export default {
   font-weight: 600;
 }
 
-
-/* 添加自定义字体 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-* {
-  font-family: 'Poppins', sans-serif;
-}
 </style>
