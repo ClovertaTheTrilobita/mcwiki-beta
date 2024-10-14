@@ -54,7 +54,7 @@
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body overflow-auto" style="text-align: left;">
+          <div class="accordion-body" style="text-align: left;">
 
             <h3>实验性特性</h3>
 
