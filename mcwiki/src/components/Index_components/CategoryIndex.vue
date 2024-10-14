@@ -27,7 +27,7 @@ export default {
   <component :is="comName1"></component>
 </template>
 
-<style>
+<style scoped>
 .accordion-body {
   background-color: aliceblue;
 }

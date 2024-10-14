@@ -6,7 +6,7 @@
         <div class="container-fluid">
 
           <a class="navbar-brand" href="#/home">
-            <img src="../icons/Minecraft_logo.png" class="mb-1 img_title">
+            <img src="../icons/Minecraft_logo.png" class="mb-1 img_title" alt="logo">
             Mincraft Wikipedia
           </a>
 
@@ -60,6 +60,13 @@
 
             </ul>
 
+            <div class="avater-container">
+              <img src="../home_components/images/95122414.jpg" alt="Avater" class="avater">
+              <div class="menu">
+                <p>Profile</p>
+              </div>
+            </div>
+
             <form class="d-flex" role="search" >
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput">
               <button class="btn btn-outline-success" type="submit" @click="SearchPushed">Search</button>
@@ -90,7 +97,38 @@ export default {
 .img_title {
   width: 30px;
   height: 24px;
-  margin-left: 12px;
+}
+
+.navbar .avater {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 2px solid #1d880e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar .menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 301.5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.avater-container:hover .avater {
+  transform: translateY(10px) translateX(-6px) scale(1.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.avater-container:hover .menu {
+  display: block;
 }
 
 </style>
