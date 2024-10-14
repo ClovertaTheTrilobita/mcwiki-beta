@@ -23,6 +23,21 @@ export default {
     if (location.hash == '#/search'){
       this.comName = 'SearchIndex'
     }
+    if (location.hash == '#/home'){
+      this.comName = 'HomeIndex'
+    }
+    if (location.hash == '#/menu'){
+      this.comName = 'MenuIndex'
+    }
+    if (location.hash == '#/sysmessage'){
+      this.comName = 'SysMessageIndex'
+    }
+    if (location.hash == '#/contact'){
+      this.comName = 'ContactIndex'
+    }
+    if (location.hash == '#/space'){
+      this.comName = 'SpaceIndex'
+    }
     window.onhashchange = () => {
       switch (location.hash) {
         case '':
