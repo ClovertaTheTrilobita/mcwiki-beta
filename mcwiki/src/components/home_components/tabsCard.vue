@@ -27,7 +27,6 @@
               <div class="col"><Card/></div>
               <div class="col"><Card/></div>
               <div class="col"><Card/></div>
-              <div class="col"><placeHolders/></div>
             </div>
           </div>
           <div id="menu1" class="container tab-pane">

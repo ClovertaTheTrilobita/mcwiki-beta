@@ -1,13 +1,13 @@
 <template>
-  <a href="#" class="btn ">
-    <div class="card">
+  <div class="card mb-3 mx-2">
+    <a href="#">
       <img src="./images/95122414.jpg" class="card-img-top img-fluid" alt="..." id="source">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </template>
 
 <script>
@@ -16,7 +16,22 @@
   }
 </script>
 
-<style>
+<style scoped>
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform:  scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+  }
+
 </style>
 
 <!--

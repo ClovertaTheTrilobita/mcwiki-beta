@@ -99,18 +99,18 @@ export default {
   height: 24px;
 }
 
-.navbar .avater {
+.avater {
   max-width: 40px;
   max-height: 40px;
   border-radius: 50%;
   margin-right: 10px;
   object-fit: cover;
   border: 2px solid #1d880e;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000
 }
 
-.navbar .menu {
+.menu {
   display: none;
   position: absolute;
   top: 50px;
@@ -120,6 +120,7 @@ export default {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
   border-radius: 5px;
+  z-index: 999
 }
 
 .avater-container:hover .avater {

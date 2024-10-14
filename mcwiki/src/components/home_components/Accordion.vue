@@ -60,8 +60,8 @@
 
             <p>此项Pale Garden生物群系实验性特性可被"冬季小更新（<em>Winter Drop</em>）"实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<a href="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition" style="color: #48af3a;">此处</a>找到更多关于实验性开关的信息。</p>
             <p>我们喜欢听见你们对新的Pale Garden群系和新敌对生物Creaking的反馈。</p>
-            <p>Creaking反馈链接：<a href="https://aka.ms/mccreakingfeedback" style="color: #48af3a;">https://aka.ms/mccreakingfeedback</a></p>
-            <p>Pale Garden反馈链接：<a href="https://aka.ms/mcpalegardenfeedback" style="color: #48af3a;">https://aka.ms/mcpalegardenfeedback</a></p>
+            <p>Creaking反馈链接：<a href="https://aka.ms/mccreakingfeedback">https://aka.ms/mccreakingfeedback</a></p>
+            <p>Pale Garden反馈链接：<a href="https://aka.ms/mcpalegardenfeedback">https://aka.ms/mcpalegardenfeedback</a></p>
             
             <h4>冬季小更新</h4>
 
@@ -253,6 +253,7 @@
 
 <style scoped>
   a {
+    color: #48af3a;
     text-decoration: none;
   }
 </style>
