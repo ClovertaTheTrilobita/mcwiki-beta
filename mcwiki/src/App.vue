@@ -9,11 +9,12 @@ import SpaceIndex from './components/Index_components/SpaceIndex.vue';
 import i404NotFound from './components/public_components/i404NotFound.vue';
 import About from './components/public_components/About.vue';
 import TestIndex from './components/Index_components/TestIndex.vue';
-import MenuIndex from './components/Index_components/MenuIndex.vue';
+import CategoryIndex from './components/Index_components/CategoryIndex.vue';
+
 
 export default {
   name: "App",
-  components: { NavBar, SearchIndex, HomeIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About, TestIndex, MenuIndex},
+  components: { NavBar, SearchIndex, HomeIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About, TestIndex, CategoryIndex},
   data() {
     return {
       comName: 'HomeIndex',  // Initalize comName
@@ -32,8 +33,8 @@ export default {
           this.comName = 'HomeIndex'
           console.log(this.comName)
           break
-        case '#/menu':
-          this.comName = 'MenuIndex'
+        case '#/category':
+          this.comName = 'CategoryIndex'
           break
         case '#/sysmessage':
           this.comName = 'SysMessageIndex'
