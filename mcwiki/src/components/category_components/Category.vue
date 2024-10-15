@@ -28,7 +28,7 @@
 
 
 <!-- 卡片 -->
- <h2 style="margin-left: 200px;font-family: STHupo;">Before You Play</h2>
+  <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Before you play</h1>
  <br>
   <div class="card-header">
     <div class="card-body" style="text-align: left;">
@@ -57,7 +57,7 @@
 
 
 <br><br><br><br>
-  <h2 style="margin-left: 200px;font-family: STHupo;">When You Play</h2>
+  <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">When you play</h1>
   <div class="container mt-1" style="--bs-focus-ring-color: #5a5a5a85;">
     <div class="accordion accordion-flush" style="--bs-accordion-active-bg: #ffffff;" id="accordionExample">
 

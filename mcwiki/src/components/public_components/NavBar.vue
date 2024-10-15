@@ -10,12 +10,12 @@
             Mincraft Wikipedia
           </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar"
+            aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navBar">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
@@ -43,21 +43,6 @@
                 </ul>
               </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#/account" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Account
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#/space">Space</a></li>
-                  <li><a class="dropdown-item" href="#/switch">Switch Account</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#/logout" style="color:brown">Log Out</a></li>
-                </ul>
-              </li>
-
             </ul>
 
             <div class="avater-container">
@@ -68,10 +53,10 @@
                 </div>
                 <div class="Bottom">
                   <nav class="nav flex-column">
-                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">个人中心</a>
-                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">收藏</a>
+                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Account</a>
+                    <a class="nav-link btn btn-light avater-link" href="#/test" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>
                     <hr>
-                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">退出登录</a>
+                    <a class="nav-link btn btn-light avater-link" href="#/404" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Sign out</a>
                   </nav>
                 </div>
               </div>
@@ -105,7 +90,7 @@ export default {
   },
   data() {
     return {
-      username: 'Welcome'
+      username: 'Laurentina'
     };
   }
 }
@@ -137,10 +122,10 @@ export default {
 .menu {
   position: absolute;
   top: 50px;
-  right: 224px;
+  right: 239px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 245px;
-  width: 230px;
+  width: 210px;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
@@ -152,7 +137,7 @@ export default {
 }
 
 .avater-container:hover .avater {
-  transform: translateY(10px) translateX(-11px) scale(1.5);
+  transform: translateY(15px) translateX(-16px) scale(2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
