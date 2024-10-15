@@ -1,49 +1,63 @@
 ﻿<template>
-  <h1 class="visually-hidden">Heroes examples</h1>
 
   <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src=".\media\t1.png" alt="" width="90" height="90">
-    <h1 class="display-5 fw-bold">Find What You Need ...</h1>
+    <img class="d-block mx-auto mb-4" src=".\media\Weel.png" alt="" width="90" height="90">
+    <h1 class="display-5 fw-bold">Start From Here ...</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
         popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
         prebuilt components, and powerful JavaScript plugins.</p>
+    </div>
+  </div>
 
+  <!-- 翻页
+<div class="container demo-3">
+<ul class="grid cs-style-4">
+  <li>
+    <figure>
+      <div><img src="./images/5.png" alt=""></div>
+      <figcaption>
+        <h3>Safari</h3>
+        <span>Jacob Cummings</span>
+        <a href="http://www.jq22.com">Take a look</a>
+      </figcaption>
+    </figure>
+  </li>
+</ul>
+</div> -->
+
+
+<!-- 卡片 -->
+ <h2 style="margin-left: 200px;font-family: STHupo;">Before You Play</h2>
+ <br>
+  <div class="card-header">
+    <div class="card-body" style="text-align: left;">
+      <div class="tab-content">
+        <div id="home" class="container tab-pane active show">
+          <div class="row row-cols-2 row-cols-lg-4">
+            <div class="col">
+              <Card1 />
+            </div>
+            <div class="col">
+              <Card2 />
+            </div>
+            <div class="col">
+              <Card3 />
+            </div>
+            <div class="col">
+              <Card4 />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
 
 
 
-
-
-  <li>
-
-<figure>
-
-  <div><img src="./images/5.png" alt="img05"></div>
-
-  <figcaption>
-
-    <h3>Safari</h3>
-
-    <span>Jacob Cummings</span>
-
-    <a href="http://www.jq22.com">Take a look</a>
-
-  </figcaption>
-
-</figure>
-
-</li>
-
-
-
-
-
-
-
-
+<br><br><br><br>
+  <h2 style="margin-left: 200px;font-family: STHupo;">When You Play</h2>
   <div class="container mt-1" style="--bs-focus-ring-color: #5a5a5a85;">
     <div class="accordion accordion-flush" style="--bs-accordion-active-bg: #ffffff;" id="accordionExample">
 
@@ -190,98 +204,45 @@
 </template>
 
 <script>
-import Modernizr from './js/modernizr.custom'
-// import touch from './js/toucheffects'
+import modernizrCustom from './js/modernizr.custom';
+import toucheffects from './js/toucheffects';
+import Card1 from './Card1.vue';
+import Card2 from './Card2.vue';
+import Card3 from './Card3.vue';
+import Card4 from './Card4.vue';
+import placeHolders1 from './placeHolders1.vue';
 
 export default {
   name: 'Category',
-  methods() {
-    (function (window) {
+  components: {
+    Card1,Card2,Card3,Card4,
+    placeHolders1,
+  },
+  created() {
 
-      // for touch devices: add class cs-hover to the figures when touching the items
-      if (Modernizr.touch) {
 
-        // classie.js https://github.com/desandro/classie/blob/master/classie.js
-        // class helper functions from bonzo https://github.com/ded/bonzo
 
-        function classReg(className) {
-          return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-        }
+  },
+  methods: {
+    categoryClicked() {
+      // do{
+      //   console.log("waiting");
 
-        // classList support for class management
-        // altho to be fair, the api sucks because it won't accept multiple classes at once
-        var hasClass, addClass, removeClass;
+      // }while(modernizrCustom.methods.function.b.documentElement == 'undefined');
 
-        if ('classList' in document.documentElement) {
-          hasClass = function (elem, c) {
-            return elem.classList.contains(c);
-          };
-          addClass = function (elem, c) {
-            elem.classList.add(c);
-          };
-          removeClass = function (elem, c) {
-            elem.classList.remove(c);
-          };
-        }
-        else {
-          hasClass = function (elem, c) {
-            return classReg(c).test(elem.className);
-          };
-          addClass = function (elem, c) {
-            if (!hasClass(elem, c)) {
-              elem.className = elem.className + ' ' + c;
-            }
-          };
-          removeClass = function (elem, c) {
-            elem.className = elem.className.replace(classReg(c), ' ');
-          };
-        }
+      modernizrCustom.methods.function();
+      toucheffects.methods.function1();
 
-        function toggleClass(elem, c) {
-          var fn = hasClass(elem, c) ? removeClass : addClass;
-          fn(elem, c);
-        }
-
-        var classie = {
-          // full names
-          hasClass: hasClass,
-          addClass: addClass,
-          removeClass: removeClass,
-          toggleClass: toggleClass,
-          // short names
-          has: hasClass,
-          add: addClass,
-          remove: removeClass,
-          toggle: toggleClass
-        };
-
-        // transport
-        if (typeof define === 'function' && define.amd) {
-          // AMD
-          define(classie);
-        } else {
-          // browser global
-          window.classie = classie;
-        }
-
-        [].slice.call(document.querySelectorAll('ul.grid > li > figure')).forEach(function (el, i) {
-          el.querySelector('figcaption > a').addEventListener('touchstart', function (e) {
-            e.stopPropagation();
-          }, false);
-          el.addEventListener('touchstart', function (e) {
-            classie.toggle(this, 'cs-hover');
-          }, false);
-        });
-
-      }
-
-    })(window);
+    }
   }
 }
 
 </script>
 
-<style src="./css/component.css" scoped>
+<style scoped>
+/* @import './css/component.css';
+@import './css/default.css'; */
+
 .accordion-body {
   background-color: aliceblue;
 }

@@ -24,7 +24,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#/category">Category</a>
+                <a class="nav-link" href="#/category" @click="categroyClicked">Category</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -90,12 +90,17 @@
 </template>
 
 <script>
+import Category from '../category_components/Category.vue';
+
 
 export default {
   name: "NavBar",
   methods: {
     SearchPushed() {
       window.location.href = '#/search'
+    },
+    categroyClicked(){
+      Category.methods.categoryClicked()
     }
   },
   data() {
