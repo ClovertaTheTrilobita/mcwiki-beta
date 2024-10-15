@@ -3,7 +3,7 @@
     <div class="mb-5">
       <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Official News</h1>
     </div>
-    <div class="accordion" style="--bs-focus-ring-color: #5a5a5a85; --bs-accordion-btn-color: #eefdf1; --bs-accordion-active-color: #eefdf1;--bs-accordion-bg: #eefdf1;" id="accordionExample" >
+    <div class="accordion" style="--bs-focus-ring-color: #6cb16385; --bs-accordion-btn-color: #eefdf1; --bs-accordion-active-color: #eefdf1;--bs-accordion-bg: #eefdf1;" id="accordionExample" >
       <div class="accordion-item">
         <h2 class="accordion-header" >
           <button class="accordion-button focus-ring" style="--bs-accordion-btn-bg: #00ac78; --bs-accordion-active-bg: #00ac78;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

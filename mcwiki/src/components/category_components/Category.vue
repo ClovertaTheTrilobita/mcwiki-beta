@@ -59,7 +59,7 @@
 <br><br><br><br>
   <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">When you play</h1>
   <div class="container mt-1" style="--bs-focus-ring-color: #5a5a5a85;">
-    <div class="accordion accordion-flush" style="--bs-accordion-active-bg: #ffffff;" id="accordionExample">
+    <div class="accordion" style="--bs-accordion-active-bg: #ffffff;" id="accordionExample">
 
 
       <!-- Drop down menue for Bloks&Items -->
