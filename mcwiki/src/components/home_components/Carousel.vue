@@ -7,13 +7,25 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./images/Slide01.jpg" class="d-block w-100 Slide" alt="...">
+        <img src="./images/Slide01.png" class="d-block w-100 Slide img-fluid" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Cherry Grove</h1>
+          <p>樱花树林是山地的特殊繁茂变种，在Java版1.19.4快照23w07a（内置数据包）中加入。这里生长着大量樱花树，地表被草方块覆盖着，且地表上会生成众多装饰性的粉红色花簇，这儿的草色调较暖。猪、绵羊、蜜蜂会在此生物群系生成。</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="./images/Slide02.jpg" class="d-block w-100 Slide" alt="...">
+        <img src="./images/Slide02.png" class="d-block w-100 Slide img-fluid" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>The Nether</h1>
+          <p>下界是一个封闭、危险的维度，充斥着火焰、熔岩、菌类植被以及许多敌对生物，是一个和主世界存在于不同维度的世界，也是一个洞穴维度。</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="./images/Slide03.jpg" class="d-block w-100 Slide" alt="...">
+        <img src="./images/Slide03.png" class="d-block w-100 Slide img-fluid" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Woodland Mansion</h1>
+          <p>林地府邸会非常罕见地在黑森林生物群系中生成，通常距离出生点有几万个方块远，玩家可以通过向制图师村民用绿宝石购买林地探险家地图寻找它们</p>
+        </div>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
@@ -36,7 +48,7 @@
 <style scoped>
 
 .Slide {
-  max-height: 800px;
+  max-height: 840px;
   object-fit: cover;
 }
 

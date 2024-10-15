@@ -5,7 +5,6 @@
   import placeHolders from '../home_components/placeHolders.vue';
   import Card from '../home_components/Card.vue';
 
-
   export default {
     name: 'HomeIndex',
     components: {
@@ -19,9 +18,11 @@
 </script>
 
 <template>
-  <Carousel/>
-  <tabsCard/>
-  <Accordion/>
+  <div style="background-color: #fff;">
+    <Carousel/>
+    <tabsCard/>
+    <Accordion/>
+  </div>
 </template>
 
 <style>

@@ -38,24 +38,24 @@ a {
 
 example: style="--bs-card-spacer-y: "
 
-$card-spacer-y:                     $spacer;
-$card-spacer-x:                     $spacer;
-$card-title-spacer-y:               $spacer * .5;
-$card-title-color:                  null;
-$card-subtitle-color:               null;
-$card-border-width:                 var(--#{$prefix}border-width);
-$card-border-color:                 var(--#{$prefix}border-color-translucent);
-$card-border-radius:                var(--#{$prefix}border-radius);
-$card-box-shadow:                   null;
-$card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
-$card-cap-padding-y:                $card-spacer-y * .5;
-$card-cap-padding-x:                $card-spacer-x;
-$card-cap-bg:                       rgba(var(--#{$prefix}body-color-rgb), .03);
-$card-cap-color:                    null;
-$card-height:                       null;
-$card-color:                        null;
-$card-bg:                           var(--#{$prefix}body-bg);
-$card-img-overlay-padding:          $spacer;
-$card-group-margin:                 $grid-gutter-width * .5;
+--#{$prefix}card-spacer-y: #{$card-spacer-y};
+--#{$prefix}card-spacer-x: #{$card-spacer-x};
+--#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
+--#{$prefix}card-title-color: #{$card-title-color};
+--#{$prefix}card-subtitle-color: #{$card-subtitle-color};
+--#{$prefix}card-border-width: #{$card-border-width};
+--#{$prefix}card-border-color: #{$card-border-color};
+--#{$prefix}card-border-radius: #{$card-border-radius};
+--#{$prefix}card-box-shadow: #{$card-box-shadow};
+--#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
+--#{$prefix}card-cap-padding-y: #{$card-cap-padding-y};
+--#{$prefix}card-cap-padding-x: #{$card-cap-padding-x};
+--#{$prefix}card-cap-bg: #{$card-cap-bg};
+--#{$prefix}card-cap-color: #{$card-cap-color};
+--#{$prefix}card-height: #{$card-height};
+--#{$prefix}card-color: #{$card-color};
+--#{$prefix}card-bg: #{$card-bg};
+--#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
+--#{$prefix}card-group-margin: #{$card-group-margin};
 
 -->

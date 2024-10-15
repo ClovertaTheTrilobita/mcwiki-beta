@@ -1,9 +1,12 @@
 <template>
-  <div class="container mt-1">
-    <div class="accordion accordion-flush" style="--bs-accordion-active-bg: #ffffff; --bs-focus-ring-color: #5a5a5a85;" id="accordionExample" >
+  <div class="container mt-5">
+    <div class="mb-5">
+      <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Official News</h1>
+    </div>
+    <div class="accordion" style="--bs-focus-ring-color: #5a5a5a85; --bs-accordion-btn-color: #eefdf1; --bs-accordion-active-color: #eefdf1;--bs-accordion-bg: #eefdf1;" id="accordionExample" >
       <div class="accordion-item">
         <h2 class="accordion-header" >
-          <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <button class="accordion-button focus-ring" style="--bs-accordion-btn-bg: #00ac78; --bs-accordion-active-bg: #00ac78;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             MC 直播总结
           </button>
         </h2>
@@ -49,7 +52,7 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="accordion-button focus-ring collapsed" style="--bs-accordion-btn-bg: #00bf77; --bs-accordion-active-bg: #00bf77;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             最新快照版 - 24w40a
           </button>
         </h2>
@@ -227,7 +230,7 @@
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <button class="accordion-button focus-ring collapsed" style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             最新正式版 - 1.21.1
           </button>
         </h2>
@@ -252,48 +255,38 @@
 </script>
 
 <style scoped>
+
   a {
     color: #48af3a;
     text-decoration: none;
   }
+
 </style>
 
 <!--
 
 example: style="--bs-accordion-color: "
 
-$accordion-padding-y:                     1rem;
-$accordion-padding-x:                     1.25rem;
-$accordion-color:                         var(--#{$prefix}body-color);
-$accordion-bg:                            var(--#{$prefix}body-bg);
-$accordion-border-width:                  var(--#{$prefix}border-width);
-$accordion-border-color:                  var(--#{$prefix}border-color);
-$accordion-border-radius:                 var(--#{$prefix}border-radius);
-$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
-
-$accordion-body-padding-y:                $accordion-padding-y;
-$accordion-body-padding-x:                $accordion-padding-x;
-
-$accordion-button-padding-y:              $accordion-padding-y;
-$accordion-button-padding-x:              $accordion-padding-x;
-$accordion-button-color:                  var(--#{$prefix}body-color);
-$accordion-button-bg:                     var(--#{$prefix}accordion-bg);
-$accordion-transition:                    $btn-transition, border-radius .15s ease;
-$accordion-button-active-bg:              var(--#{$prefix}primary-bg-subtle);
-$accordion-button-active-color:           var(--#{$prefix}primary-text-emphasis);
-
-// fusv-disable
-$accordion-button-focus-border-color:     $input-focus-border-color; // Deprecated in v5.3.3
-// fusv-enable
-$accordion-button-focus-box-shadow:       $btn-focus-box-shadow;
-
-$accordion-icon-width:                    1.25rem;
-$accordion-icon-color:                    $body-color;
-$accordion-icon-active-color:             $primary-text-emphasis;
-$accordion-icon-transition:               transform .2s ease-in-out;
-$accordion-icon-transform:                rotate(-180deg);
-
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+--#{$prefix}accordion-color: #{$accordion-color};
+--#{$prefix}accordion-bg: #{$accordion-bg};
+--#{$prefix}accordion-transition: #{$accordion-transition};
+--#{$prefix}accordion-border-color: #{$accordion-border-color};
+--#{$prefix}accordion-border-width: #{$accordion-border-width};
+--#{$prefix}accordion-border-radius: #{$accordion-border-radius};
+--#{$prefix}accordion-inner-border-radius: #{$accordion-inner-border-radius};
+--#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
+--#{$prefix}accordion-btn-padding-y: #{$accordion-button-padding-y};
+--#{$prefix}accordion-btn-color: #{$accordion-button-color};
+--#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
+--#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon)};
+--#{$prefix}accordion-btn-icon-width: #{$accordion-icon-width};
+--#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
+--#{$prefix}accordion-btn-icon-transition: #{$accordion-icon-transition};
+--#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
+--#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
+--#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
+--#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
+--#{$prefix}accordion-active-color: #{$accordion-button-active-color};
+--#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
 
 -->

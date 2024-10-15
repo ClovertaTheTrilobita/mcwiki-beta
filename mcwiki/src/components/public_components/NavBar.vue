@@ -1,8 +1,8 @@
 ﻿<template>
-  <div class="container-fluid sticky-top bg-body-tertiary" style="background-color: #ffffff;">
+  <div class="container-fluid sticky-top" style="background-color: #2d7054;">
     <!-- wdf? Why is that? sticky->fixed->sticky??? No way... It just fking works -->
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
 
           <a class="navbar-brand" href="#/home">
@@ -79,7 +79,7 @@
 
             <form class="d-flex" role="search" >
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput">
-              <button class="btn btn-outline-success" type="submit" @click="SearchPushed">Search</button>
+              <button class="btn btn-outline-light" type="submit" @click="SearchPushed">Search</button>
             </form>
 
           </div>
@@ -128,7 +128,7 @@ export default {
   border-radius: 50%;
   margin-right: 10px;
   object-fit: cover;
-  border: 2px solid #1d880e;
+  border: 2px solid #fafafa;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   z-index: 2;
@@ -171,43 +171,42 @@ export default {
 
 example: style="--bs-navbar-padding-x: "
 
-$navbar-padding-y:                  $spacer * .5;
-$navbar-padding-x:                  null;
+--#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+--#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+--#{$prefix}navbar-color: #{$navbar-light-color};
+--#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+--#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
+--#{$prefix}navbar-active-color: #{$navbar-light-active-color};
+--#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
+--#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
+--#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
+--#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
+--#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+--#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
+--#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
+--#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
+--#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
+--#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
+--#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
+--#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
+--#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
+--#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
 
-$navbar-nav-link-padding-x:         .5rem;
+--#{$prefix}nav-link-padding-x: 0;
+--#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
+@include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
+--#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+--#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
+--#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
+--#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
 
-$navbar-brand-font-size:            $font-size-lg;
-// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2;
-$navbar-brand-height:               $navbar-brand-font-size * $line-height-base;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5;
-$navbar-brand-margin-end:           1rem;
-
-$navbar-toggler-padding-y:          .25rem;
-$navbar-toggler-padding-x:          .75rem;
-$navbar-toggler-font-size:          $font-size-lg;
-$navbar-toggler-border-radius:      $btn-border-radius;
-$navbar-toggler-focus-width:        $btn-focus-width;
-$navbar-toggler-transition:         box-shadow .15s ease-in-out;
-
-$navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .65);
-$navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8);
-$navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1);
-$navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .3);
-$navbar-light-icon-color:           rgba($body-color, .75);
-$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-$navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), .15);
-$navbar-light-brand-color:          $navbar-light-active-color;
-$navbar-light-brand-hover-color:    $navbar-light-active-color;
-
-$navbar-dark-color:                 rgba($white, .55);
-$navbar-dark-hover-color:           rgba($white, .75);
-$navbar-dark-active-color:          $white;
-$navbar-dark-disabled-color:        rgba($white, .25);
-$navbar-dark-icon-color:            $navbar-dark-color;
-$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-$navbar-dark-toggler-border-color:  rgba($white, .1);
-$navbar-dark-brand-color:           $navbar-dark-active-color;
-$navbar-dark-brand-hover-color:     $navbar-dark-active-color;
+--#{$prefix}navbar-color: #{$navbar-dark-color};
+--#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
+--#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
+--#{$prefix}navbar-active-color: #{$navbar-dark-active-color};
+--#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
+--#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
+--#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
+--#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
 
 -->

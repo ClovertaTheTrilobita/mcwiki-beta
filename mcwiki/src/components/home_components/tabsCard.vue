@@ -1,5 +1,8 @@
 <template>
-  <div class="container mt-1">
+  <div class="container mt-5">
+    <div class="mb-5">
+      <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Official News</h1>
+    </div>
     <div class="card text-center">
       <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs" role="tablist" style="--bs-nav-link-color: #48af3a; --bs-nav-link-hover-color: #69cf5c;">
