@@ -33,7 +33,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 
 .Slide {
   max-height: 800px;

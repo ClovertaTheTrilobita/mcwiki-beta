@@ -13,7 +13,6 @@ html {
  
 body {
   width: 100vw;
-  overflow: hidden;
   background: url('../components/images/Background.png') no-repeat center center fixed;
   background-size: cover;
 }

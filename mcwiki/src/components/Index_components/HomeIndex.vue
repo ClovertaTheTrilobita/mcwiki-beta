@@ -20,8 +20,8 @@
 
 <template>
   <Carousel/>
-  <Accordion/>
   <tabsCard/>
+  <Accordion/>
 </template>
 
 <style>
