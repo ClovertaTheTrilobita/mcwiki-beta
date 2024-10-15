@@ -1,6 +1,6 @@
 ﻿<template>
   <div>
-    <SearchList/>
+    <users v-bind:users="users"></users>
   </div>
 </template>
 
@@ -9,7 +9,16 @@ import SearchList from '../search_components/SearchList.vue';
 
   export default{
     name: "SearchIndex",
-    components: {SearchList}
+    data(){
+	    return{
+	      users:["Henry","Bucky","Emily"]
+	    }
+	  },
+	  components:{
+	    "users":SearchList
+	  },
+    
+
   }
 </script>
 
