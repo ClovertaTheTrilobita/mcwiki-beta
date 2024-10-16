@@ -26,7 +26,11 @@
             </div>
           </div>
           <div id="menu1" class="container tab-pane fade">
-
+            
+            <div class="row mt-5 mb-3">
+              <div class="col-md-6 offset-md-3"><img src="../images/MC-Logo_300x51.svg" class="img-fluid Logo mx-auto d-block"></div>
+            </div>
+            
             <h3>概述</h3><hr>
 
               <p>Minecraft于2009年5月13日正式发行，并且在2016年1月正式译作「我的世界」，是一款沙盒建造游戏，玩家可以在一个三维世界里进行随机的
@@ -161,4 +165,5 @@
 </script>
 
 <style>
+
 </style>
