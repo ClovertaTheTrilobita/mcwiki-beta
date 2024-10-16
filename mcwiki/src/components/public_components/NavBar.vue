@@ -85,9 +85,22 @@ export default {
   name: "NavBar",
   methods: {
     SearchPushed() {
-      this.search = document.getElementById("myInput").value;
-      console.log("Searched: " + this.search)
-      SearchList.methods.searchPushed(this.search)
+      let searchcontent = document.getElementById("myInput").value;
+      console.log("Searched: " + searchcontent)
+      let searchresult=[]; var j = 0;
+      var text = ['a', 'b', 'c', 'd', 'a', 'a']
+      for (var i = 0; i < text.length; i++) {
+        if (text[i] == searchcontent){
+          searchresult[j] = text[i];
+          j++;
+        }
+      }
+      this.search = searchresult
+      console.log("Search received: " + searchcontent)
+      for (var i = 0; i < searchresult.length; i++)
+      {
+        console.log("Search result: "+ this.search)
+      }
       window.location.href = '#/search'
     },
     categroyClicked(){

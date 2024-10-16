@@ -21,7 +21,7 @@
     <br>
   </div> -->
 
-  <div v-for="data in users" class="d-flex justify-content-center" id="searchresult">
+  <div v-for="data in search" class="d-flex justify-content-center" id="searchresult">
     <div class="card" style="max-width: 80rem;">
       <div class="row g-0">
         <div class="col-sm-2">
@@ -55,32 +55,32 @@ export default {
   name: 'SearchList',
   components: {},
   props: {
-    users: {           //这个就是父组件中子标签自定义名字
+    // users: {           //这个就是父组件中子标签自定义名字
+    //   type: Array,
+    //   required: true
+    // },
+    search: {
       type: Array,
       required: true
-    },
-    // search: {
-    //   type: String,
-    //   required: true
-    // }
+    }
   },
   methods: {
-    searchPushed(searchcontent) {
-      let searchresult=[]; var j = 0;
-      var text = ['a', 'b', 'c', 'd', 'a', 'a']
-      for (var i = 0; i < text.length; i++) {
-        if (text[i] == searchcontent){
-          searchresult[j] = text[i];
-          j++;
-        }
-      }
-      console.log("Search received: " + searchcontent)
-      for (var i = 0; i < searchresult.length; i++)
-      {
-        console.log("Search result: "+ searchresult)
-      }
-      return searchresult;
-    }
+    // searchPushed(searchcontent) {
+    //   let searchresult=[]; var j = 0;
+    //   var text = ['a', 'b', 'c', 'd', 'a', 'a']
+    //   for (var i = 0; i < text.length; i++) {
+    //     if (text[i] == searchcontent){
+    //       searchresult[j] = text[i];
+    //       j++;
+    //     }
+    //   }
+    //   console.log("Search received: " + searchcontent)
+    //   for (var i = 0; i < searchresult.length; i++)
+    //   {
+    //     console.log("Search result: "+ searchresult)
+    //   }
+    //   return searchresult;
+    // }
   },
 }
 
