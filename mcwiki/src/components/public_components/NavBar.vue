@@ -46,7 +46,7 @@
             </ul>
 
             <div class="avater-container">
-              <img src="../home_components/images/95122414.jpg" alt="Avater" class="avater">
+              <img src="../images/95122414.jpg" alt="Avater" class="avater">
               <div class="menu">
                 <div class="container text-center mt-4 mb-3">
                   <p>{{ username }}</p>
