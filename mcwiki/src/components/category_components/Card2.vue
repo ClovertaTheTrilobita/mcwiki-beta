@@ -4,7 +4,7 @@
       <img src="./media/2.png" class="card-img-top img-fluid" alt="..." id="source">
       <div class="card-body">
         <h5 class="card-title" style="font-family: STXinwei;font-weight: bold;">UPDATE</h5>
-        <p class="card-text">What have been the latest updates to the game? Click here to learn more.</p>
+        <p class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif;color:gray">What have been the latest updates to the game? Click here to learn more and download them.</p>
       </div>
     </a>
   </div>

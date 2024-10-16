@@ -3,8 +3,8 @@
     <a href="https://www.minecraft.net/zh-hans" target="_blank">
       <img src="./media/1.png" class="card-img-top img-fluid" alt="..." id="source">
       <div class="card-body">
-        <h5 class="card-title" style="font-family: STXinwei;font-weight: bold;">Official Website</h5>
-        <p class="card-text">If you want to browse more game information, click here to open the Minecraft official website.</p>
+        <h5 class="card-title" style="font-family: STXinwei;font-weight: bold;">OFFICAL WEBSITE</h5>
+        <p class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif; color:gray">If you want to browse more game information, click here to open the Minecraft official website.</p>
       </div>
     </a>
   </div>
