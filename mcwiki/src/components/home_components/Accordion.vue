@@ -12,7 +12,7 @@
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
           <div class="accordion-body" style="text-align: left;">
-            <h3>新特性</h3>
+            <h3>新特性</h3><hr>
 
             <ul>
               <li>基岩版极限模式</li>
@@ -40,7 +40,7 @@
               <li>Hanging moss（悬吊苔藓）</li>
             </ul>
             
-            <h3>其他内容</h3>
+            <h3>其他内容</h3><hr>
 
             <ul>
               <li>电影预热与幕后</li>
@@ -59,7 +59,7 @@
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body" style="text-align: left;">
 
-            <h3>实验性特性</h3>
+            <h3>实验性特性</h3><hr>
 
             <p>此项Pale Garden生物群系实验性特性可被"冬季小更新（<em>Winter Drop</em>）"实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<a href="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition" style="color: #48af3a;">此处</a>找到更多关于实验性开关的信息。</p>
             <p>我们喜欢听见你们对新的Pale Garden群系和新敌对生物Creaking的反馈。</p>
@@ -72,7 +72,9 @@
               <li>增加了Pale Garden生物群系，苍白橡树，苍白苔藓块，苍白夏地苔藓，苍白垂藤以及苍白橡树系列</li>
               <li>增加了Creaking生物，Creaking刷怪蛋和Creaking Heart方块</li>
             </ul>
+
             <h4>Pale Garden</h4>
+
             <p>Pale Garden是一个黑森林的生物群系变种，拥有以下独特特性：</p>
             <ul>
               <li>苍白橡树在此生成</li>
@@ -155,7 +157,7 @@
 
             <p>在Pale Garden中环境音效并不源自生物群系设置而是产生于在生物群系中的方块*当苍白垂藤接触到苍白橡树原木以及苍白橡树树叶时散发微小的环境音效*当夜晚时并且六面全被原木遮盖，Creaking Heart方块会散发一系列的怪异恐怖的音效</p>
             
-            <h3>更改</h3>
+            <h3>更改</h3><hr>
 
               <ul>
                 <li>收纳袋染色配方现在由染料解锁而非未染色的收纳袋物品解锁</li>
@@ -167,14 +169,14 @@
             
             <ul><li>若适用，Realms主界面会显示Realm中最新活动的世界的游戏模式</li></ul>
             
-            <h3>技术性更改</h3>
+            <h3>技术性更改</h3><hr>
             
             <ul>
               <li>数据包版本现在为 56</li>
               <li>资源包版本现在为 40</li>
             </ul>
 
-            <h3>数据包版本 56</h3>
+            <h3>数据包版本 56</h3><hr>
             
             <ul><li>新的粒子效果：<kbd>block_crumble</kbd>和<kbd>trai1</kbd></li></ul>
             
@@ -223,7 +225,7 @@
               </li>
             </ul>
 
-            <h3>资源包版本 40</h3>
+            <h3>资源包版本 40</h3><hr>
             <p>增加了对新实验性特性更改的支持</p>
           </div>
         </div>
@@ -236,7 +238,7 @@
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body" style="text-align: left;">
-            <h3>更改</h3>
+            <h3>更改</h3><hr>
             <ul>
               <li>增加了索西语与白俄罗斯语（拉丁）的支持</li>
               <li>修复可能会被用于使服务器崩溃的关键漏洞</li>
