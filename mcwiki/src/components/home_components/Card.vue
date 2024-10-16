@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-3 mx-2 mt-4" style="--bs-card-height: 430px">
+  <div class="card mb-3 mx-2 mt-4" style="--bs-card-height: 430px; background-color: #eefdf1;">
     <a href="#">
       <img :src="img_url" class="card-img-top img-fluid Card-img" alt="Image" id="source">
       <div class="card-body">
@@ -31,7 +31,7 @@
 }
 
 .card:hover {
-  transform:  scale(1.01);
+  transform:  scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
