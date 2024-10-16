@@ -67,7 +67,7 @@ export default {
   methods: {
     searchPushed(searchcontent) {
       let searchresult=[]; var j = 0;
-      var text = ['a', 'b', 'c', 'd']
+      var text = ['a', 'b', 'c', 'd', 'a', 'a']
       for (var i = 0; i < text.length; i++) {
         if (text[i] == searchcontent){
           searchresult[j] = text[i];
