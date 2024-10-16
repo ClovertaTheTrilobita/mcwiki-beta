@@ -7,9 +7,8 @@
 
           <a class="navbar-brand" href="#/home">
             <img src="../images/Minecraft_logo.png" class="mb-1 img_title" alt="logo">
-            Mincraft Wikipedia
+            Minecraft Wikipedia
           </a>
-
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar"
             aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
