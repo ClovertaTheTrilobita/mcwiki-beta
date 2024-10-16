@@ -11,7 +11,7 @@ import SearchList from '../search_components/SearchList.vue';
     name: "SearchIndex",
     data(){
 	    return{
-	      users:["Henry","Bucky","Emily"]
+	      users:["Rocks","Biome","Blocks"]
 	    }
 	  },
 	  components:{
