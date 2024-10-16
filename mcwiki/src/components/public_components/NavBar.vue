@@ -46,7 +46,7 @@
             </ul>
 
             <div class="avater-container">
-              <img src="../home_components/images/95122414.jpg" alt="Avater" class="avater">
+              <img src="../images/95122414.jpg" alt="Avater" class="avater">
               <div class="menu">
                 <div class="container text-center mt-4 mb-3">
                   <p>{{ username }}</p>
@@ -184,6 +184,22 @@ example: style="--bs-navbar-padding-x: "
 --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
 --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
 --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
+
+--#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
+--#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
+--#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
+--#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
+--#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
+--#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
+--#{$prefix}nav-tabs-link-active-border-color: #{$nav-tabs-link-active-border-color};
+
+--#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
+--#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
+--#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
+
+--#{$prefix}nav-underline-gap: #{$nav-underline-gap};
+--#{$prefix}nav-underline-border-width: #{$nav-underline-border-width};
+--#{$prefix}nav-underline-link-active-color: #{$nav-underline-link-active-color};
 
 --#{$prefix}navbar-color: #{$navbar-dark-color};
 --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};

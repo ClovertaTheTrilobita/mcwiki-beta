@@ -1,10 +1,10 @@
 <template>
-  <div class="card mb-3 mx-2">
+  <div class="card mb-3 mx-2 mt-4" style="--bs-card-height: 430px; background-color: #F6FFF8;">
     <a href="#">
-      <img src="./images/95122414.jpg" class="card-img-top img-fluid" alt="..." id="source">
+      <img :src="img_url" class="card-img-top img-fluid Card-img" alt="Image" id="source">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h4 class="card-title">{{ title }}</h4>
+        <h5 class="card-text" style="font-weight: 100;">{{ text }}</h5>
       </div>
     </a>
   </div>
@@ -12,7 +12,15 @@
 
 <script>
   export default {
-    name: "Card"
+    name: "Card",
+    props: {
+      img_url: {
+        type: String,
+        default: "",
+      },
+      title: String,
+      text: String,
+    },
   }
 </script>
 
@@ -23,7 +31,7 @@
 }
 
 .card:hover {
-  transform:  scale(1.01);
+  transform:  scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
