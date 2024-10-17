@@ -1,9 +1,10 @@
 ﻿<template>
-  <div>
-    <form class="d-flex" role="search">
+  <div class="d-flex justify-content-center">
+    <form class="d-flex" role="search"  style="width: 50dvh; height: 45px;">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput1"
         ref="myInput1">
-      <button class="btn btn-outline-success" type="submit" @click="SearchPushed">Search</button>
+      <button class="btn btn-success" type="submit" @click="SearchPushed">
+        Search</button>
     </form>
   </div>
   <div>
@@ -57,4 +58,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.d-flex{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+</style>
