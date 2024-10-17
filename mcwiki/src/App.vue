@@ -20,6 +20,7 @@ import About from './components/public_components/About.vue';
 import TestIndex from './components/Index_components/TestIndex.vue';
 import CategoryIndex from './components/Index_components/CategoryIndex.vue';
 import Login from './components/Login_componments/Login.vue';
+import Details from './components/category_components/Details.vue';
 
 export default {
   name: "App",
@@ -35,7 +36,8 @@ export default {
     i404NotFound,
     About,
     TestIndex,
-    CategoryIndex
+    CategoryIndex,
+    Details
   },
 
   setup() {
@@ -90,6 +92,9 @@ export default {
           break;
         case '#/test':
           comName.value = 'TestIndex';
+          break;
+        case '#/detail':
+          comName.value = 'Details';
           break;
         default:
           comName.value = 'i404NotFound'; // 404 页面

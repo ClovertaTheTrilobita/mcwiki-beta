@@ -1,8 +1,8 @@
 ﻿<template>
   <div class="d-flex justify-content-center">
-    <form class="d-flex" role="search"  style="width: 50dvh; height: 45px;">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput1"
-        ref="myInput1">
+    <form class="d-flex" role="search" style="width: 50dvh; height: 45px;" onsubmit="return false;">
+      <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" clearable id="myInput1"
+        ref="myInput1" >
       <button class="btn btn-success" type="button" @click="SearchPushed">
         Search</button>
     </form>
@@ -10,9 +10,9 @@
   <div>
     <search v-bind:search="search" ref="search" v-if="refresh"></search>
   </div>
-  <div>
+  <!-- <div>
     <button @click="CheckData">check</button>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
   name: "SearchIndex",
   props: {
     datasent: {
-      type: Object,
+      type: Array,
       required: true
     },
   },
@@ -37,23 +37,26 @@ export default {
   components: {
     "search": SearchList
   },
+  setup() {
+
+  },
   methods: {
     SearchPushed() {
       let searchcontent = document.getElementById("myInput1").value;
       console.log("Searched: " + searchcontent)
       let searchresult = []; var j = 0;
+      console.log(this.datasent[0])
       var text = ['a', 'b', 'c', 'd', 'a', 'a']
-      for (var i = 0; i < text.length; i++) {
-        if (text[i] == searchcontent) {
-          searchresult[j] = text[i];
+      for (var i = 0; i < this.datasent.length; i++) {
+        if (this.datasent[i].Entry == searchcontent) {
+          searchresult[j] = this.datasent[i];
           j++;
         }
       }
       this.search = searchresult
       console.log("Search received: " + searchcontent)
-      for (var i = 0; i < searchresult.length; i++) {
-        console.log("Search result: " + this.search)
-      }
+      console.log("Search result: ")
+      console.log(this.search)
       this.refresh = false
       this.$nextTick(() => {
         // 2. 再调用子组件的方法使用该属性
@@ -72,7 +75,7 @@ export default {
 </script>
 
 <style scoped>
-.d-flex{
+.d-flex {
   margin-top: 30px;
   margin-bottom: 20px;
 }

@@ -22,7 +22,7 @@
   </div> -->
 
    <div v-for="data in search" class="d-flex justify-content-center" id="searchresult" >
-    <div class="card" style="max-width: 80rem;">
+    <div class="card" style="width: 80rem;">
       <div class="row g-0">
         <div class="col-sm-2">
           <div style="font-size: 70%;">
@@ -30,11 +30,11 @@
           </div>
 
         </div>
-        <div class="col-md-2">
+        <div class="col-md-10">
           <div class="card-body">
-            <h5 class="card-title">{{ data }}</h5>
+            <h5 class="card-title">{{ data.Entry }}</h5>
             <p class="card-text" style="color: grey; ">
-              {{ data }}'s breaf intro...
+              {{ data.Text }}......
             </p>
             <a href="#" class="btn btn-success" style="">Take a look</a>
             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
@@ -56,7 +56,7 @@ export default {
   components: {},
   props: {
     search: {
-      type: Array,
+      type: Object,
       required: true
     },
   },
