@@ -43,7 +43,7 @@ export default {
 
     // 根据 hash 初始化 comName
     const initializeComponent = () => {
-      const hash = window.location.hash;
+      const hash = window.location.hash || '#/login'; // ****！如果 hash 为空，默认为登录页面
       switch (hash) {
         case '#/login':
           comName.value = 'Login';
