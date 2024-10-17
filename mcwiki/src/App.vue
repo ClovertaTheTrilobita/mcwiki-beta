@@ -21,11 +21,13 @@ import TestIndex from './components/Index_components/TestIndex.vue';
 import CategoryIndex from './components/Index_components/CategoryIndex.vue';
 import Login from './components/Login_componments/Login.vue';
 import Details from './components/category_components/Details.vue';
+import Preference from './components/account_components/Preference.vue';
 
 export default {
   name: "App",
   components: {
     Login,
+    Preference,
     NavBar,
     SearchIndex,
     HomeIndex,
@@ -90,8 +92,8 @@ export default {
         case '#/space':
           comName.value = 'SpaceIndex';
           break;
-        case '#/test':
-          comName.value = 'TestIndex';
+        case '#/preference':
+          comName.value = 'Preference';//change preference's hash
           break;
         case '#/detail':
           comName.value = 'Details';
