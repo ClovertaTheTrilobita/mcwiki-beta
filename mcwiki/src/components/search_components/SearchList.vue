@@ -50,7 +50,7 @@
   </div> -->
 </template>
 
-<script scoped>
+<script >
 export default {
   name: 'SearchList',
   components: {},

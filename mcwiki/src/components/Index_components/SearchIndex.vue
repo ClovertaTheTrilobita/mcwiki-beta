@@ -3,12 +3,15 @@
     <form class="d-flex" role="search"  style="width: 50dvh; height: 45px;">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput1"
         ref="myInput1">
-      <button class="btn btn-success" type="submit" @click="SearchPushed">
+      <button class="btn btn-success" type="button" @click="SearchPushed">
         Search</button>
     </form>
   </div>
   <div>
     <search v-bind:search="search" ref="search" v-if="refresh"></search>
+  </div>
+  <div>
+    <button @click="CheckData">check</button>
   </div>
 </template>
 
@@ -17,12 +20,18 @@ import SearchList from '../search_components/SearchList.vue';
 
 export default {
   name: "SearchIndex",
+  props: {
+    datasent: {
+      type: Object,
+      required: true
+    },
+  },
   data() {
     return {
       users: ["Rocks", "Biome", "Blocks"],
       update: true,
       refresh: true,
-      search: []
+      search: [],
     }
   },
   components: {
@@ -52,6 +61,10 @@ export default {
         this.refresh = true
       })
     },
+
+    CheckData() {
+      console.log(this.datasent)
+    }
   }
 
 
