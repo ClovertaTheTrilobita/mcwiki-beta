@@ -10,6 +10,9 @@
   <div>
     <search v-bind:search="search" ref="search" v-if="refresh"></search>
   </div>
+  <div>
+    <button @click="">check</button>
+  </div>
 </template>
 
 <script>
@@ -17,6 +20,12 @@ import SearchList from '../search_components/SearchList.vue';
 
 export default {
   name: "SearchIndex",
+  props: {
+    datasent: {
+      type: Object,
+      required: true
+    },
+  },
   data() {
     return {
       users: ["Rocks", "Biome", "Blocks"],
@@ -52,6 +61,10 @@ export default {
         this.refresh = true
       })
     },
+
+    CheckData() {
+      console.log(this.datasent)
+    }
   }
 
 

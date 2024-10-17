@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <NavBar class="navbar"/>
-    <component :is="comName"></component> <!-- 使用 comName -->
+    <component :is="comName" ></component> <!-- 使用 comName -->
     <About />
   </div>
 </template>
