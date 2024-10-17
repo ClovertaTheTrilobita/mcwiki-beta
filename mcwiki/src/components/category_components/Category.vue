@@ -5,8 +5,8 @@
     <h1 class="display-5 fw-bold">Start From Here ...</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Build all the wonders you can think of in this sandbox game, uncover the mysteries
-        of strange mysteries, and survive the long night.  
-        In <span>Minecraft</span>, every play is a different experience, and the world
+        of strange mysteries, and survive the long night. </p>
+        <p class="lead mb-4">In <span>Minecraft</span>, every play is a different experience, and the world
         is full of unforgettable adventures. Explore and create in an infinite world, one square at a time, a world you can shape.</p>
 
     </div>
@@ -63,7 +63,7 @@
 <br><br><br><br>
   <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">When you play</h1>
   <br>
-  <h6 style="text-align: center; font-size: 1.2em; color: gray;">What is that? Don't worry. Click on the categories below to find and learn more!</h6>
+  <h6 style="text-align: center; font-size: 1.2em; color: gray;">What's this ... and ... what is that? Don't worry. Click on the categories below to find and learn more!</h6>
  <br>
   <div class="container mt-1" style="--bs-focus-ring-color: #5a5a5a85;">
     <div class="accordion" style="--bs-accordion-active-bg: #ffffff;" id="accordionExample">
@@ -219,8 +219,6 @@
 </template>
 
 <script>
-import modernizrCustom from './js/modernizr.custom';
-import toucheffects from './js/toucheffects';
 import Card1 from './Card1.vue';
 import Card2 from './Card2.vue';
 import Card3 from './Card3.vue';
@@ -245,8 +243,6 @@ export default {
 
       // }while(modernizrCustom.methods.function.b.documentElement == 'undefined');
 
-      modernizrCustom.methods.function();
-      toucheffects.methods.function1();
 
     }
   }
@@ -255,8 +251,7 @@ export default {
 </script>
 
 <style scoped>
-/* @import './css/component.css';
-@import './css/default.css'; */
+
 
 .accordion-body {
   background-color: aliceblue;
