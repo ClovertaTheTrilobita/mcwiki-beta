@@ -21,7 +21,7 @@
       <div class="card-body" style="text-align: left; background-color: #eefdf1;">
         <div class="tab-content">
           <div id="home" class="container tab-pane active show fade"> 
-            <div class="row row-cols-2 row-cols-lg-4">
+            <div class="row row-cols-2 row-cols-lg-3">
               <div class="col" v-for = "item in present"><Card :img_url="item.url" :text="item.descriptions" :title="item.title"/></div>
             </div>
           </div>
