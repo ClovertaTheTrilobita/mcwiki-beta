@@ -3,7 +3,7 @@
     <form class="d-flex" role="search"  style="width: 50dvh; height: 45px;">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput1"
         ref="myInput1">
-      <button class="btn btn-success" type="submit" @click="SearchPushed">
+      <button class="btn btn-success" type="button" @click="SearchPushed">
         Search</button>
     </form>
   </div>
