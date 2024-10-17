@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <NavBar />
+    <NavBar class="navbar"/>
     <component :is="comName"></component> <!-- 使用 comName -->
     <About />
   </div>
@@ -44,9 +44,22 @@ export default {
     // 根据 hash 初始化 comName
     const initializeComponent = () => {
       const hash = window.location.hash || '#/login'; // ****！如果 hash 为空，默认为登录页面
+      const navbars=document.querySelectorAll('.navbar');
+      if(hash=='#/login'){
+        navbars.forEach(function(navbar){
+          navbar.style.display='none';
+        })
+        comName.value='Login';
+      }
+      else{
+        navbars.forEach(function(navbar){
+          navbar.style.display='block';
+        })
+      }
       switch (hash) {
         case '#/login':
           comName.value = 'Login';
+          
           break;
         case '#/home':
           comName.value = 'HomeIndex';
