@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-3 mx-2">
+  <div class="card mb-3 mx-2" style="background-color: #F6FFF8;">
     <a href="#/detail" target="_blank">
       <img src="./media/1.png" class="card-img-top img-fluid" alt="..." id="source">
       <div class="card-body">

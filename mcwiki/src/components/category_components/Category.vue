@@ -65,15 +65,17 @@
   <br>
   <h6 style="text-align: center; font-size: 1.2em; color: gray;">What's this ... and ... what is that? Don't worry. Click on the categories below to find and learn more!</h6>
  <br>
-  <div class="container mt-1" style="--bs-focus-ring-color: #5a5a5a85;">
-    <div class="accordion" style="--bs-accordion-active-bg: #ffffff;" id="accordionExample">
+  <div class="container mt-1">
+    <div class="accordion" style="--bs-focus-ring-color: #6cb16385; --bs-accordion-btn-color: #eefdf1;
+    --bs-accordion-active-color: #eefdf1; --bs-accordion-bg: #eefdf1;" id="accordionExample">
 
 
       <!-- Drop down menue for Bloks&Items -->
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" 
+            style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
             Blocks&Items
           </button>
         </h2>
@@ -89,7 +91,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+            style="--bs-accordion-btn-bg: #32c674; --bs-accordion-active-bg: #32c674;">
             Biome
           </button>
         </h2>
@@ -104,7 +107,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+            style="--bs-accordion-btn-bg: #2bbb75; --bs-accordion-active-bg: #2bbb75;">
             DIM
           </button>
         </h2>
@@ -119,7 +123,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+            style="--bs-accordion-btn-bg: #24b074; --bs-accordion-active-bg: #24b074;">
             Entity
           </button>
         </h2>
@@ -134,7 +139,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+            style="--bs-accordion-btn-bg: #1ba173; --bs-accordion-active-bg: #1ba173;">
             Enchantment
           </button>
         </h2>
@@ -149,7 +155,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
+            style="--bs-accordion-btn-bg: #139372; --bs-accordion-active-bg: #139372;">
             Effect
           </button>
         </h2>
@@ -164,7 +171,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
+            style="--bs-accordion-btn-bg: #0c8672; --bs-accordion-active-bg: #0c8672;">
             Structres
           </button>
         </h2>
@@ -179,7 +187,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
+            style="--bs-accordion-btn-bg: #067b72; --bs-accordion-active-bg: #067b72;">
             Backstory
           </button>
         </h2>
@@ -194,7 +203,8 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
+            style="--bs-accordion-btn-bg: #007271; --bs-accordion-active-bg: #007271;">
             Game Settings
           </button>
         </h2>
@@ -251,11 +261,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-.accordion-body {
-  background-color: aliceblue;
-}
 
 .lead{
   span{
