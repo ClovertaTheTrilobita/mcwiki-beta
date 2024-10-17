@@ -1,7 +1,7 @@
 <template>
-  <!-- testing... -->
+  <!-- ----------以下代码正在测试，请勿改动---------- -->
   <input type="file" @change="handleFileUpload">
-
+  <!-- ----------以上代码正在测试，请勿改动---------- -->
 
   <div class="login-container">
     <h2>Login</h2>
@@ -55,6 +55,10 @@ export default {
       handleLogin
     };
   },
+
+
+
+  /* --------------------以下代码正在测试，请勿改动-------------------- */
   methods: {
     handleFileUpload(event) {
       // 获取用户选择的文件
@@ -106,6 +110,10 @@ export default {
       datasent: []
     }
   }
+  /* --------------------以上代码正在测试，请勿改动-------------------- */
+
+
+  
 };
 </script>
 
