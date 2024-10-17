@@ -61,10 +61,10 @@
               </div>
             </div>
 
-            <form class="d-flex" role="search" >
+            <!-- <form class="d-flex" role="search" >
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput" ref="myInput">
               <button class="btn btn-outline-light" type="submit" @click="SearchPushed">Search</button>
-            </form>
+            </form> -->
 
           </div>
         </div>
