@@ -7,9 +7,8 @@
 
           <a class="navbar-brand" href="#/home">
             <img src="../images/Minecraft_logo.png" class="mb-1 img_title" alt="logo">
-            Mincraft Wikipedia
+            Minecraft Wikipedia
           </a>
-
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar"
             aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -63,7 +62,7 @@
             </div>
 
             <form class="d-flex" role="search" >
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput" ref="myInput">
               <button class="btn btn-outline-light" type="submit" @click="SearchPushed">Search</button>
             </form>
 
@@ -72,16 +71,23 @@
       </nav>
     </div>
   </div>
+  <div style="display: none;">
+    <search v-bind:search="search"></search>
+  </div>
 </template>
 
 <script>
 import Category from '../category_components/Category.vue';
+import SearchList from '../search_components/SearchList.vue';
 
 
 export default {
   name: "NavBar",
   methods: {
     SearchPushed() {
+      this.search = document.getElementById("myInput").value;
+      console.log("Searched: " + this.search)
+      SearchList.methods.searchPushed(this.search)
       window.location.href = '#/search'
     },
     categroyClicked(){
@@ -90,9 +96,13 @@ export default {
   },
   data() {
     return {
-      username: 'Laurentina'
+      username: 'Laurentina',
+      search:[]
     };
-  }
+  },
+  components: {
+    'search': SearchList
+  },
 }
 
 </script>

@@ -5,12 +5,12 @@
     <h1 style="text-align: left; font-family: STHupo; font-size: 4em;">Search results</h1>
   </div>
 
-  <div v-for="data in users" class="d-flex justify-content-center" id="searchresult">
+  <!-- <div v-for="data in users" class="d-flex justify-content-center" id="searchresult">
     <div class="card center-block" style="width: 80rem;">
-      <!-- <div class="col-md-4">
+      <div class="col-md-4">
         <img src="../pic/3.jpg" alt="..." class="w-100">
-      </div> -->
-      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      </div>
+      <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
         <h4 class="card-title">{{ data }}</h4>
         <p class="card-text" style="color: grey; ">{{ data }}'s breaf intro.</p>
@@ -19,26 +19,34 @@
       </div>
     </div>
     <br>
-  </div>
+  </div> -->
 
-  <!-- <div v-for="data in users" class="d-flex justify-content-center" id="searchresult">
+  <div v-for="data in users" class="d-flex justify-content-center" id="searchresult">
     <div class="card" style="max-width: 80rem;">
       <div class="row g-0">
-        <div class="col-md-4">
-          <img src="../pic/3.jpg" alt="..." class="w-100">
+        <div class="col-sm-2">
+          <div style="font-size: 70%;">
+            <img src="..\images\Minecraft_logo.png" alt="..." class="w-100">
+          </div>
+
         </div>
-        <div class="col-md-8">
+        <div class="col-md-2">
           <div class="card-body">
-            <h5 class="card-title">{{data}}</h5>
-            <p class="card-text">
-              春夏秋冬皆自然,明月清风共我闲,有春风拂面的温柔,也有美好故事的发生,又一个春天如约而至,温柔的朝阳里布谷鸟声声呼唤,愿普天同安康,迎接春天到来的简...
+            <h5 class="card-title">{{ data }}</h5>
+            <p class="card-text" style="color: grey; ">
+              {{ data }}'s breaf intro...
             </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="#" class="btn btn-success" style="">Take a look</a>
+            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
+  <div v-for="sea in search" style="background-color: aqua;">
+    <p>SeachInput:</p>
+    <p>{{ sea }}</p>
+  </div>
 </template>
 
 <script scoped>
@@ -46,13 +54,34 @@
 export default {
   name: 'SearchList',
   components: {},
-  methods: {},
   props: {
     users: {           //这个就是父组件中子标签自定义名字
       type: Array,
       required: true
+    },
+    // search: {
+    //   type: String,
+    //   required: true
+    // }
+  },
+  methods: {
+    searchPushed(searchcontent) {
+      let searchresult=[]; var j = 0;
+      var text = ['a', 'b', 'c', 'd', 'a', 'a']
+      for (var i = 0; i < text.length; i++) {
+        if (text[i] == searchcontent){
+          searchresult[j] = text[i];
+          j++;
+        }
+      }
+      console.log("Search received: " + searchcontent)
+      for (var i = 0; i < searchresult.length; i++)
+      {
+        console.log("Search result: "+ searchresult)
+      }
+      return searchresult;
     }
-  }
+  },
 }
 
 

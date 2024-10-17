@@ -1,10 +1,10 @@
 <template>
   <div class="card mb-3 mx-2">
-    <a href="#">
+    <a href="https://mc.163.com/fab/" target="_blank">
       <img src="./media/4.png" class="card-img-top img-fluid" alt="..." id="source">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" style="font-family: STXinwei;font-weight: bold;">CN WEBSITE</h5>
+        <p class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif;color:gray">This is a website provided by My World China agent NetEase. Click to learn more.</p>
       </div>
     </a>
   </div>

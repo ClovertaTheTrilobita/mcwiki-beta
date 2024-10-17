@@ -1,10 +1,10 @@
 <script>
 import Category from '../category_components/Category.vue';
-import Test1 from '../category_components/Test1.vue';
+import Details from '../category_components/Details.vue';
 
 export default {
   name: 'CategoryIndex',
-  components: { Category, Test1 },
+  components: { Category, Details },
   data() {
     return {
       comName1: 'Category',  // Initalize comName
