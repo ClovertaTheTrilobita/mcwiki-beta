@@ -3,10 +3,12 @@
   <div class="LoginIndex">
     <div class="content">
       <div class="login_container" style="color: #eefdf1;">
-        <div class="bg-light">
-          <!-- ----------以下代码正在测试，请勿改动---------- -->
-          <!-- <input type="file" @change="handleFileUpload"> -->
-          <!-- ----------以上代码正在测试，请勿改动---------- -->
+        <div class="row fixed-top">
+          <div class="col-1 signln">
+            <!-- ----------以下代码正在测试，请勿改动---------- -->
+            <input type="file" @change="handleFileUpload">
+            <!-- ----------以上代码正在测试，请勿改动---------- -->
+          </div>
         </div>
         <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Login</h1>
         <form @submit.prevent="handleLogin">
@@ -200,6 +202,16 @@ button {
 button:hover {
   background-color: #369d73;
   /* 按钮悬停时的颜色 */
+}
+
+.signln {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.signln:hover {
+  transform: translate(0);
+  opacity: 1;
 }
 
 </style>
