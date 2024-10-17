@@ -1,36 +1,46 @@
 <template>
-  <!-- ----------以下代码正在测试，请勿改动---------- -->
-  <input type="file" @change="handleFileUpload">
-  <!-- ----------以上代码正在测试，请勿改动---------- -->
 
-  <div class="login-container">
-    <h2>Login</h2>
-    <form @submit.prevent="handleLogin">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" v-model="username" id="username" required placeholder="Enter username" />
+  <div class="LoginIndex">
+    <div class="content">
+      <div class="login_container" style="color: #eefdf1;">
+        <div class="bg-light">
+          <!-- ----------以下代码正在测试，请勿改动---------- -->
+          <!-- <input type="file" @change="handleFileUpload"> -->
+          <!-- ----------以上代码正在测试，请勿改动---------- -->
+        </div>
+        <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Login</h1>
+        <form @submit.prevent="handleLogin">
+          <div class="form-group">
+            <label for="username" class="label">Username:</label>
+            <input type="text" v-model="username" id="username" required placeholder="Enter username" />
+          </div>
+          <div class="form-group">
+            <label for="password" class="label">Password:</label>
+            <input type="password" v-model="password" id="password" required placeholder="Enter password" />
+          </div>
+          <button type="submit" style="color: #eefdf1">Login</button>
+        </form>
+        <About class="fixed-bottom"/>
       </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" v-model="password" id="password" required placeholder="Enter password" />
-      </div>
-      <button type="submit">Login</button>
-    </form>
+    </div>
   </div>
 
   <div style="display: none;">
     <datasent v-bind:datasent="datasent" ref="datasent"></datasent>
   </div>
+
 </template>
 
 <script>
 import { ref } from 'vue';
 import SearchIndex from '../Index_components/SearchIndex.vue';
+import About from '../public_components/About.vue'
 
 export default {
   name: 'Login',
   components: {
-    'datasent': SearchIndex
+    'datasent': SearchIndex,
+    About,
   },
   setup() {
     const username = ref('');
@@ -118,25 +128,29 @@ export default {
 </script>
 
 <style scoped>
-.login-container {
+
+.LoginIndex {
+  height: 100vh;
+  background: url('./images/background_01.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.content {
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.100);
+}
+
+.login_container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f9f9f9;
-  /* 背景颜色，提供一个干净的界面 */
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* 添加轻微的阴影 */
   border-radius: 8px;
-  /* 圆角效果 */
 }
 
-h2 {
-  margin-bottom: 20px;
-  color: #333;
-  /* 字体颜色 */
+label {
+  margin-bottom: 5px;
 }
 
 .form-group {
@@ -181,4 +195,5 @@ button:hover {
   background-color: #369d73;
   /* 按钮悬停时的颜色 */
 }
+
 </style>

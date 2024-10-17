@@ -2,7 +2,7 @@
   <div class="content">
     <NavBar class="navbar" />
     <component :is="comName" v-on:listenToChildEvent='showMsgfromChild' v-bind:datasent="datasent"></component> <!-- 使用 comName -->
-    <About />
+    <About class="about" />
   </div>
 </template>
 
@@ -43,10 +43,14 @@ export default {
 
     // 根据 hash 初始化 comName
     const initializeComponent = () => {
-      const hash = window.location.hash || '#/login'; // ****！如果 hash 为空，默认为登录页面
+      const hash = window.location.hash || '#/home'; // ****！如果 hash 为空，默认为登录页面
       const navbars = document.querySelectorAll('.navbar');
+      const abouts = document.querySelectorAll('.about');
       if (hash == '#/login') {
         navbars.forEach(function (navbar) {
+          navbar.style.display = 'none';
+        })
+        abouts.forEach(function (navbar) {
           navbar.style.display = 'none';
         })
         comName.value = 'Login';
@@ -55,11 +59,13 @@ export default {
         navbars.forEach(function (navbar) {
           navbar.style.display = 'block';
         })
+        abouts.forEach(function (navbar) {
+          navbar.style.display = 'block';
+        })
       }
       switch (hash) {
         case '#/login':
           comName.value = 'Login';
-
           break;
         case '#/home':
           comName.value = 'HomeIndex';

@@ -11,11 +11,11 @@
             Developed by
           </p>
           <p class="copyleft">Group 3 &nbsp;|&nbsp; 
-            <a href="https://github.com/ATwhiteIIIQwQ" class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover">Laur</a>&nbsp;
-            <a href="https://github.com/ClovertaTheTrilobita" class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover">Steve</a>&nbsp;
-            <a href="https://github.com/Theo-polis" class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover">Raydon</a>&nbsp;
-            <a href="https://github.com/zzh-zzh66" class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover">Hurlburt</a>&nbsp;
-            <a href="#" class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover">Tony</a></p>
+            <a href="https://github.com/ATwhiteIIIQwQ" >Laur</a>&nbsp;
+            <a href="https://github.com/ClovertaTheTrilobita" >Steve</a>&nbsp;
+            <a href="https://github.com/Theo-polis">Raydon</a>&nbsp;
+            <a href="https://github.com/zzh-zzh66">Hurlburt</a>&nbsp;
+            <a href="#">Tony</a></p>
         </div>
       </div>
     </div>
@@ -34,5 +34,10 @@
   }
 </script>
 
-<style>
+<style scoped>
+
+a {
+    color: #48af3a;
+  }
+
 </style>
