@@ -43,13 +43,14 @@
       </div>
     </div>
   </div>
-  <div v-for="sea in search" style="background-color: aqua;">
+  <!-- <div v-for="sea in search" style="background-color: aqua;">
     <p>SeachInput:</p>
     <p>{{ sea }}</p>
-  </div>
+  </div> -->
 </template>
 
 <script scoped>
+import { nextTick } from 'vue';
 
 export default {
   name: 'SearchList',
@@ -62,7 +63,11 @@ export default {
     search: {
       type: Array,
       required: true
-    }
+    },
+    // curId: {
+    //   type: String,
+    //   required: true
+    // }
   },
   methods: {
     // searchPushed(searchcontent) {

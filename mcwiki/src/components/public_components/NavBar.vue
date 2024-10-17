@@ -12,7 +12,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar"
             aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-         </button>
+          </button>
 
           <div class="collapse navbar-collapse" id="navBar">
 
@@ -52,18 +52,27 @@
                 </div>
                 <div class="Bottom">
                   <nav class="nav flex-column">
-                    <a class="nav-link btn btn-light avater-link" href="#" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Account</a>
-                    <a class="nav-link btn btn-light avater-link" href="#/test" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>
+                    <a class="nav-link btn btn-light avater-link" href="#"
+                      style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Account</a>
+                    <a class="nav-link btn btn-light avater-link" href="#/test"
+                      style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>
                     <hr>
-                    <a class="nav-link btn btn-light avater-link" href="#/404" style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Sign out</a>
+                    <a class="nav-link btn btn-light avater-link" href="#/404"
+                      style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Sign out</a>
                   </nav>
                 </div>
               </div>
             </div>
 
-            <form class="d-flex" role="search" >
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" clearable id="myInput" ref="myInput">
-              <button class="btn btn-outline-light" type="submit" @click="SearchPushed">Search</button>
+            <form class="d-flex" role="search">
+
+              <button class="btn btn-outline-light" type="submit" @click="SearchPushed"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+              </button>
             </form>
 
           </div>
@@ -72,45 +81,54 @@
     </div>
   </div>
   <div style="display: none;">
-    <search v-bind:search="search"></search>
+    <search v-bind:search="search" ref="search"></search>
   </div>
 </template>
 
 <script>
 import Category from '../category_components/Category.vue';
 import SearchList from '../search_components/SearchList.vue';
+import { nextTick } from 'vue';
+import SearchIndex from '../Index_components/SearchIndex.vue';
+
 
 
 export default {
   name: "NavBar",
   methods: {
     SearchPushed() {
-      let searchcontent = document.getElementById("myInput").value;
-      console.log("Searched: " + searchcontent)
-      let searchresult=[]; var j = 0;
-      var text = ['a', 'b', 'c', 'd', 'a', 'a']
-      for (var i = 0; i < text.length; i++) {
-        if (text[i] == searchcontent){
-          searchresult[j] = text[i];
-          j++;
-        }
-      }
-      this.search = searchresult
-      console.log("Search received: " + searchcontent)
-      for (var i = 0; i < searchresult.length; i++)
-      {
-        console.log("Search result: "+ this.search)
-      }
+      // let searchcontent = document.getElementById("myInput").value;
+      // console.log("Searched: " + searchcontent)
+      // let searchresult=[]; var j = 0;
+      // var text = ['a', 'b', 'c', 'd', 'a', 'a']
+      // for (var i = 0; i < text.length; i++) {
+      //   if (text[i] == searchcontent){
+      //     searchresult[j] = text[i];
+      //     j++;
+      //   }
+      // }
+      // this.search = searchresult
+      // console.log("Search received: " + searchcontent)
+      // for (var i = 0; i < searchresult.length; i++)
+      // {
+      //   console.log("Search result: "+ this.search)
+      // }
+      // SearchIndex.methods.refreshFalse()
       window.location.href = '#/search'
+      // this.$nextTick(() => {
+      // 		// 2. 再调用子组件的方法使用该属性
+      // 		// 如果不使用 nextTick的话，子组件方法内获取到的有可能是这次赋值之前的值，下次调用时才能获取到此次赋值的值（应该是跟 Vue的异步事件队列有关系）
+      // 		SearchIndex.methods.refreshTrue()
+      // 	})
     },
-    categroyClicked(){
+    categroyClicked() {
       Category.methods.categoryClicked()
     }
   },
   data() {
     return {
       username: 'Laurentina',
-      search:[]
+      // search:[]
     };
   },
   components: {
@@ -121,7 +139,6 @@ export default {
 </script>
 
 <style scoped>
-
 .img_title {
   width: 30px;
   height: 24px;
@@ -172,7 +189,6 @@ export default {
 .avater-link {
   text-align: left;
 }
-
 </style>
 
 <!--
