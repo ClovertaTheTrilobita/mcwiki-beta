@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" style="background-color: #2d7054; height: 60px;"></div>
+  <div class="container-fluid" style="background-color: #2d7054; height: 80px;"></div>
   <div class="container mt-5">
     <div class="mb-5">
       <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Minecraft Materials</h1>

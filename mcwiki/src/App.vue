@@ -1,4 +1,13 @@
+<template>
+  <div class="content">
+    <NavBar />
+    <component :is="comName"></component> <!-- 使用 comName -->
+    <About />
+  </div>
+</template>
+
 <script>
+import { ref, onMounted } from 'vue'; // 导入 ref 和 onMounted
 import NavBar from './components/public_components/NavBar.vue';
 import SearchIndex from './components/Index_components/SearchIndex.vue';
 import HomeIndex from './components/Index_components/HomeIndex.vue';
@@ -10,83 +19,80 @@ import i404NotFound from './components/public_components/i404NotFound.vue';
 import About from './components/public_components/About.vue';
 import TestIndex from './components/Index_components/TestIndex.vue';
 import CategoryIndex from './components/Index_components/CategoryIndex.vue';
-
+import Login from './components/Login_componments/Login.vue';
 
 export default {
   name: "App",
-  components: { NavBar, SearchIndex, HomeIndex, AccMessageIndex, SysMessageIndex, ContactIndex, SpaceIndex, i404NotFound, About, TestIndex, CategoryIndex},
-  data() {
-    return {
-      comName: 'HomeIndex',  // Initalize comName
-    }
+  components: {
+    Login,
+    NavBar,
+    SearchIndex,
+    HomeIndex,
+    AccMessageIndex,
+    SysMessageIndex,
+    ContactIndex,
+    SpaceIndex,
+    i404NotFound,
+    About,
+    TestIndex,
+    CategoryIndex
   },
-  created() {
-    if (location.hash == '#/search'){
-      this.comName = 'SearchIndex'
-    }
-    if (location.hash == '#/home'){
-      this.comName = 'HomeIndex'
-    }
-    if (location.hash == '#/menu'){
-      this.comName = 'MenuIndex'
-    }
-    if (location.hash == '#/sysmessage'){
-      this.comName = 'SysMessageIndex'
-    }
-    if (location.hash == '#/contact'){
-      this.comName = 'ContactIndex'
-    }
-    if (location.hash == '#/space'){
-      this.comName = 'SpaceIndex'
-    }
-    window.onhashchange = () => {
-      switch (location.hash) {
-        case '':
-          this.comName = 'HomeIndex'
-          break
+
+  setup() {
+    const comName = ref('Login'); // 默认显示登录组件
+
+    // 根据 hash 初始化 comName
+    const initializeComponent = () => {
+      const hash = window.location.hash || '#/login'; // ****！如果 hash 为空，默认为登录页面
+      switch (hash) {
+        case '#/login':
+          comName.value = 'Login';
+          break;
         case '#/home':
-          this.comName = 'HomeIndex'
-          console.log(this.comName)
-          break
-        case '#/category':
-          this.comName = 'CategoryIndex'
-          break
-        case '#/sysmessage':
-          this.comName = 'SysMessageIndex'
-          break
-        case '#/accmessage':
-          this.comName = 'AccMessageIndex'
-          break
-        case '#/contact':
-          this.comName = 'ContactIndex'
-          break
-        case '#/space':
-          this.comName = 'SpaceIndex'
-          break
+          comName.value = 'HomeIndex';
+          break;
         case '#/search':
-          this.comName = 'SearchIndex'
-          console.log(this.comName)
-          break
+          comName.value = 'SearchIndex';
+          break;
+        case '#/category':
+          comName.value = 'CategoryIndex';
+          break;
+        case '#/sysmessage':
+          comName.value = 'SysMessageIndex';
+          break;
+        case '#/accmessage':
+          comName.value = 'AccMessageIndex';
+          break;
+        case '#/contact':
+          comName.value = 'ContactIndex';
+          break;
+        case '#/space':
+          comName.value = 'SpaceIndex';
+          break;
         case '#/test':
-          this.comName = 'TestIndex'
-          break
-          // test
+          comName.value = 'TestIndex';
+          break;
         default:
-          this.comName = 'i404NotFound'
-          break
+          comName.value = 'i404NotFound'; // 404 页面
+          break;
       }
-    }
-  }
+    };
+
+    const handleHashChange = () => {
+      initializeComponent(); // 每次 hash 变化时更新 comName
+    };
+
+    onMounted(() => {
+      initializeComponent(); // 初始化时设置当前组件
+      window.addEventListener('hashchange', handleHashChange); // 监听 hash 变化
+    });
+
+    return {
+      comName
+    };
+  },
 }
 </script>
-
-<template>
-  <div class="content">
-    <NavBar />
-    <component :is="comName"></component>
-    <About/>
-  </div>
-</template>
 
 <style scoped>
 #app {
@@ -94,3 +100,4 @@ export default {
   margin-top: 0px;
 }
 </style>
+
