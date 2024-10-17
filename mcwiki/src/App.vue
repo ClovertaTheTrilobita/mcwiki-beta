@@ -47,17 +47,19 @@ export default {
 
     // 根据 hash 初始化 comName
     const initializeComponent = () => {
-      const hash = window.location.hash || '#/home'; // ****！如果 hash 为空，默认为登录页面
+      const hash = window.location.hash || '#/home'; // ****！如果 hash 为空，默认为home界面
       const navbars = document.querySelectorAll('.navbar');
       const abouts = document.querySelectorAll('.about');
-      if(hash=='#login'||'#/preference'){
+      if(hash=='#/preference'){
         abouts.forEach(function(about){
           about.style.display='none';
+          console.log("run1");
         })
       }
       else{
         abouts.forEach(function(about){
           about.style.display='block';
+          console.log("run2");
         })
       }
       //分离about和navbar显示控制
@@ -65,13 +67,22 @@ export default {
         navbars.forEach(function (navbar) {
           navbar.style.display = 'none';
         })
+        abouts.forEach(function(about){
+          about.style.display='none';
+          console.log("run3");
+        })
         comName.value = 'Login';
       }
       else {
         navbars.forEach(function (navbar) {
           navbar.style.display = 'block';
         })
+        abouts.forEach(function(about){
+          about.style.display='block';
+          console.log("run4");
+        })
       }
+
       switch (hash) {
         case '#/login':
           comName.value = 'Login';
