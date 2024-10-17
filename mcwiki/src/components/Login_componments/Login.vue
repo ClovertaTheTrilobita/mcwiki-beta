@@ -89,10 +89,16 @@ export default {
         const rowData = {};
 
         for (let j = 0; j < headers.length; j++) {
-          rowData[headers[j]] = row[j];
+          if (j > 0){
+            rowData[headers[j].substring(1, headers[j].length - 1)] = row[j];
+          }else{
+            rowData[headers[j]] = row[j];
+          }
         }
 
         csvData.push(rowData);
+        console.log("rowData:")
+        console.log(rowData)
       }
 
       // 在控制台中打印CSV数据
@@ -113,7 +119,7 @@ export default {
   /* --------------------以上代码正在测试，请勿改动-------------------- */
 
 
-  
+
 };
 </script>
 
