@@ -77,7 +77,7 @@ export default {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa 30%, #0ba668);
+  /* background: linear-gradient(135deg, #f8f9fa 30%, #0ba668);  delete background-color: ; */
   padding: 40px;
 }
 

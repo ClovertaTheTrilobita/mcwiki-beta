@@ -50,20 +50,25 @@ export default {
       const hash = window.location.hash || '#/home'; // ****！如果 hash 为空，默认为登录页面
       const navbars = document.querySelectorAll('.navbar');
       const abouts = document.querySelectorAll('.about');
+      if(hash=='#login'||'#/preference'){
+        abouts.forEach(function(about){
+          about.style.display='none';
+        })
+      }
+      else{
+        abouts.forEach(function(about){
+          about.style.display='block';
+        })
+      }
+      //分离about和navbar显示控制
       if (hash == '#/login') {
         navbars.forEach(function (navbar) {
-          navbar.style.display = 'none';
-        })
-        abouts.forEach(function (navbar) {
           navbar.style.display = 'none';
         })
         comName.value = 'Login';
       }
       else {
         navbars.forEach(function (navbar) {
-          navbar.style.display = 'block';
-        })
-        abouts.forEach(function (navbar) {
           navbar.style.display = 'block';
         })
       }
