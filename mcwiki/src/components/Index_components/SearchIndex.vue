@@ -11,7 +11,7 @@
     <search v-bind:search="search" ref="search" v-if="refresh"></search>
   </div>
   <div>
-    <button @click="">check</button>
+    <button @click="CheckData">check</button>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
       users: ["Rocks", "Biome", "Blocks"],
       update: true,
       refresh: true,
-      search: []
+      search: [],
     }
   },
   components: {

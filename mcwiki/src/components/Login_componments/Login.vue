@@ -95,6 +95,10 @@ export default {
       console.log(csvData);
       this.datasent = csvData;
       console.log(this.datasent)
+      this.sendTOParent()
+    },
+    sendTOParent() {
+      this.$emit('listenToChildEvent', this.datasent)
     }
   },
   data() {
