@@ -50,47 +50,19 @@
 </template>
 
 <script scoped>
-import { nextTick } from 'vue';
-
 export default {
   name: 'SearchList',
   components: {},
   props: {
-    // users: {           //这个就是父组件中子标签自定义名字
-    //   type: Array,
-    //   required: true
-    // },
     search: {
       type: Array,
       required: true
     },
-    // curId: {
-    //   type: String,
-    //   required: true
-    // }
   },
   methods: {
-    // searchPushed(searchcontent) {
-    //   let searchresult=[]; var j = 0;
-    //   var text = ['a', 'b', 'c', 'd', 'a', 'a']
-    //   for (var i = 0; i < text.length; i++) {
-    //     if (text[i] == searchcontent){
-    //       searchresult[j] = text[i];
-    //       j++;
-    //     }
-    //   }
-    //   console.log("Search received: " + searchcontent)
-    //   for (var i = 0; i < searchresult.length; i++)
-    //   {
-    //     console.log("Search result: "+ searchresult)
-    //   }
-    //   return searchresult;
-    // }
+
   },
 }
-
-
-
 </script>
 
 <style scoped>
@@ -100,11 +72,6 @@ export default {
 
 #headers {
   margin-top: 10px;
-}
-
-.card-body {
-  /* background-color: rgb(217, 217, 217); */
-  /* background-color: rgb(247, 250, 255); */
 }
 
 .card:hover {
