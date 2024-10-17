@@ -7,59 +7,65 @@
         <p v-else>{{ item.text }}</p>
       </div>
       <div class="actions">
-        <button @click="toggleLike(index)" class="btn">
+        <button @click="toggleLike(index)" class="like-btn">
           <span v-if="item.liked">❤️</span>
           <span v-else>🤍</span>
         </button>
         <span class="like-count">{{ item.likes }}</span>
+      </div>
+      <div class="comments">
+        <input v-model="item.newComment" placeholder="Add a comment..." class="comment-input" />
+        <button @click="addComment(index)" class="comment-btn">Submit</button>
+        <ul class="comment-list">
+          <li v-for="(comment, commentIndex) in item.comments" :key="commentIndex">{{ comment }}</li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import imageSrc from './media/a15.jpg';
+import videoSrc from './media/b11.mp4';
 
-// 通过 import 导入资源
-  import imageSrc from './media/a15.jpg';
-  import videoSrc from './media/b11.mp4';
-
-  export default {
-    data() {
-      return {
-        items: [
-          { type: 'image', text: 'highlight', likes: 0, liked: false },
-          { type: 'video', text: 'Amazing adventure', likes: 0, liked: false },
-          { type: 'text', text: 'HAVE FUN!!!!!', likes: 0, liked: false },
-        ],
-      };
+export default {
+  data() {
+    return {
+      items: [
+        { type: 'image', text: 'highlight', likes: 236, liked: false, comments: [], newComment: '' },
+        { type: 'video', text: 'Amazing adventure', likes: 112, liked: false, comments: [], newComment: '' },
+        { type: 'text', text: 'HAVE FUN!!!!!', likes: 17, liked: false, comments: [], newComment: '' },
+      ],
+    };
+  },
+  methods: {
+    toggleLike(index) {
+      this.items[index].liked = !this.items[index].liked;
+      if (this.items[index].liked) {
+        this.items[index].likes++;
+      } else {
+        this.items[index].likes--;
+      }
     },
-    methods: {
-      toggleLike(index) {
-        this.items[index].liked = !this.items[index].liked;
-        if (this.items[index].liked) {
-          this.items[index].likes++;
-        } else {
-          this.items[index].likes--;
-        }
-      },
+    addComment(index) {
+      if (this.items[index].newComment.trim()) {
+        this.items[index].comments.push(this.items[index].newComment);
+        this.items[index].newComment = '';
+      }
     },
-    computed: {
-      imageSrc() {
-        return imageSrc;
-      },
-      videoSrc() {
-        return videoSrc;
-      },
+  },
+  computed: {
+    imageSrc() {
+      return imageSrc;
     },
+    videoSrc() {
+      return videoSrc;
+    },
+  },
 };
-
 </script>
 
 <style scoped>
-
-/* 添加自定义字体 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 * {
   font-family: 'Poppins', sans-serif;
 }
@@ -86,6 +92,9 @@
   box-shadow: 0 10px 20px rgba(237, 6, 6, 0.05);
   margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .item:hover {
@@ -96,6 +105,7 @@
 /* 内容样式 */
 .content {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .media {
@@ -106,15 +116,15 @@
 }
 
 /* 操作按钮和点赞数样式 */
-/* 操作按钮和点赞数样式 */
 .actions {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .like-btn {
-  background-color: #ff6b6b; /* 去掉边框，使用平滑的背景颜色 */
+  background-color: #ff6b6b;
   color: #ffffff;
   padding: 10px;
   border-radius: 50%;
@@ -124,19 +134,19 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影，使按钮有立体感 */
-  border: none; /* 去除边框 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 .like-btn:hover {
   background-color: #fa5252;
-  transform: scale(1.1); /* 鼠标悬停时按钮放大 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影 */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .like-btn:active {
-  transform: scale(0.95); /* 点按时缩小，增加点击效果 */
-  background-color: #f03e3e; /* 点按时按钮颜色更深 */
+  transform: scale(0.95);
+  background-color: #f03e3e;
 }
 
 .like-count {
@@ -146,4 +156,46 @@
   font-weight: 600;
 }
 
+/* 留言样式 */
+.comments {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.comment-btn {
+  background-color: #0ba668;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-btn:hover {
+  background-color: #098450;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.comment-list li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
 </style>
+
+

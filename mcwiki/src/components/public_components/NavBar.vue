@@ -52,9 +52,10 @@
                 </div>
                 <div class="Bottom">
                   <nav class="nav flex-column">
-                    <a class="nav-link btn btn-light avater-link" href="#/login"
+                    <!-- 改变account的hash值 -->
+                    <a class="nav-link btn btn-light avater-link" href="#/login"  
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Account</a>
-                    <a class="nav-link btn btn-light avater-link" href="#/test"
+                    <a class="nav-link btn btn-light avater-link" href="#/preference"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>
                     <hr>
                     <a class="nav-link btn btn-light avater-link" href="#/404"
@@ -65,8 +66,9 @@
             </div>
 
             <form class="d-flex" role="search">
-              <button class="btn btn-outline-light" type="button" @click="SearchJump" style="margin-bottom: 2px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search mx-2" style="margin-bottom: 2px;"
+
+              <button class="btn btn-outline-light" type="submit" @click="SearchJump">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
                   viewBox="0 0 16 16">
                   <path
                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -124,7 +126,7 @@ export default {
 .avater {
   position: absolute;
   top: 8px;
-  right: 70px;
+  right: 298px;
   max-width: 40px;
   max-height: 40px;
   border-radius: 50%;
@@ -139,7 +141,7 @@ export default {
 .menu {
   position: absolute;
   top: 50px;
-  right: 13px;
+  right: 239px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 245px;
   width: 210px;
@@ -154,7 +156,7 @@ export default {
 }
 
 .avater-container:hover .avater {
-  transform: translateY(15px) translateX(-18px) scale(2);
+  transform: translateY(15px) translateX(-16px) scale(2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
