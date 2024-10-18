@@ -11,6 +11,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
+    "csvtojson": "^2.0.10",
     "element-plus": "^2.8.5",
     "jschardet": "^3.1.4",
     "papaparse": "^5.4.1",
