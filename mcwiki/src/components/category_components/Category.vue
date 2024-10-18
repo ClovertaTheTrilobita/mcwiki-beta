@@ -1,16 +1,6 @@
 ﻿<template>
 <div class="container">
-  <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src=".\media\Weel.png" alt="" width="90" height="90">
-    <h1 class="display-5 fw-bold">Start From Here ...</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Build all the wonders you can think of in this sandbox game, uncover the mysteries
-        of strange mysteries, and survive the long night. </p>
-        <p class="lead mb-4">In <span>Minecraft</span>, every play is a different experience, and the world
-        is full of unforgettable adventures. Explore and create in an infinite world, one square at a time, a world you can shape.</p>
-
-    </div>
-  </div>
+  <Start />
 
   <!-- 翻页
 <div class="container demo-3">
@@ -30,33 +20,7 @@
 
 
 <!-- 卡片 -->
-  <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">Before you play</h1>
-  <br>
-  <h6 style="text-align: center; font-size: 1.2em; color: gray;">Browse the news, download the game, customize the material...... Your Minecraft journey began here.</h6>
- <br>
-  <div class="card-header">
-    <div class="card-body" style="text-align: left;">
-      <div class="tab-content">
-        <div id="home" class="container tab-pane active show">
-          <div class="row row-cols-2 row-cols-lg-4">
-            <div class="col">
-              <Card1 />
-            </div>
-            <div class="col">
-              <Card2 />
-            </div>
-            <div class="col">
-              <Card3 />
-            </div>
-            <div class="col">
-              <Card4 />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <Cards />
 
 
 
@@ -173,7 +137,7 @@
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
             style="--bs-accordion-btn-bg: #0c8672; --bs-accordion-active-bg: #0c8672;">
-            Structres
+            Multiblocked Structures
           </button>
         </h2>
         <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -189,7 +153,7 @@
           <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
             style="--bs-accordion-btn-bg: #067b72; --bs-accordion-active-bg: #067b72;">
-            Backstory
+            Features
           </button>
         </h2>
         <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -233,13 +197,16 @@ import Card1 from './Card1.vue';
 import Card2 from './Card2.vue';
 import Card3 from './Card3.vue';
 import Card4 from './Card4.vue';
+import Start from './Start.vue';
+import Cards from './Cards.vue';
 import placeHolders1 from './placeHolders1.vue';
 
 export default {
   name: 'Category',
   components: {
-    Card1,Card2,Card3,Card4,
+    Card1,Card2,Card3,Card4,Cards,
     placeHolders1,
+    Start,
   },
   created() {
 
@@ -262,10 +229,4 @@ export default {
 
 <style scoped>
 
-.lead{
-  span{
-    font-weight: bold;
-    color: #2f7054;
-  }
-}
 </style>

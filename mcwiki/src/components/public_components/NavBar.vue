@@ -59,7 +59,7 @@
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>
                     <hr>
                     <a class="nav-link btn btn-light avater-link" href="#/404"
-                      style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Sign out</a>
+                      style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Sign Out</a>
                   </nav>
                 </div>
               </div>

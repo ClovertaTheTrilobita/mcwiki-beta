@@ -21,7 +21,8 @@
       <div class="card-body" style="text-align: left; background-color: #eefdf1;">
         <div class="tab-content">
           <div id="home" class="container tab-pane active show fade"> 
-            <div class="row row-cols-2 row-cols-lg-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+              <!-- sm md lg xl xxl -->
               <div class="col" v-for = "item in present"><Card :img_url="item.url" :text="item.descriptions" :title="item.title"/></div>
             </div>
           </div>
@@ -113,7 +114,7 @@
       return {
         present: [
           {
-            "title": "Items/Blocks",
+            "title": "Items&Blocks",
             "descriptions": "Newly added or rewritten items and blocks",
             "url": img1,
           },
@@ -143,12 +144,12 @@
             "url": img6,
           },
           {
-            "title": "Multiblocked Structure",
+            "title": "Multiblocked Structures",
             "descriptions": "Events triggered by players building blocks",
             "url": img7,
           },
           {
-            "title": "Feature",
+            "title": "Features",
             "descriptions": "Newly added or rewritten structures, features, jigsaws",
             "url": img8,
           },
