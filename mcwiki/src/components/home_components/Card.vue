@@ -1,6 +1,6 @@
 <template>
   <div class="card mb-4 mx-3 mt-4" style="--bs-card-height: 510px; background-color: #F6FFF8;">
-    <a href="#/category">
+    <a href="#/jumpcategory">
       <img :src="img_url" class="card-img-top img-fluid Card-img" alt="Image" id="source">
       <div class="card-body">
         <h4 class="card-title">{{ title }}</h4>

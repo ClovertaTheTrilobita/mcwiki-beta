@@ -1,6 +1,6 @@
 ﻿<template>
 <div class="container">
-  <Start />
+  <Start v-if="currentHash !== '#/jumpcategory'" />
 
   <!-- 翻页
 <div class="container demo-3">
@@ -20,16 +20,16 @@
 
 
 <!-- 卡片 -->
-  <Cards />
+  <Cards v-if="currentHash !== '#/jumpcategory'" />
 
 
 
-<br><br><br><br>
+  <br><br><br><br>
   <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">When you play</h1>
   <br>
   <h6 style="text-align: center; font-size: 1.2em; color: gray;">What's this ... and ... what is that? Don't worry. Click on the categories below to find and learn more!</h6>
- <br>
-  <div class="container mt-1">
+  <br>
+  <div class="container mt-1" :style="Accordion">
     <div class="accordion" style="--bs-focus-ring-color: #6cb16385; --bs-accordion-btn-color: #eefdf1;
     --bs-accordion-active-color: #eefdf1; --bs-accordion-bg: #eefdf1;" id="accordionExample">
 
@@ -178,18 +178,10 @@
           </div>
         </div>
       </div>
-
     </div>
+    <About v-if="currentHash == '#/jumpcategory'" :class="{'fixed-bottom': isFixed}"/>
   </div>
 </div>
-
-
-
-
-
-
-
-
 </template>
 
 <script>
@@ -200,6 +192,7 @@ import Card4 from './Card4.vue';
 import Start from './Start.vue';
 import Cards from './Cards.vue';
 import placeHolders1 from './placeHolders1.vue';
+import About from '../public_components/About.vue';
 
 export default {
   name: 'Category',
@@ -207,11 +200,29 @@ export default {
     Card1,Card2,Card3,Card4,Cards,
     placeHolders1,
     Start,
+    About,
+  },
+  data() {
+    return {
+      currentHash: window.location.hash,
+      isFixed: true,
+      Accordion: {
+        height: '72.5vh',
+      }
+    };
   },
   created() {
-
-
-
+    window.addEventListener('hashchange',this.onHashChange);
+  },
+  mounted() {
+    window.addEventListener('scroll', this.checkScroll);
+    window.addEventListener('resize', this.checkScroll);
+    this.checkScroll();
+  },
+  beforeDestroy() {
+    window.removeEventListener('hashchange',this.onHashChange);
+    window.removeEventListener('scroll', this.checkScroll);
+    window.removeEventListener('resize', this.checkScroll);
   },
   methods: {
     categoryClicked() {
@@ -219,8 +230,16 @@ export default {
       //   console.log("waiting");
 
       // }while(modernizrCustom.methods.function.b.documentElement == 'undefined');
-
-
+    },
+    onHashChange() {
+      this.currentHash = window.location.hash;
+    },
+    checkScroll() {
+      const hasScrollbar = document.documentElement.scrollHeight > window.innerHeight;
+      this.isFixed = !hasScrollbar;
+      this.Accordion = hasScrollbar
+        ? {  }
+        : { height: '72.5vh' };
     }
   }
 }
