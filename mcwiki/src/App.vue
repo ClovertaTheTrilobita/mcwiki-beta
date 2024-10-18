@@ -82,6 +82,12 @@ export default {
         })
       }
 
+      if(hash=='#/search'){
+        abouts.forEach(function(about){
+          about.style.display='none';
+        })
+      }
+
       switch (hash) {
         case '#/login':
           comName.value = 'Login';
