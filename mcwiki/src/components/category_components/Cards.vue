@@ -2,7 +2,8 @@
 
   <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">Before you play</h1>
   <br>
-  <h6 style="text-align: center; font-size: 1.2em; color: gray;">Browse the news, download the game, customize the material...... Your Minecraft journey began here.</h6>
+  <h6 style="text-align: center; font-size: 1.2em; color: gray;">Browse the news, download the game, customize the
+    material...... Your Minecraft journey began here.</h6>
   <br>
   <div class="row row-cols-2 row-cols-lg-4 mx-1">
     <div class="col">
@@ -23,19 +24,17 @@
 
 <script>
 
-  import Card1 from './Card1.vue';
-  import Card2 from './Card2.vue';
-  import Card3 from './Card3.vue';
-  import Card4 from './Card4.vue';
+import Card1 from './Card1.vue';
+import Card2 from './Card2.vue';
+import Card3 from './Card3.vue';
+import Card4 from './Card4.vue';
 
-  export default {
-    name: "Cards",
-    components: {
-      Card1,Card2,Card3,Card4,
-    }
+export default {
+  name: "Cards",
+  components: {
+    Card1, Card2, Card3, Card4,
   }
+}
 </script>
 
-<style scoped>
-
-</style> 
+<style scoped></style>

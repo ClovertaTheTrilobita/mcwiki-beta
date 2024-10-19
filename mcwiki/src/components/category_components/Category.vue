@@ -1,187 +1,188 @@
 ﻿<template>
-<div class="container">
-  <Start v-if="currentHash !== '#/jumpcategory'" />
-
-  <!-- 翻页
-<div class="container demo-3">
-<ul class="grid cs-style-4">
-  <li>
-    <figure>
-      <div><img src="./images/5.png" alt=""></div>
-      <figcaption>
-        <h3>Safari</h3>
-        <span>Jacob Cummings</span>
-        <a href="http://www.jq22.com">Take a look</a>
-      </figcaption>
-    </figure>
-  </li>
-</ul>
-</div> -->
+  <div class="container">
+    <Start v-if="currentHash !== '#/jumpcategory'" />
 
 
-<!-- 卡片 -->
-  <Cards v-if="currentHash !== '#/jumpcategory'" />
+    <!-- 卡片 -->
+    <Cards v-if="currentHash !== '#/jumpcategory'" />
 
 
 
-  <br><br><br><br>
-  <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">When you play</h1>
-  <br>
-  <h6 style="text-align: center; font-size: 1.2em; color: gray;">What's this ... and ... what is that? Don't worry. Click on the categories below to find and learn more!</h6>
-  <br>
-  <div class="container mt-1" :style="Accordion">
-    <div class="accordion" style="--bs-focus-ring-color: #6cb16385; --bs-accordion-btn-color: #eefdf1;
+    <br><br><br><br>
+    <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">When you play</h1>
+    <br>
+    <h6 style="text-align: center; font-size: 1.2em; color: gray;">What's this ... and ... what is that? Don't worry.
+      Click on the categories below to find and learn more!</h6>
+    <br>
+    <div class="container mt-1" :style="Accordion">
+      <div class="accordion" style="--bs-focus-ring-color: #6cb16385; --bs-accordion-btn-color: #eefdf1;
     --bs-accordion-active-color: #eefdf1; --bs-accordion-bg: #eefdf1;" id="accordionExample">
 
 
-      <!-- Drop down menue for Bloks&Items -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" 
-            style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
-            Blocks&Items
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            <!-- <a href="#/test1" >111</a> -->
-            test
-          </div>
-        </div>
-      </div>
+        <!-- Drop down menue for Bloks&Items -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+              style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
+              Blocks&Items
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              <div class="row row-cols-8 cols-sm-5 mx-0">
+<!--card start-->
+                <div  v-for="i in hhh"  class="col">
+                  <div class="card mb-3 mx-1" style="background-color: #F6FFF8;">
+                    <a href="#/detail" target="_blank">
+                      <img src="./media/Weel.png" class=" card-img-top img-fluid" alt="..." id="source">
+                      <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">test</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+<!--card end-->
 
-      <!-- Drop down menue for Boime -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-            style="--bs-accordion-btn-bg: #32c674; --bs-accordion-active-bg: #32c674;">
-            Biome
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            MC bios will appear here.
-          </div>
-        </div>
-      </div>
+    
 
-      <!-- Drop down menue for DIM -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-            style="--bs-accordion-btn-bg: #2bbb75; --bs-accordion-active-bg: #2bbb75;">
-            DIM
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            World dimention.
+           
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Drop down menue for Entity -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
-            style="--bs-accordion-btn-bg: #24b074; --bs-accordion-active-bg: #24b074;">
-            Entity
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            Minecraft Entities.
+        <!-- Drop down menue for Boime -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+              style="--bs-accordion-btn-bg: #32c674; --bs-accordion-active-bg: #32c674;">
+              Biome
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              MC bios will appear here.
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Drop down menue for Enchantment -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
-            style="--bs-accordion-btn-bg: #1ba173; --bs-accordion-active-bg: #1ba173;">
-            Enchantment
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            Enchantment for tools will appear here.
+        <!-- Drop down menue for DIM -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+              style="--bs-accordion-btn-bg: #2bbb75; --bs-accordion-active-bg: #2bbb75;">
+              DIM
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              World dimention.
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Drop down menue for Effects -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
-            style="--bs-accordion-btn-bg: #139372; --bs-accordion-active-bg: #139372;">
-            Effect
-          </button>
-        </h2>
-        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample" bg-light>
-          <div class="accordion-body" style="text-align: left;">
-            Buffs&Debuffs appears here.
+        <!-- Drop down menue for Entity -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+              style="--bs-accordion-btn-bg: #24b074; --bs-accordion-active-bg: #24b074;">
+              Entity
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              Minecraft Entities.
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Drop down menue for Structres -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
-            style="--bs-accordion-btn-bg: #0c8672; --bs-accordion-active-bg: #0c8672;">
-            Multiblocked Structures
-          </button>
-        </h2>
-        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            Block Structres.
+        <!-- Drop down menue for Enchantment -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+              style="--bs-accordion-btn-bg: #1ba173; --bs-accordion-active-bg: #1ba173;">
+              Enchantment
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              Enchantment for tools will appear here.
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Drop down menue for Game Backstories -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
-            style="--bs-accordion-btn-bg: #067b72; --bs-accordion-active-bg: #067b72;">
-            Features
-          </button>
-        </h2>
-        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            The MC Game Backstories.
+        <!-- Drop down menue for Effects -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
+              style="--bs-accordion-btn-bg: #139372; --bs-accordion-active-bg: #139372;">
+              Effect
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample" bg-light>
+            <div class="accordion-body" style="text-align: left;">
+              Buffs&Debuffs appears here.
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Drop down menue for In Game Settings -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
-            style="--bs-accordion-btn-bg: #007271; --bs-accordion-active-bg: #007271;">
-            Game Settings
-          </button>
-        </h2>
-        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            The new game settings appeared.
+        <!-- Drop down menue for Structres -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
+              style="--bs-accordion-btn-bg: #0c8672; --bs-accordion-active-bg: #0c8672;">
+              Multiblocked Structures
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              Block Structres.
+            </div>
+          </div>
+        </div>
+
+        <!-- Drop down menue for Game Backstories -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
+              style="--bs-accordion-btn-bg: #067b72; --bs-accordion-active-bg: #067b72;">
+              Features
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              The MC Game Backstories.
+            </div>
+          </div>
+        </div>
+
+        <!-- Drop down menue for In Game Settings -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
+              style="--bs-accordion-btn-bg: #007271; --bs-accordion-active-bg: #007271;">
+              Game Settings
+            </button>
+          </h2>
+          <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              The new game settings appeared.
+            </div>
           </div>
         </div>
       </div>
+      <About v-if="currentHash == '#/jumpcategory'" :class="{ 'fixed-bottom': isFixed }" />
     </div>
-    <About v-if="currentHash == '#/jumpcategory'" :class="{'fixed-bottom': isFixed}"/>
   </div>
-</div>
 </template>
 
 <script>
@@ -197,7 +198,7 @@ import About from '../public_components/About.vue';
 export default {
   name: 'Category',
   components: {
-    Card1,Card2,Card3,Card4,Cards,
+    Card1, Card2, Card3, Card4, Cards,
     placeHolders1,
     Start,
     About,
@@ -212,7 +213,7 @@ export default {
     };
   },
   created() {
-    window.addEventListener('hashchange',this.onHashChange);
+    window.addEventListener('hashchange', this.onHashChange);
   },
   mounted() {
     window.addEventListener('scroll', this.checkScroll);
@@ -220,7 +221,7 @@ export default {
     this.checkScroll();
   },
   beforeDestroy() {
-    window.removeEventListener('hashchange',this.onHashChange);
+    window.removeEventListener('hashchange', this.onHashChange);
     window.removeEventListener('scroll', this.checkScroll);
     window.removeEventListener('resize', this.checkScroll);
   },
@@ -238,7 +239,7 @@ export default {
       const hasScrollbar = document.documentElement.scrollHeight > window.innerHeight;
       this.isFixed = !hasScrollbar;
       this.Accordion = hasScrollbar
-        ? {  }
+        ? {}
         : { height: '72.5vh' };
     }
   }
@@ -247,5 +248,17 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
 </style>
