@@ -19,7 +19,8 @@ import i404NotFound from './components/public_components/i404NotFound.vue';
 import About from './components/public_components/About.vue';
 import TestIndex from './components/Index_components/TestIndex.vue';
 import CategoryIndex from './components/Index_components/CategoryIndex.vue';
-import Login from './components/Login_componments/Login.vue';
+import Login from './components/account_components/Login.vue';
+import Register from './components/account_components/Register.vue';
 import Details from './components/category_components/Details.vue';
 import Preference from './components/account_components/Preference.vue';
 import Data from './data/entry.json';
@@ -28,6 +29,7 @@ export default {
   name: "App",
   components: {
     Login,
+    Register,
     Preference,
     NavBar,
     SearchIndex,
@@ -48,7 +50,7 @@ export default {
     const currentItem = ref(null);
     // 根据 hash 初始化 comName
     const initializeComponent = () => {
-      const hash = window.location.hash || '#/home'; // ****！如果 hash 为空，默认为home界面
+      const hash = window.location.hash;
       const navbars = document.querySelectorAll('.navbar');
       const abouts = document.querySelectorAll('.about');
       const decodedHash = decodeURIComponent(hash.slice(2)); // 去掉前面的 `#/` 并解码
@@ -63,7 +65,7 @@ export default {
       }
 
       //分离about和navbar显示控制
-      if (hash == '#/login') {
+      if (hash == '#/login' || hash == '#/register') {
         navbars.forEach(function (navbar) {
           navbar.style.display = 'none';
         })
@@ -98,8 +100,14 @@ export default {
         currentItem.value = matchedItem;
       } else {
         switch (hash) {
+          case '#/':
+            comName.value = 'HomeIndex';
+            break;
           case '#/login':
             comName.value = 'Login';
+            break;
+          case '#/register':
+            comName.value = 'Register';
             break;
           case '#/home':
             comName.value = 'HomeIndex';
