@@ -67,6 +67,10 @@ export default {
 
     CheckData() {
       console.log(this.datasent)
+    },
+
+    BFSearch(searchcontent){
+      
     }
   }
 
