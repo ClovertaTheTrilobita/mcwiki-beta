@@ -45,8 +45,7 @@
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body" style="text-align: left;">
-            <!-- <a href="#/test1" >111</a> -->
-            test
+            <a v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank" class="mx-2">{{ block.Entry }}</a>
           </div>
         </div>
       </div>
@@ -193,6 +192,7 @@ import Start from './Start.vue';
 import Cards from './Cards.vue';
 import placeHolders1 from './placeHolders1.vue';
 import About from '../public_components/About.vue';
+import Entry from '../../data/entry.json';
 
 export default {
   name: 'Category',
@@ -204,6 +204,7 @@ export default {
   },
   data() {
     return {
+      Entry,
       currentHash: window.location.hash,
       isFixed: true,
       Accordion: {
@@ -247,5 +248,10 @@ export default {
 </script>
 
 <style scoped>
+
+a {
+    color: #48af3a;
+    text-decoration: none;
+  }
 
 </style>

@@ -2,8 +2,8 @@
 import csv from 'csvtojson';
 import { promises as fs } from 'fs';
 
-const csvFilePath = './src/data/TestData.csv';
-const jsonFilePath = './src/data/output.json';
+const csvFilePath = './src/data/Entry.csv';
+const jsonFilePath = './src/data/entry.json';
 
 csv()
   .fromFile(csvFilePath)
