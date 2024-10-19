@@ -7,20 +7,19 @@
 		</div>
 		<!-- hero组件1 -->
 		<div class="px-4 pt-3 my-5 text-center ">
-			<h1 class="display-4 fw-bold">ITEM NAME</h1>
-			<div class="col-lg-6 mx-auto">
-				<p class="lead mb-4">Parent Category</p>
-				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
-				</div>
-			</div>
-			<div class="overflow-hidden" style="max-height: 15vh;">
-				<div class="container px-5">
-					<img src="./media/Weel.png" class="img-fluid border rounded-3 shadow-lg mb-4" width="192"
-						height="192" loading="lazy">
-				</div>
-			</div>
-		</div>
-		<!-- hero组件2 -->
+    <h1 class="display-4 fw-bold">ITEM NAME{{ Item.Entry }}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Parent Category</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 15vh;">
+      <div class="container px-5">
+        <img src="./media/Weel.png" class="img-fluid border rounded-3 shadow-lg mb-4" width="192" height="192" loading="lazy">
+      </div>
+    </div>
+  </div>
+<!-- hero组件2 -->
 		<div style="background-color: white;position: relative;top: -49px;" class="container my-5">
 			<div class=" row p-5 pb-0 pe-lg-0 pt-lg-5 rounded-3 border shadow-lg">
 
@@ -169,7 +168,11 @@
 
 export default {
 	name: 'Details',
-
+	props: {
+		Item: {
+			type: Object,
+		}
+	}
 }
 
 

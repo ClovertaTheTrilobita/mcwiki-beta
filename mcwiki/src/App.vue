@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <NavBar class="navbar" />
-    <component :is="comName" v-on:listenToChildEvent='showMsgfromChild' v-bind:datasent="datasent"></component> <!-- 使用 comName -->
+    <component :is="comName" v-on:listenToChildEvent='showMsgfromChild' v-bind:datasent="datasent" :Item="currentItem"></component> <!-- 使用 comName -->
     <About class="about" />
   </div>
 </template>
@@ -22,6 +22,7 @@ import CategoryIndex from './components/Index_components/CategoryIndex.vue';
 import Login from './components/Login_componments/Login.vue';
 import Details from './components/category_components/Details.vue';
 import Preference from './components/account_components/Preference.vue';
+import Data from './data/entry.json';
 
 export default {
   name: "App",
@@ -43,14 +44,18 @@ export default {
   },
 
   setup() {
-    const comName = ref('Login'); // 默认显示登录组件
-
+    const comName = ref('');
+    const currentItem = ref(null);
     // 根据 hash 初始化 comName
     const initializeComponent = () => {
       const hash = window.location.hash || '#/home'; // ****！如果 hash 为空，默认为home界面
       const navbars = document.querySelectorAll('.navbar');
       const abouts = document.querySelectorAll('.about');
-      
+      const decodedHash = decodeURIComponent(hash.slice(2)); // 去掉前面的 `#/` 并解码
+      const matchedItem = Data.find(Item => Item.Entry == decodedHash);
+
+
+
       if(hash=='#/preference'){
         abouts.forEach(function(about){
           about.style.display='none';
@@ -88,43 +93,49 @@ export default {
         })
       }
 
-      switch (hash) {
-        case '#/login':
-          comName.value = 'Login';
-          break;
-        case '#/home':
-          comName.value = 'HomeIndex';
-          break;
-        case '#/search':
-          comName.value = 'SearchIndex';
-          break;
-        case '#/category':
-          comName.value = 'CategoryIndex';
-          break;
-        case '#/jumpcategory':
-          comName.value = 'CategoryIndex';
-          break;
-        case '#/sysmessage':
-          comName.value = 'SysMessageIndex';
-          break;
-        case '#/accmessage':
-          comName.value = 'AccMessageIndex';
-          break;
-        case '#/contact':
-          comName.value = 'ContactIndex';
-          break;
-        case '#/space':
-          comName.value = 'SpaceIndex';
-          break;
-        case '#/preference':
-          comName.value = 'Preference';//change preference's hash
-          break;
-        case '#/detail':
-          comName.value = 'Details';
-          break;
-        default:
-          comName.value = 'i404NotFound'; // 404 页面
-          break;
+      if (matchedItem) {
+        comName.value = 'Details';
+        currentItem.value = matchedItem;
+      } else {
+        switch (hash) {
+          case '#/login':
+            comName.value = 'Login';
+            break;
+          case '#/home':
+            comName.value = 'HomeIndex';
+            break;
+          case '#/search':
+            comName.value = 'SearchIndex';
+            break;
+          case '#/category':
+            comName.value = 'CategoryIndex';
+            break;
+          case '#/jumpcategory':
+            comName.value = 'CategoryIndex';
+            break;
+          case '#/sysmessage':
+            comName.value = 'SysMessageIndex';
+            break;
+          case '#/accmessage':
+            comName.value = 'AccMessageIndex';
+            break;
+          case '#/contact':
+            comName.value = 'ContactIndex';
+            break;
+          case '#/space':
+            comName.value = 'SpaceIndex';
+            break;
+          case '#/preference':
+            comName.value = 'Preference';//change preference's hash
+            break;
+          case '#/detail':
+            comName.value = 'Details';
+            break;
+          default:
+            comName.value = 'i404NotFound'; // 404 页面
+            currentItem.value = null;
+            break;
+        }
       }
     };
 
@@ -138,18 +149,20 @@ export default {
     });
 
     return {
-      comName
+      comName,
+      currentItem,
     };
   },
   methods: {
     showMsgfromChild(data) {
       console.log(data)
       this.datasent = data;
-    }
+    },
   },
   data() {
     return {
-      datasent: []
+      datasent: [],
+      Data,
     }
   }
 }

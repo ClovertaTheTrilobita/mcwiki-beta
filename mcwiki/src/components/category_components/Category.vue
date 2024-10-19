@@ -19,38 +19,21 @@
     --bs-accordion-active-color: #eefdf1; --bs-accordion-bg: #eefdf1;" id="accordionExample">
 
 
-        <!-- Drop down menue for Bloks&Items -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
-              style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
-              Blocks&Items
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
-              <div class="row row-cols-8 cols-sm-5 mx-0">
-<!--card start-->
-                <div  v-for="i in hhh"  class="col">
-                  <div class="card mb-3 mx-1" style="background-color: #F6FFF8;">
-                    <a href="#/detail" target="_blank">
-                      <img src="./media/Weel.png" class=" card-img-top img-fluid" alt="..." id="source">
-                      <div class="card-body">
-                        <h5 class="card-title" style="text-align: center;">test</h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-<!--card end-->
-
-    
-
-           
-              </div>
-            </div>
+      <!-- Drop down menue for Bloks&Items -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" 
+            style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
+            Blocks&Items
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body" style="text-align: left;">
+            <a v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank" class="mx-2">{{ block.Entry }}</a>
           </div>
         </div>
+      </div>
 
         <!-- Drop down menue for Boime -->
         <div class="accordion-item">
@@ -194,6 +177,7 @@ import Start from './Start.vue';
 import Cards from './Cards.vue';
 import placeHolders1 from './placeHolders1.vue';
 import About from '../public_components/About.vue';
+import Entry from '../../data/entry.json';
 
 export default {
   name: 'Category',
@@ -205,6 +189,7 @@ export default {
   },
   data() {
     return {
+      Entry,
       currentHash: window.location.hash,
       isFixed: true,
       Accordion: {
@@ -248,17 +233,10 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
 
 a {
-  text-decoration: none;
-  color: #000000;
-}
+    color: #48af3a;
+    text-decoration: none;
+  }
+
 </style>
