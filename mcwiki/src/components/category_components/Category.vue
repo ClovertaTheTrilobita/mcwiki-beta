@@ -19,21 +19,22 @@
     --bs-accordion-active-color: #eefdf1; --bs-accordion-bg: #eefdf1;" id="accordionExample">
 
 
-      <!-- Drop down menue for Bloks&Items -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" 
-            style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
-            Blocks&Items
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
-            <a v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank" class="mx-2">{{ block.Entry }}</a>
+        <!-- Drop down menue for Bloks&Items -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+              style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
+              Blocks&Items
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="text-align: left;">
+              <a v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank" class="mx-2">{{
+                block.Entry }}</a>
+            </div>
           </div>
         </div>
-      </div>
 
         <!-- Drop down menue for Boime -->
         <div class="accordion-item">
@@ -46,7 +47,16 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body" style="text-align: left;">
-              MC bios will appear here.
+              <!--start-->
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank" >
+                  <a :href="'#/' + block.Entry" target="_blank">
+                  <div style="text-align: center;">An Image</div><!--Image-->
+                  <div class="card-content" >{{ block.Entry }}</div><!--Name-->
+                </a>
+                </div>
+              </div>
+              <!--end-->
             </div>
           </div>
         </div>
@@ -194,6 +204,8 @@ export default {
       isFixed: true,
       Accordion: {
         height: '72.5vh',
+
+
       }
     };
   },
@@ -233,10 +245,50 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color: #48af3a;
+  text-decoration: none;
+}
+
+
+
+
+#cardd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  /* 卡片之间的间距 */
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+  width: calc(12.5% - 16px);/* 减去间距，确保8张卡片并排 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #F6FFF8;
+}
+
+.card:hover {
+  transform:  scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  text-align: center;
+  font-size: 10.9px;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
 
 a {
-    color: #48af3a;
     text-decoration: none;
+    color: #000000;
   }
-
 </style>
