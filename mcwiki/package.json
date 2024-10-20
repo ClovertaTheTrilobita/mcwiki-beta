@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
     "element-plus": "^2.8.5",
+    "express": "^4.21.1",
     "jschardet": "^3.1.4",
     "papaparse": "^5.4.1",
     "vue": "^3.4.29",

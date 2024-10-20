@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import axios from 'axios';
 
 const store = createStore({
   state: {
@@ -13,17 +14,26 @@ const store = createStore({
     }
   },
   actions: {
-    login({ commit }, user) {
-      // 实现登录逻辑
-      commit('setUser', user);
+    async login({ commit }, user) {
+      try {
+        const response = await axios.post('http://localhost:3000/login', user);
+        commit('setUser', response.data);
+      } catch (error) {
+        console.error('Login failed:', error);
+        throw error;
+      }
     },
     logout({ commit }) {
       // 实现登出逻辑
       commit('clearUser');
     },
-    register({ commit }, user) {
-      // 实现注册逻辑
-      commit('setUser', user);
+    async register({ commit }, user) {
+      try {
+        const response = await axios.post('http://localhost:3000/register', user);
+        commit('setUser', response.data);
+      } catch (error) {
+        console.error('Registration failed:', error);
+      }
     }
   }
 });
