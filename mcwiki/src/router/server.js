@@ -88,6 +88,12 @@ app.post('/favorites', (req, res) => {
       }
 
       const favorites = data ? JSON.parse(data) : [];
+      // const itemExists = favorites.some(fav => fav.Enttry === item.Enttry);
+
+      // if (itemExists) {
+      //   return res.status(409).json({ error: 'Item already exists in favorites' });
+      // }
+
       favorites.push( item );
 
       fs.writeFile(filePath, JSON.stringify(favorites, null, 2), err => {
@@ -96,8 +102,38 @@ app.post('/favorites', (req, res) => {
           return;
         }
 
+        console.log('Favorites data added:', favorites);
         res.status(201).json({ message: 'Favorite added successfully' });
       });
+    });
+  });
+});
+
+app.get('/favorites', (req, res) => {
+  const token = req.headers.authorization.split(' ')[1];
+  jwt.verify(token, SECRET_KEY, (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    const username = decoded.username; // 使用用户名
+    const filePath = `favorites_${username}.json`;
+
+    fs.readFile(filePath, (err, data) => {
+      if (err) {
+        if (err.code === 'ENOENT') {
+          // 如果文件不存在，返回空数组
+          console.log('File not found, returning empty array');
+          return res.status(200).json([]);
+        } else {
+          console.error('File read error:', err);
+          return res.status(500).json({ error: 'Internal Server Error' });
+        }
+      }
+
+      const favorites = JSON.parse(data);
+      console.log('Favorites data:', favorites);
+      res.status(200).json(favorites);
     });
   });
 });

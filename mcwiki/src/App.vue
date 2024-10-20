@@ -25,6 +25,7 @@ import Register from './components/account_components/Register.vue';
 import Details from './components/category_components/Details.vue';
 import Preference from './components/account_components/Preference.vue';
 import Data from './data/entry.json';
+import axios from 'axios';
 
 export default {
   name: "App",
@@ -51,6 +52,8 @@ export default {
     const currentItem = ref(null);
     const isLoggedIn = ref(false);
     const user = ref(null);
+    const favorites = ref([]);
+
     // 根据 hash 初始化 comName
     const initializeComponent = () => {
       const hash = window.location.hash;
@@ -59,7 +62,7 @@ export default {
       const decodedHash = decodeURIComponent(hash.slice(2)); // 去掉前面的 `#/` 并解码
       const matchedItem = Data.find(Item => Item.Entry == decodedHash);
 
-      if(hash=='#/preference'){
+      if(hash == '#/preference'){
         abouts.forEach(function(about){
           about.style.display='none';
         })
@@ -86,6 +89,9 @@ export default {
       if (matchedItem) {
         comName.value = 'Details';
         currentItem.value = matchedItem;
+      } else if ( hash == '#/preference') {
+        comName.value = 'Preference';
+        currentItem.value = favorites.value;
       } else {
         switch (hash) {
           case '#/':
@@ -121,9 +127,6 @@ export default {
           case '#/space':
             comName.value = 'SpaceIndex';
             break;
-          case '#/preference':
-            comName.value = 'Preference';//change preference's hash
-            break;
           case '#/detail':
             comName.value = 'Details';
             break;
@@ -145,9 +148,24 @@ export default {
         const decodedToken = jwtDecode(token);
         user.value = { username: decodedToken.username };
         isLoggedIn.value = true;
+        fetchFavorites(token);
       } else {
         isLoggedIn.value = false;
         user.value = null;
+      }
+    };
+
+    const fetchFavorites = async (token) => {
+      try {
+        const response = await axios.get('http://localhost:3000/favorites', {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        favorites.value = response.data;
+        console.log('Fetched favorites:', favorites.value);
+      } catch (error) {
+        console.error('Failed to fetch favorites:', error);
       }
     };
 
@@ -161,7 +179,8 @@ export default {
       comName,
       currentItem,
       isLoggedIn,
-      user
+      user,
+      favorites,
     };
   },
 }

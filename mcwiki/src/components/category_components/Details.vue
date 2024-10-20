@@ -87,8 +87,12 @@ export default {
 	      await this.addFavorite({ favorite, token });
         alert('收藏成功');
   	  } catch (error) {
-	  	  console.error('收藏失败:', error);
-      	alert('收藏失败');
+	  	  if (error.response && error.response.status === 409) {
+					alert('该项目已经在收藏列表中');
+				} else {
+					console.error('收藏失败:', error);
+      		alert('收藏失败');
+				}
 	    }
   	},
   },

@@ -1,6 +1,7 @@
 <template>
   <div class="preference-list">
     <h1>小红书风格页面</h1>
+    <div v-for = "items in Item">{{ items.Entry }}</div>
     <div class="preference-items">
       <PreferenceCard
         v-for="(post, index) in posts"
@@ -26,6 +27,12 @@ import image109 from './media/background_02.png';
 
 
 export default {
+  name: 'Preference',
+  props: {
+    Item: {
+      type: Array,
+    }
+  },
   components: {
     PreferenceCard,
   },

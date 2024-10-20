@@ -3,5 +3,15 @@
     "Entry": "Log",
     "Text": "A log or stem is a naturally occurring block found in trees or huge fungi, primarily used as a building block and to create planks, a versatile crafting ingredient. There are currently ten types of logs: oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry blossom, pale oak,[only \"Winter Drop\" Experiment] crimson, and warped.",
     "Category": "Block"
+  },
+  {
+    "Entry": "Wooden Trapdoor",
+    "Text": "A wooden trapdoor is a variant of the trapdoor that can be opened and closed by the player without redstone.",
+    "Category": "Block"
+  },
+  {
+    "Entry": "Warped Wart Block",
+    "Text": "Warped wart blocks are a decorative block found in warped forests, generating as part of huge warped fungus.",
+    "Category": "Block"
   }
 ]
