@@ -8,12 +8,11 @@
     "password": "1234"
   },
   {
-<<<<<<< HEAD
     "username":"zzh",
     "password":"1234"
-=======
+  },
+  {
     "username": "yasir",
     "password": "123456"
->>>>>>> 2fb9c3b88141efd8c7480fda921f1988f292eee9
   }
 ]

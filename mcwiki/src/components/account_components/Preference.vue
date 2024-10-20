@@ -59,6 +59,18 @@ export default {
           image: 'https://via.placeholder.com/200x300.png?text=文章3',
           likes: 7,
         },
+        {
+          title: '文章6',
+          description: '这是关于文章3的描述内容。',
+          image: 'https://via.placeholder.com/200x300.png?text=文章3',
+          likes: 7,
+        },
+        {
+          title: '文章6',
+          description: '这是关于文章3的描述内容。',
+          image: 'https://via.placeholder.com/200x300.png?text=文章3',
+          likes: 7,
+        },
       ],
     };
   },
