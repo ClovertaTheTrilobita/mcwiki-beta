@@ -35,7 +35,7 @@
 							探索和用各种方块建造建筑物。Minecraft的创造者为瑞典游戏设计师马库斯阿列克谢·泊松，也就是Notch。
 							2014年9月，Minecraft及其开发公司Mojang被Microsoft收购。
 							2017年9月18日，PC/Mac版Minecraft正式更名为Minecraft:Java版（Minecraft:Java
-							Edition）,与基岩版（Minecraft:Bedrock Edition）这一 多平台版本区分开来。目前Minecraft可分为Java版、基岩版和教育版三个主要版本。</p>
+							Edition）,与基岩版Minecraft:Bedrock Edition这一 多平台版本区分开来。目前Minecraft可分为Java版、基岩版和教育版三个主要版本。</p>
 					</div>
 				</div>
 				<div class="col-lg-3  overflow-hidden ">
