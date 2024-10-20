@@ -50,14 +50,7 @@ export default {
       let searchcontent = document.getElementById("myInput1").value;
       console.log("Searched: " + searchcontent)
       let searchresult = []; var j = 0;
-      console.log(AllData[0])
-      var text = ['a', 'b', 'c', 'd', 'a', 'a']
-      // for (var i = 0; i < AllData.length; i++) {
-      //   if (AllData[i].Entry == searchcontent) {
-      //     searchresult[j] = AllData[i];
-      //     j++;
-      //   }
-      // }
+      //console.log(AllData[0])
       searchresult = this.BFSearch(searchcontent, AllData)
       this.search = searchresult
       console.log("Search received: " + searchcontent)
@@ -75,15 +68,16 @@ export default {
       console.log(this.datasent)
     },
 
-    BFSearch(searchcontent, searchdata) {
+    BFSearch(searchcontent1, searchdata1) {
       var l = 0; var searchresult = []; var flag = new Boolean(false);
       console.log("Starting search.")
-      
-      for (var i = 0; i < searchdata.length; i++) {
-        for (var k = 0; k < searchdata[i].Entry.length; k++) {
+      var searchcontent = searchcontent1.toLowerCase();
+      for (var i = 0; i < searchdata1.length; i++) {
+        var searchdata = searchdata1[i].Entry.toLowerCase();
+        for (var k = 0; k < searchdata.length; k++) {
           flag = false;
           for (var j = 0; j < searchcontent.length; j++) {
-            if (searchcontent[j] == searchdata[i].Entry[k + j]) {
+            if (searchcontent[j] == searchdata[k + j]) {
               flag = true;
               console.log("flag:" + flag)
               continue;
@@ -96,7 +90,7 @@ export default {
           if (flag) {
             console.log("Got:")
 
-            searchresult[l] = searchdata[i];
+            searchresult[l] = searchdata1[i];
             console.log(searchresult[l])
             l++;
             break;
