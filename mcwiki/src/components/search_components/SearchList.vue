@@ -36,7 +36,7 @@
             <p class="card-text" style="color: grey; ">
               {{ data.Text }}......
             </p>
-            <a href="#" class="btn btn-success" style="">Take a look</a>
+            <a :href="'#/' + data.Entry" class="btn btn-success" style="" target="_blank">Take a look</a>
             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
         </div>

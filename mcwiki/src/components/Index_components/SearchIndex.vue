@@ -89,7 +89,6 @@ export default {
           }
           if (flag) {
             console.log("Got:")
-
             searchresult[l] = searchdata1[i];
             console.log(searchresult[l])
             l++;
