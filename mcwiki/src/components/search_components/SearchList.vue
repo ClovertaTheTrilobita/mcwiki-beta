@@ -1,27 +1,5 @@
 ﻿<template>
-  <!-- <input  type="file" id="files" ref="refFile" v-on:change="importCsv"> -->
-  <!-- <li v-for="data in users">{{ data }}</li> -->
-  <!-- <div class="d-flex justify-content-center" style="width: 50rem;" id="headers">
-    <h1 style="text-align: left; font-family: STHupo; font-size: 4em;">Search results</h1>
-  </div> -->
-
-  <!-- <div v-for="data in users" class="d-flex justify-content-center" id="searchresult">
-    <div class="card center-block" style="width: 80rem;">
-      <div class="col-md-4">
-        <img src="../pic/3.jpg" alt="..." class="w-100">
-      </div>
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h4 class="card-title">{{ data }}</h4>
-        <p class="card-text" style="color: grey; ">{{ data }}'s breaf intro.</p>
-        <a href="#" class="btn btn-success">Take a look</a>
-
-      </div>
-    </div>
-    <br>
-  </div> -->
-
-   <div v-for="data in search" class="d-flex justify-content-center" id="searchresult" >
+  <div v-for="data in search" class="d-flex justify-content-center" id="searchresult">
     <div class="card" style="width: 80rem;">
       <div class="row g-0">
         <div class="col-sm-2">
@@ -49,11 +27,11 @@
   </div> -->
 </template>
 
-<script >
+<script>
 
 export default {
   name: 'SearchList',
-  components: { },
+  components: {},
   props: {
     search: {
       type: Object,
@@ -62,7 +40,7 @@ export default {
   },
   data() {
     return {
-      
+
     };
   },
   methods: {
@@ -91,13 +69,29 @@ export default {
   animation-name: fade;
   animation-duration: 0.3s;
 }
+
 @-webkit-keyframes fade {
-  from {opacity: 0.2; transform: translateY(70%);} 
-  to {opacity: 1; transform: translateY(0%);}
+  from {
+    opacity: 0.2;
+    transform: translateY(70%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
+
 @keyframes fade {
-  from {opacity: 0.2; transform: translateY(70%);} 
-  to {opacity: 1; transform: translateY(0%);}
+  from {
+    opacity: 0.2;
+    transform: translateY(70%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 
