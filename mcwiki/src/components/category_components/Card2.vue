@@ -21,6 +21,9 @@
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.card-body{
+  background-color: white;
+}
 
 .card:hover {
   transform:  scale(1.05);

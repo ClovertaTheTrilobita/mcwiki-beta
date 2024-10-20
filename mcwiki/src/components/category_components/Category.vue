@@ -47,16 +47,16 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body" style="text-align: left;">
-              <!--start-->
+              <!--card start-->
               <div class="container" id="cardd">
-                <div class="card" v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank" >
+                <div class="card" v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank"  >
                   <a :href="'#/' + block.Entry" target="_blank">
-                  <div style="text-align: center;">An Image</div><!--Image-->
+                  <div class="card-img"><img src="./media/Weel.png" height="76.8px" width="76.8px"></div><!--Image-->
                   <div class="card-content" >{{ block.Entry }}</div><!--Name-->
                 </a>
                 </div>
               </div>
-              <!--end-->
+              <!--card end-->
             </div>
           </div>
         </div>
@@ -251,8 +251,6 @@ a {
 }
 
 
-
-
 #cardd {
   display: flex;
   flex-wrap: wrap;
@@ -279,12 +277,15 @@ a {
 .card-content {
   text-align: center;
   font-size: 10.9px;
+  position: relative;
+  top: 10px;
 }
 
 .card-img {
   width: 100%;
   height: auto;
   border-radius: 4px;
+  text-align: center;
 }
 
 a {
