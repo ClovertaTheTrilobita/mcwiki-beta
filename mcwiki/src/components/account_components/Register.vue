@@ -17,7 +17,7 @@
             <div v-if="message" class="alert" :class="{'alert-danger': isError, 'alert-success': !isError}" role="alert" style="--bs-alert-padding-y: 10px">
               {{ message }}
             </div>
-            <a class="btn btn-secondary Register" href="#/login"><a class="mx-1 login">Login</a></a>
+            <a class="btn btn-secondary Register" href="#/login"><span class="mx-1 login">Login</span></a>
             <button class="btn btn-success" type="submit" style="color: #eefdf1">Signup</button>
           </form>
         </div>
