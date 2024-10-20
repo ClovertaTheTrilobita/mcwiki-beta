@@ -20,6 +20,14 @@ app.post('/register', (req, res) => {
     }
 
     const users = data ? JSON.parse(data) : [];
+
+    const existingUser = users.find(u => u.username === username);
+    if (existingUser) {
+      res.writeHead(409, { 'Content-Type': 'application/json' }); // 409 Conflict
+      res.end(JSON.stringify({ error: 'Username already exists' }));
+      return;
+    }
+    
     users.push(user);
 
     // 将用户数据写入JSON文件

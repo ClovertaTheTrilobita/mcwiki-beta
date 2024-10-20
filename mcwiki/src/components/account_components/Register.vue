@@ -1,9 +1,9 @@
 <template>
 
-  <div class="LoginIndex">
+  <div class="RegisterIndex">
     <div class="content">
-      <div class="login_container" style="color: #eefdf1;">
-        <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Register</h1>
+      <div class="register_container" style="color: #eefdf1;">
+        <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Join us</h1>
         <form @submit.prevent="handleRegister">
           <div class="form-group">
             <label class="label">Username:</label>
@@ -13,7 +13,10 @@
             <label class="label">Password:</label>
             <input type="password" v-model="password" required placeholder="Enter password" />
           </div>
-          <button type="submit" style="color: #eefdf1">Register</button>
+          <div v-if="message" class="alert" :class="{'alert-danger': isError, 'alert-success': !isError}" role="alert" style="--bs-alert-padding-y: 10px">
+            {{ message }}
+          </div>
+          <button class="btn btn-success" type="submit" style="color: #eefdf1">Sign up</button>
         </form>
         <About class="fixed-bottom"/>
       </div>
@@ -25,32 +28,62 @@
 <script>
 
 import { mapActions } from 'vuex';
-import About from '../public_components/About.vue'
+import About from '../public_components/About.vue';
 
 export default {
-  name: 'Login',
+  name: 'Register',
   components: {
     About,
   },
-  methods: {
-    ...mapActions(['register']),
-    handleRegister() {
-      const user = { username: this.username, password: this.password};
-      this.register(user);
-    }
-  },
+
   data() {
     return {
       username: '',
       password: '',
+      message: '',
+      isError: false,
+    };
+  },
+
+  methods: {
+    ...mapActions(['register']),
+    async handleRegister() {
+      const user = { username: this.username, password: this.password };
+      console.log('Sending register request:', user);
+      try {
+        const response = await this.register(user);
+        if (response.status === 201) {
+          console.log('Registration success, jumping');
+          this.message = 'Registration success, jumping';
+          this.isError = false;
+          setTimeout(() => {
+            window.location.hash = '#/login';
+          }, 2000);
+        } else {
+          console.error('Registration failed:', response.statusText);
+          this.message = `Registration failed: ${response.statusText}`;
+          this.isError = true;
+        }
+      } catch (error) {
+        if (error.response && error.response.status === 409) {
+          console.log('Username already exists');
+          this.message = 'Username already exists';
+          this.isError = true;
+        } else {
+          console.error('Registration failed:', error);
+          this.message = `Registration failed: ${error.message}`;
+          this.isError = true;
+        }
+      }
     }
   }
 };
+
 </script>
 
 <style scoped>
 
-.LoginIndex {
+.RegisterIndex {
   height: 100vh;
   background: url('./media/background_02.png') no-repeat center center fixed;
   background-size: cover;
@@ -61,7 +94,7 @@ export default {
   background: rgba(0, 0, 0, 0.100);
 }
 
-.login_container {
+.register_container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,7 +117,7 @@ input {
   padding: 10px;
   width: 100%;
   /* 输入框宽度自适应 */
-  border: 1px solid #851111;
+  border: 1px solid #00bf77;
   /* 边框 */
   border-radius: 4px;
   /* 圆角效果 */
@@ -95,7 +128,7 @@ input {
 }
 
 input:focus {
-  border-color: #42b983;
+  border-color: #2d7054;
   /* 输入框获得焦点时的边框颜色 */
   outline: none;
   /* 去掉默认的外边框 */
@@ -103,18 +136,6 @@ input:focus {
 
 button {
   padding: 10px 15px;
-  background-color: #42b983;
-  color: rgb(206, 30, 30);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  /* 按钮的过渡效果 */
-}
-
-button:hover {
-  background-color: #369d73;
-  /* 按钮悬停时的颜色 */
 }
 
 .signln {
