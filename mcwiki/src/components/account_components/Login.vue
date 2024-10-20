@@ -17,8 +17,8 @@
             <div v-if="message" class="alert" :class="{'alert-danger': isError, 'alert-success': !isError}" role="alert" style="--bs-alert-padding-y: 10px">
               {{ message }}
             </div>
-            <button class="btn btn-success" type="submit" style="color: #eefdf1"><a class="mx-1">Login</a></button>
-            <a class="btn btn-success Register" style="color: #eefdf1" href="#/register">Signup</a>
+            <a class="btn btn-secondary Register" href="#/register">Signup</a>
+            <button class="btn btn-success" type="submit"><a class="mx-1 login">Login</a></button>
           </form>
         </div>
         <About class="fixed-bottom"/>
@@ -138,22 +138,12 @@ input:focus {
 
 button {
   padding: 10px 15px;
-}
-
-.signln {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.signln:hover {
-  transform: translate(0);
-  opacity: 1;
-}
-
-.Register {
   position: absolute;
             bottom: 0;
             right: 0;
+}
+
+.Register {
   padding: 10px 15px;
 }
 
@@ -161,9 +151,9 @@ button {
   position: relative;
 }
 
-a {
+.login {
     color: #eefdf1;
     text-decoration: none;
-  }
+}
 
 </style>

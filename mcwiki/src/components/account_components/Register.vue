@@ -4,20 +4,23 @@
     <div class="content">
       <div class="register_container" style="color: #eefdf1;">
         <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Join us</h1>
-        <form @submit.prevent="handleRegister">
-          <div class="form-group">
-            <label class="label">Username:</label>
-            <input type="text" v-model="username" required placeholder="Enter username" />
-          </div>
-          <div class="form-group">
-            <label class="label">Password:</label>
-            <input type="password" v-model="password" required placeholder="Enter password" />
-          </div>
-          <div v-if="message" class="alert" :class="{'alert-danger': isError, 'alert-success': !isError}" role="alert" style="--bs-alert-padding-y: 10px">
-            {{ message }}
-          </div>
-          <button class="btn btn-success" type="submit" style="color: #eefdf1">Sign up</button>
-        </form>
+        <div class="form_container">
+          <form @submit.prevent="handleRegister">
+            <div class="form-group">
+              <label class="label">Username:</label>
+              <input type="text" v-model="username" required placeholder="Enter username" />
+            </div>
+            <div class="form-group">
+              <label class="label">Password:</label>
+              <input type="password" v-model="password" required placeholder="Enter password" />
+            </div>
+            <div v-if="message" class="alert" :class="{'alert-danger': isError, 'alert-success': !isError}" role="alert" style="--bs-alert-padding-y: 10px">
+              {{ message }}
+            </div>
+            <a class="btn btn-secondary Register" href="#/login"><a class="mx-1 login">Login</a></a>
+            <button class="btn btn-success" type="submit" style="color: #eefdf1">Signup</button>
+          </form>
+        </div>
         <About class="fixed-bottom"/>
       </div>
     </div>
@@ -136,16 +139,22 @@ input:focus {
 
 button {
   padding: 10px 15px;
+  position: absolute;
+            bottom: 0;
+            right: 0;
 }
 
-.signln {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.Register {
+  padding: 10px 15px;
 }
 
-.signln:hover {
-  transform: translate(0);
-  opacity: 1;
+.form_container {
+  position: relative;
+}
+
+.login {
+    color: #eefdf1;
+    text-decoration: none;
 }
 
 </style>

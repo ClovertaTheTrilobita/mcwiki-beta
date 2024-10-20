@@ -77,7 +77,7 @@
                 </div>
                 <a class=" btn btn-success mx-2" href="#/login"><span style="margin-left: 99px; margin-right: 99px;">Log In</span></a>
                 <div class="text-center mt-2">
-                  <small>First time user? <a href="#/register" style="color: #48af3a;">Click to register</a></small>
+                  <small>First time user? <a href="#/register" style="color: #48af3a;">Click to signup</a></small>
                 </div>
               </div>
             </div>
