@@ -9,8 +9,8 @@
       <div class="carousel-item active">
         <img src="./images/Carousel/Slide01.png" class="d-block w-100 Slide img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1>Cherry Grove</h1>
-          <p>樱花树林是山地的特殊繁茂变种，在Java版1.19.4快照23w07a（内置数据包）中加入。这里生长着大量樱花树，地表被草方块覆盖着，且地表上会生成众多装饰性的粉红色花簇，这儿的草色调较暖。猪、绵羊、蜜蜂会在此生物群系生成。</p>
+          <h1 >Cherry Grove</h1>
+          <p >樱花树林是山地的特殊繁茂变种，在Java版1.19.4快照23w07a（内置数据包）中加入。这里生长着大量樱花树，地表被草方块覆盖着，且地表上会生成众多装饰性的粉红色花簇，这儿的草色调较暖。猪、绵羊、蜜蜂会在此生物群系生成。</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -48,7 +48,7 @@
 <style scoped>
 
 .Slide {
-  max-height: 840px;
+  max-height: 900px;
   object-fit: cover;
 }
 
