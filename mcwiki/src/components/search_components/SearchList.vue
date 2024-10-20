@@ -51,8 +51,8 @@
 </template>
 
 <script >
-
 import About from '../public_components/About.vue';
+
 export default {
   name: 'SearchList',
   components: { About, },

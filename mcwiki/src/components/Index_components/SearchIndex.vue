@@ -17,6 +17,7 @@
 
 <script>
 import SearchList from '../search_components/SearchList.vue';
+import Entry from '../../data/entry.json'
 
 export default {
   name: "SearchIndex",
@@ -32,6 +33,7 @@ export default {
       update: true,
       refresh: true,
       search: [],
+      Entry,
     }
   },
   components: {
@@ -42,14 +44,15 @@ export default {
   },
   methods: {
     SearchPushed() {
+      //console.log(Entry)
       let searchcontent = document.getElementById("myInput1").value;
       console.log("Searched: " + searchcontent)
       let searchresult = []; var j = 0;
       console.log(this.datasent[0])
       var text = ['a', 'b', 'c', 'd', 'a', 'a']
-      for (var i = 0; i < this.datasent.length; i++) {
-        if (this.datasent[i].Entry == searchcontent) {
-          searchresult[j] = this.datasent[i];
+      for (var i = 0; i < Entry.length; i++) {
+        if (Entry[i].Entry == searchcontent) {
+          searchresult[j] = Entry[i];
           j++;
         }
       }
