@@ -50,19 +50,19 @@ export default {
       const hash = window.location.hash || '#/home'; // ****！如果 hash 为空，默认为home界面
       const navbars = document.querySelectorAll('.navbar');
       const abouts = document.querySelectorAll('.about');
-      if(hash=='#/preference'){
-        abouts.forEach(function(about){
-          about.style.display='none';
-          console.log("run1");
-        })
-      }
-      else{
-        abouts.forEach(function(about){
-          about.style.display='block';
-          console.log("run2");
-        })
-      }
-      //分离about和navbar显示控制
+      // if(hash=='#/preference'){
+      //   abouts.forEach(function(about){
+      //     about.style.display='none';
+      //     console.log("run1");
+      //   })
+      // }
+      // else{
+      //   abouts.forEach(function(about){
+      //     about.style.display='block';
+      //     console.log("run2");
+      //   })
+      // }
+      //分离preference和login显示控制
       if (hash == '#/login') {
         navbars.forEach(function (navbar) {
           navbar.style.display = 'none';
