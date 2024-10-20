@@ -29,9 +29,10 @@
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
-              <a v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank" class="mx-2">{{
-                block.Entry }}</a>
+            <div class="accordion-body">
+              <a v-for="block in Entry" :href="'#/' + block.Entry" target="_blank" class="mx-2">
+                {{block.Entry }}
+              </a>
             </div>
           </div>
         </div>
@@ -46,17 +47,16 @@
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
-              <!--card start-->
+            <div class="accordion-body">
               <div class="container" id="cardd">
-                <div class="card" v-for="block in Entry" :key="block.Entry" :href="'#/' + block.Entry" target="_blank"  >
+                <div class="card" v-for="block in Entry" style="--bs-card-height: 50px;">
                   <a :href="'#/' + block.Entry" target="_blank">
-                  <div class="card-img"><img src="./media/Weel.png" height="76.8px" width="76.8px"></div><!--Image-->
-                  <div class="card-content" >{{ block.Entry }}</div><!--Name-->
-                </a>
+                    <div class="card-body">
+                      <p class="card-content" >{{ block.Entry }}</p>
+                    </div>
+                  </a>
                 </div>
               </div>
-              <!--card end-->
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
+            <div class="accordion-body">
               World dimention.
             </div>
           </div>
@@ -87,7 +87,7 @@
             </button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
+            <div class="accordion-body">
               Minecraft Entities.
             </div>
           </div>
@@ -103,7 +103,7 @@
             </button>
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
+            <div class="accordion-body">
               Enchantment for tools will appear here.
             </div>
           </div>
@@ -119,7 +119,7 @@
             </button>
           </h2>
           <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample" bg-light>
-            <div class="accordion-body" style="text-align: left;">
+            <div class="accordion-body">
               Buffs&Debuffs appears here.
             </div>
           </div>
@@ -135,7 +135,7 @@
             </button>
           </h2>
           <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
+            <div class="accordion-body">
               Block Structres.
             </div>
           </div>
@@ -151,7 +151,7 @@
             </button>
           </h2>
           <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
+            <div class="accordion-body">
               The MC Game Backstories.
             </div>
           </div>
@@ -167,7 +167,7 @@
             </button>
           </h2>
           <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="text-align: left;">
+            <div class="accordion-body">
               The new game settings appeared.
             </div>
           </div>
@@ -204,8 +204,6 @@ export default {
       isFixed: true,
       Accordion: {
         height: '72.5vh',
-
-
       }
     };
   },
@@ -236,7 +234,7 @@ export default {
       const hasScrollbar = document.documentElement.scrollHeight > window.innerHeight;
       this.isFixed = !hasScrollbar;
       this.Accordion = hasScrollbar
-        ? {}
+        ? { }
         : { height: '72.5vh' };
     }
   }
@@ -262,9 +260,8 @@ a {
 .card {
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 16px;
-  width: calc(12.5% - 16px);/* 减去间距，确保8张卡片并排 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: calc(12.5% - 14px);/* 减去间距，确保8张卡片并排 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #F6FFF8;
 }
@@ -292,4 +289,9 @@ a {
     text-decoration: none;
     color: #000000;
   }
+
+.accordion-body {
+  text-align: left;
+}
+
 </style>

@@ -11,7 +11,7 @@
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
+          <div class="accordion-body">
             <h3>新特性</h3><hr>
 
             <ul>
@@ -57,7 +57,7 @@
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
+          <div class="accordion-body">
 
             <h3>实验性特性</h3><hr>
 
@@ -237,7 +237,7 @@
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
+          <div class="accordion-body">
             <h3>更改</h3><hr>
             <ul>
               <li>增加了索西语与白俄罗斯语（拉丁）的支持</li>
@@ -261,6 +261,10 @@
   a {
     color: #48af3a;
     text-decoration: none;
+  }
+
+  .accordion-body {
+    text-align: left;
   }
 
 </style>
