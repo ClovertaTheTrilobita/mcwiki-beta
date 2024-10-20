@@ -11,7 +11,7 @@
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
+          <div class="accordion-body">
             <h3>新特性</h3><hr>
 
             <ul>
@@ -57,14 +57,14 @@
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
+          <div class="accordion-body">
 
             <h3>实验性特性</h3><hr>
 
-            <p>此项Pale Garden生物群系实验性特性可被"冬季小更新（<em>Winter Drop</em>）"实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<a href="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition" style="color: #48af3a;">此处</a>找到更多关于实验性开关的信息。</p>
+            <p>此项Pale Garden生物群系实验性特性可被"冬季小更新（<em>Winter Drop</em>）"实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<a href="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition" target="_blank">此处</a>找到更多关于实验性开关的信息。</p>
             <p>我们喜欢听见你们对新的Pale Garden群系和新敌对生物Creaking的反馈。</p>
-            <p>Creaking反馈链接：<a href="https://aka.ms/mccreakingfeedback">https://aka.ms/mccreakingfeedback</a></p>
-            <p>Pale Garden反馈链接：<a href="https://aka.ms/mcpalegardenfeedback">https://aka.ms/mcpalegardenfeedback</a></p>
+            <p>Creaking反馈链接：<a href="https://aka.ms/mccreakingfeedback" target="_blank">https://aka.ms/mccreakingfeedback</a></p>
+            <p>Pale Garden反馈链接：<a href="https://aka.ms/mcpalegardenfeedback" target="_blank">https://aka.ms/mcpalegardenfeedback</a></p>
             
             <h4>冬季小更新</h4>
 
@@ -237,7 +237,7 @@
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body" style="text-align: left;">
+          <div class="accordion-body">
             <h3>更改</h3><hr>
             <ul>
               <li>增加了索西语与白俄罗斯语（拉丁）的支持</li>
@@ -261,6 +261,10 @@
   a {
     color: #48af3a;
     text-decoration: none;
+  }
+
+  .accordion-body {
+    text-align: left;
   }
 
 </style>

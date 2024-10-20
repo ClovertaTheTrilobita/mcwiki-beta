@@ -28,7 +28,5 @@ export default {
 </template>
 
 <style scoped>
-.accordion-body {
-  background-color: aliceblue;
-}
+
 </style>

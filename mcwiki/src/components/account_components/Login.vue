@@ -35,6 +35,7 @@
 
 <script>
 import { ref } from 'vue';
+import { mapActions } from 'vuex';
 import SearchIndex from '../Index_components/SearchIndex.vue';
 import About from '../public_components/About.vue'
 
@@ -44,31 +45,6 @@ export default {
     'datasent': SearchIndex,
     About,
   },
-  setup() {
-    const username = ref('');
-    const password = ref('');
-
-    const handleLogin = () => {
-      // 简单验证，实际应用中应该进行后端验证
-      if (username.value === 'admin' && password.value === '1234') {
-        localStorage.setItem('isAuthenticated', 'true'); // 保存登录状态
-        window.location.hash = '#/home'; // 登录成功后跳转
-      } else {
-        alert('Invalid username or password');
-        // 清空输入框
-        username.value = '';
-        password.value = '';
-      }
-    };
-
-    return {
-      username,
-      password,
-      handleLogin
-    };
-  },
-
-
 
   /* --------------------以下代码正在测试，请勿改动-------------------- */
   methods: {
@@ -121,11 +97,23 @@ export default {
     },
     sendTOParent() {
       this.$emit('listenToChildEvent', this.datasent)
+    },
+    ...mapActions(['login']),
+    async handleLogin() {
+      const user = { username: this.username, password: this.password };
+      try {
+        await this.login(user);
+        console.log('Login successful');
+      } catch (error) {
+        console.error('Login failed:', error);
+      }
     }
   },
   data() {
     return {
-      datasent: []
+      datasent: [],
+      username: '',
+      password: '',
     }
   }
   /* --------------------以上代码正在测试，请勿改动-------------------- */
@@ -139,7 +127,7 @@ export default {
 
 .LoginIndex {
   height: 100vh;
-  background: url('./images/background_01.png') no-repeat center center fixed;
+  background: url('./media/background_01.png') no-repeat center center fixed;
   background-size: cover;
 }
 
