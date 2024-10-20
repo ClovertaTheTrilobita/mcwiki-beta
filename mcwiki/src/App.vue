@@ -55,15 +55,11 @@ export default {
       const abouts = document.querySelectorAll('.about');
       const decodedHash = decodeURIComponent(hash.slice(2)); // 去掉前面的 `#/` 并解码
       const matchedItem = Data.find(Item => Item.Entry == decodedHash);
-
-
-
       if(hash=='#/preference'){
         abouts.forEach(function(about){
           about.style.display='none';
         })
       }
-
       //分离about和navbar显示控制
       if (hash == '#/login' || hash == '#/register') {
         navbars.forEach(function (navbar) {
@@ -80,18 +76,6 @@ export default {
         })
         abouts.forEach(function(about){
           about.style.display='block';
-        })
-      }
-
-      if (hash == '#/jumpcategory') {
-        abouts.forEach(function(about){
-          about.style.display='none';
-        })
-      }
-
-      if(hash=='#/search'){
-        abouts.forEach(function(about){
-          about.style.display='none';
         })
       }
 
