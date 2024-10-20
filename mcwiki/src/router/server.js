@@ -132,7 +132,6 @@ app.get('/favorites', (req, res) => {
       }
 
       const favorites = JSON.parse(data);
-      console.log('Favorites data:', favorites);
       res.status(200).json(favorites);
     });
   });
