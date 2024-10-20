@@ -26,7 +26,11 @@
                 <a class="nav-link" href="#/category" @click="categroyClicked">Category</a>
               </li>
 
-              <li class="nav-item dropdown">
+              <li class="nav-item">
+                <a class="nav-link" href="#/contact">Contact Us</a>
+              </li>
+
+              <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#/messages" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   Messages
@@ -34,13 +38,13 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#/sysmessage">System Message</a></li>
                   <li><a class="dropdown-item" href="#/test">Account Message</a></li>
-                  <!-- TestIndex -->
+                  
                   <li>
                     <hr class="dropdown-divider">
                   </li>
                   <li><a class="dropdown-item" href="#/contact">Contact Us</a></li>
                 </ul>
-              </li>
+              </li> -->
 
             </ul>
 
