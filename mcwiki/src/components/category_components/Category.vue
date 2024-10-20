@@ -24,7 +24,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
-              style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;">
+              style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;font-size: 18px;" >
               Blocks&Items
             </button>
           </h2>
@@ -42,17 +42,18 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-              style="--bs-accordion-btn-bg: #32c674; --bs-accordion-active-bg: #32c674;">
+              style="--bs-accordion-btn-bg: #32c674; --bs-accordion-active-bg: #32c674;font-size: 18px;">
               Biome
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <div class="container" id="cardd">
-                <div class="card" v-for="block in Entry" style="--bs-card-height: 50px;">
+                <div class="card" v-for="block in Entry" style="--bs-card-height: 150px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <p class="card-content" >{{ block.Entry }}</p>
+                      <img class="card-img" src="./media/Weel.png" > <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -66,7 +67,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-              style="--bs-accordion-btn-bg: #2bbb75; --bs-accordion-active-bg: #2bbb75;">
+              style="--bs-accordion-btn-bg: #2bbb75; --bs-accordion-active-bg: #2bbb75;font-size: 18px;">
               DIM
             </button>
           </h2>
@@ -82,7 +83,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
-              style="--bs-accordion-btn-bg: #24b074; --bs-accordion-active-bg: #24b074;">
+              style="--bs-accordion-btn-bg: #24b074; --bs-accordion-active-bg: #24b074;font-size: 18px;">
               Entity
             </button>
           </h2>
@@ -98,7 +99,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
-              style="--bs-accordion-btn-bg: #1ba173; --bs-accordion-active-bg: #1ba173;">
+              style="--bs-accordion-btn-bg: #1ba173; --bs-accordion-active-bg: #1ba173;font-size: 18px;">
               Enchantment
             </button>
           </h2>
@@ -114,7 +115,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
-              style="--bs-accordion-btn-bg: #139372; --bs-accordion-active-bg: #139372;">
+              style="--bs-accordion-btn-bg: #139372; --bs-accordion-active-bg: #139372;font-size: 18px;">
               Effect
             </button>
           </h2>
@@ -130,7 +131,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
-              style="--bs-accordion-btn-bg: #0c8672; --bs-accordion-active-bg: #0c8672;">
+              style="--bs-accordion-btn-bg: #0c8672; --bs-accordion-active-bg: #0c8672;font-size: 18px;">
               Multiblocked Structures
             </button>
           </h2>
@@ -146,7 +147,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
-              style="--bs-accordion-btn-bg: #067b72; --bs-accordion-active-bg: #067b72;">
+              style="--bs-accordion-btn-bg: #067b72; --bs-accordion-active-bg: #067b72;font-size: 18px;">
               Features
             </button>
           </h2>
@@ -162,7 +163,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
-              style="--bs-accordion-btn-bg: #007271; --bs-accordion-active-bg: #007271;">
+              style="--bs-accordion-btn-bg: #007271; --bs-accordion-active-bg: #007271;font-size: 18px;">
               Game Settings
             </button>
           </h2>
@@ -249,8 +250,6 @@ a {
 }
 
 
-
-
 #cardd {
   display: flex;
   flex-wrap: wrap;
@@ -276,12 +275,15 @@ a {
 .card-content {
   text-align: center;
   font-size: 10.9px;
+  position: relative;
+  top: 10px;
 }
 
 .card-img {
   width: 100%;
   height: auto;
   border-radius: 4px;
+
 }
 
 a {
@@ -291,6 +293,10 @@ a {
 
 .accordion-body {
   text-align: left;
+}
+
+.card-body{
+  text-align: center;
 }
 
 </style>
