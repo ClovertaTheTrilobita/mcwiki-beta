@@ -1,6 +1,4 @@
-import http from 'http';
 import fs from 'fs';
-import { parse } from 'querystring';
 import cors from 'cors';
 import express from 'express';
 
@@ -9,6 +7,7 @@ app.use(cors()); // 使用cors中间件
 app.use(express.json());
 
 app.post('/register', (req, res) => {
+  console.log('Received register request:', req.body);
   const { username, password } = req.body;
   const user = { username, password };
 

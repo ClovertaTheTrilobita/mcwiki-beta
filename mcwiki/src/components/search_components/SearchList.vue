@@ -43,7 +43,6 @@
       </div>
     </div>
   </div>
-  <div :style="Accordion"><About v-if="currentHash == '#/search'" :class="{'fixed-bottom': isFixed}"/></div>
   <!-- <div v-for="sea in search" style="background-color: aqua;">
     <p>SeachInput:</p>
     <p>{{ sea }}</p>
@@ -51,11 +50,10 @@
 </template>
 
 <script >
-import About from '../public_components/About.vue';
 
 export default {
   name: 'SearchList',
-  components: { About, },
+  components: { },
   props: {
     search: {
       type: Object,
@@ -64,37 +62,11 @@ export default {
   },
   data() {
     return {
-      currentHash: window.location.hash,
-      isFixed: true,
-      Accordion: {
-        height: '81vh',
-      }
+      
     };
   },
-  created() {
-    window.addEventListener('hashchange',this.onHashChange);
-  },
-  mounted() {
-    window.addEventListener('scroll', this.checkScroll);
-    window.addEventListener('resize', this.checkScroll);
-    this.checkScroll();
-  },
-  beforeDestroy() {
-    window.removeEventListener('hashchange',this.onHashChange);
-    window.removeEventListener('scroll', this.checkScroll);
-    window.removeEventListener('resize', this.checkScroll);
-  },
   methods: {
-    onHashChange() {
-      this.currentHash = window.location.hash;
-    },
-    checkScroll() {
-      const hasScrollbar = document.documentElement.scrollHeight > window.innerHeight;
-      this.isFixed = !hasScrollbar;
-      this.Accordion = hasScrollbar
-        ? {  }
-        : { height: '81vh' };
-    }
+
   },
 }
 </script>

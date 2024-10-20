@@ -48,7 +48,7 @@ export default {
       let searchcontent = document.getElementById("myInput1").value;
       console.log("Searched: " + searchcontent)
       let searchresult = []; var j = 0;
-      console.log(this.datasent[0])
+      console.log(Entry[0])
       var text = ['a', 'b', 'c', 'd', 'a', 'a']
       for (var i = 0; i < Entry.length; i++) {
         if (Entry[i].Entry == searchcontent) {

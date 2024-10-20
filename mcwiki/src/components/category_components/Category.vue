@@ -174,7 +174,6 @@
           </div>
         </div>
       </div>
-      <About v-if="currentHash == '#/jumpcategory'" :class="{ 'fixed-bottom': isFixed }" />
     </div>
   </div>
 </template>
@@ -187,7 +186,6 @@ import Card4 from './Card4.vue';
 import Start from './Start.vue';
 import Cards from './Cards.vue';
 import placeHolders1 from './placeHolders1.vue';
-import About from '../public_components/About.vue';
 import Entry from '../../data/entry.json';
 
 export default {
@@ -196,30 +194,12 @@ export default {
     Card1, Card2, Card3, Card4, Cards,
     placeHolders1,
     Start,
-    About,
   },
   data() {
     return {
       Entry,
       currentHash: window.location.hash,
-      isFixed: true,
-      Accordion: {
-        height: '72.5vh',
-      }
     };
-  },
-  created() {
-    window.addEventListener('hashchange', this.onHashChange);
-  },
-  mounted() {
-    window.addEventListener('scroll', this.checkScroll);
-    window.addEventListener('resize', this.checkScroll);
-    this.checkScroll();
-  },
-  beforeDestroy() {
-    window.removeEventListener('hashchange', this.onHashChange);
-    window.removeEventListener('scroll', this.checkScroll);
-    window.removeEventListener('resize', this.checkScroll);
   },
   methods: {
     categoryClicked() {
@@ -228,16 +208,6 @@ export default {
 
       // }while(modernizrCustom.methods.function.b.documentElement == 'undefined');
     },
-    onHashChange() {
-      this.currentHash = window.location.hash;
-    },
-    checkScroll() {
-      const hasScrollbar = document.documentElement.scrollHeight > window.innerHeight;
-      this.isFixed = !hasScrollbar;
-      this.Accordion = hasScrollbar
-        ? { }
-        : { height: '72.5vh' };
-    }
   }
 }
 

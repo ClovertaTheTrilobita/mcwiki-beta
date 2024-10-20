@@ -79,18 +79,6 @@ export default {
         })
       }
 
-      if (hash == '#/jumpcategory') {
-        abouts.forEach(function(about){
-          about.style.display='none';
-        })
-      }
-
-      if(hash=='#/search'){
-        abouts.forEach(function(about){
-          about.style.display='none';
-        })
-      }
-
       if (matchedItem) {
         comName.value = 'Details';
         currentItem.value = matchedItem;
