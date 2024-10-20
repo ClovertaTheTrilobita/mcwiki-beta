@@ -44,11 +44,11 @@
 
             </ul>
 
-            <div class="avater-container">
+            <div v-if="isLoggedIn" class="avater-container">
               <img src="../images/95122414.jpg" alt="Avater" class="avater">
               <div class="menu">
                 <div class="container text-center mt-4 mb-3">
-                  <p>{{ username }}</p>
+                  <p>{{ user.username }}</p>
                 </div>
                 <div class="Bottom">
                   <nav class="nav flex-column">
@@ -65,8 +65,20 @@
               </div>
             </div>
 
-            <form class="d-flex" role="search">
+            <div v-else class="avater-container">
+              <img src="../images/default_avater.png" alt="Avater" class="avater">
+              <div class="MENU">
+                <div class="container text-center mt-4 mb-3">
+                  <p>Log in to use more features</p>
+                </div>
+                <a class=" btn btn-success mx-2" href="#/login"><span style="margin-left: 99px; margin-right: 99px;">Log In</span></a>
+                <div class="text-center mt-2">
+                  <small>First time user? <a href="#/register" style="color: #48af3a;">Click to register</a></small>
+                </div>
+              </div>
+            </div>
 
+            <form class="d-flex" role="search">
               <button class="btn btn-outline-light" type="submit" @click="SearchJump" style="margin-bottom: 2px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search mx-2" style="margin-bottom: 2px;"
                   viewBox="0 0 16 16">
@@ -92,7 +104,7 @@ import SearchList from '../search_components/SearchList.vue';
 import { nextTick } from 'vue';
 import SearchIndex from '../Index_components/SearchIndex.vue';
 import { mapActions } from 'vuex';
-
+import { mapState } from 'vuex';
 
 export default {
   name: "NavBar",
@@ -111,18 +123,20 @@ export default {
   },
   data() {
     return {
-      username: 'Laurentina',
-      // search:[]
     };
   },
   components: {
     'search': SearchList
   },
+  computed: {
+    ...mapState(['user','isLoggedIn'])
+  }
 }
 
 </script>
 
 <style scoped>
+
 .img_title {
   width: 30px;
   height: 24px;
@@ -145,8 +159,8 @@ export default {
 
 .menu {
   position: absolute;
-  top: 50px;
-  right: 13px;
+  top: -250px;
+  right: 14px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 245px;
   width: 210px;
@@ -160,19 +174,42 @@ export default {
   z-index: 1;
 }
 
+.MENU {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 155px;
+  width: 310px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
 .avater-container:hover .avater {
   transform: translateY(15px) translateX(-18px) scale(2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .avater-container:hover .menu {
-  transform: translate(0);
+  transform: translate(0) translateY(300px);
+  opacity: 1;
+}
+
+.avater-container:hover .MENU {
+  transform: translate(0) translateX(38px);
   opacity: 1;
 }
 
 .avater-link {
   text-align: left;
 }
+
 </style>
 
 <!--

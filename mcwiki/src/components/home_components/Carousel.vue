@@ -48,7 +48,7 @@
 <style scoped>
 
 .Slide {
-  max-height: 930px;
+  max-height: 840px;
   object-fit: cover;
 }
 
