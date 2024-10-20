@@ -58,7 +58,7 @@
                     <a class="nav-link btn btn-light avater-link" href="#/preference"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>
                     <hr>
-                    <button class="nav-link btn btn-light avater-link" href="#/404" @click="Logout"
+                    <button class="nav-link btn btn-light avater-link" href="#/404" @click="handleLogout"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Log Out</button>
                   </nav>
                 </div>
@@ -104,8 +104,9 @@ export default {
       Category.methods.categoryClicked()
     },
     ...mapActions(['logout']),
-    logout() {
+    handleLogout() {
       this.logout();
+      console.log('Logout successful');
     }
   },
   data() {

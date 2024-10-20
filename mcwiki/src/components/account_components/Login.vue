@@ -11,7 +11,7 @@
           </div>
         </div>
         <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Login</h1>
-        <form @submit.prevent="login">
+        <form @submit.prevent="handleLogin">
           <div class="form-group">
             <label for="username" class="label">Username:</label>
             <input type="text" v-model="username" id="username" required placeholder="Enter username" />
@@ -45,17 +45,6 @@ export default {
     'datasent': SearchIndex,
     About,
   },
-  setup() {
-    const username = ref('');
-    const password = ref('');
-
-    return {
-      username: '',
-      password: '',
-    };
-  },
-
-
 
   /* --------------------以下代码正在测试，请勿改动-------------------- */
   methods: {
@@ -110,9 +99,14 @@ export default {
       this.$emit('listenToChildEvent', this.datasent)
     },
     ...mapActions(['login']),
-    Login() {
+    async handleLogin() {
       const user = { username: this.username, password: this.password };
-      this.login(user);
+      try {
+        await this.login(user);
+        console.log('Login successful');
+      } catch (error) {
+        console.error('Login failed:', error);
+      }
     }
   },
   data() {

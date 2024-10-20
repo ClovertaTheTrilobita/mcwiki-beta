@@ -4,7 +4,7 @@
     <div class="content">
       <div class="login_container" style="color: #eefdf1;">
         <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Register</h1>
-        <form @submit.prevent="handleregister">
+        <form @submit.prevent="handleRegister">
           <div class="form-group">
             <label class="label">Username:</label>
             <input type="text" v-model="username" required placeholder="Enter username" />
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     ...mapActions(['register']),
-    handleregister() {
+    handleRegister() {
       const user = { username: this.username, password: this.password};
       this.register(user);
     }
