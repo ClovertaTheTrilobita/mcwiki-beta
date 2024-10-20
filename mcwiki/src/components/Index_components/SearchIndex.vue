@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-center">
     <form class="d-flex" role="search" style="width: 50dvh; height: 45px;" onsubmit="return false;">
       <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" clearable id="myInput1"
-        ref="myInput1" >
+        ref="myInput1">
       <button class="btn btn-success" type="button" @click="SearchPushed">
         Search</button>
     </form>
@@ -17,6 +17,8 @@
 
 <script>
 import SearchList from '../search_components/SearchList.vue';
+import Entry from '../../data/entry.json'
+import AllData from '../../data/sum/AllData.json'
 
 export default {
   name: "SearchIndex",
@@ -32,6 +34,8 @@ export default {
       update: true,
       refresh: true,
       search: [],
+      Entry,
+      AllData
     }
   },
   components: {
@@ -42,17 +46,12 @@ export default {
   },
   methods: {
     SearchPushed() {
+      //console.log(Entry)
       let searchcontent = document.getElementById("myInput1").value;
       console.log("Searched: " + searchcontent)
       let searchresult = []; var j = 0;
-      console.log(this.datasent[0])
-      var text = ['a', 'b', 'c', 'd', 'a', 'a']
-      for (var i = 0; i < this.datasent.length; i++) {
-        if (this.datasent[i].Entry == searchcontent) {
-          searchresult[j] = this.datasent[i];
-          j++;
-        }
-      }
+      //console.log(AllData[0])
+      searchresult = this.BFSearch(searchcontent, AllData)
       this.search = searchresult
       console.log("Search received: " + searchcontent)
       console.log("Search result: ")
@@ -69,8 +68,36 @@ export default {
       console.log(this.datasent)
     },
 
-    BFSearch(searchcontent){
-      
+    BFSearch(searchcontent1, searchdata1) {
+      var l = 0; var searchresult = []; var flag = new Boolean(false);
+      console.log("Starting search.")
+      var searchcontent = searchcontent1.toLowerCase();
+      for (var i = 0; i < searchdata1.length; i++) {
+        var searchdata = searchdata1[i].Entry.toLowerCase();
+        for (var k = 0; k < searchdata.length; k++) {
+          flag = false;
+          for (var j = 0; j < searchcontent.length; j++) {
+            if (searchcontent[j] == searchdata[k + j]) {
+              flag = true;
+              console.log("flag:" + flag)
+              continue;
+              //console.log(searchcontent[j]+ "==" + AllData[i].Text[k])
+            } else {
+              flag = false;
+              break;
+            }
+          }
+          if (flag) {
+            console.log("Got:")
+            searchresult[l] = searchdata1[i];
+            console.log(searchresult[l])
+            l++;
+            break;
+          }
+        }
+
+      }
+      return searchresult;
     }
   }
 

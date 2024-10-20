@@ -36,14 +36,13 @@
             <p class="card-text" style="color: grey; ">
               {{ data.Text }}......
             </p>
-            <a href="#" class="btn btn-success" style="">Take a look</a>
+            <a :href="'#/' + data.Entry" class="btn btn-success" style="" target="_blank">Take a look</a>
             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div :style="Accordion"><About v-if="currentHash == '#/search'" :class="{'fixed-bottom': isFixed}"/></div>
   <!-- <div v-for="sea in search" style="background-color: aqua;">
     <p>SeachInput:</p>
     <p>{{ sea }}</p>
@@ -52,10 +51,9 @@
 
 <script >
 
-import About from '../public_components/About.vue';
 export default {
   name: 'SearchList',
-  components: { About, },
+  components: { },
   props: {
     search: {
       type: Object,
@@ -64,37 +62,11 @@ export default {
   },
   data() {
     return {
-      currentHash: window.location.hash,
-      isFixed: true,
-      Accordion: {
-        height: '81vh',
-      }
+      
     };
   },
-  created() {
-    window.addEventListener('hashchange',this.onHashChange);
-  },
-  mounted() {
-    window.addEventListener('scroll', this.checkScroll);
-    window.addEventListener('resize', this.checkScroll);
-    this.checkScroll();
-  },
-  beforeDestroy() {
-    window.removeEventListener('hashchange',this.onHashChange);
-    window.removeEventListener('scroll', this.checkScroll);
-    window.removeEventListener('resize', this.checkScroll);
-  },
   methods: {
-    onHashChange() {
-      this.currentHash = window.location.hash;
-    },
-    checkScroll() {
-      const hasScrollbar = document.documentElement.scrollHeight > window.innerHeight;
-      this.isFixed = !hasScrollbar;
-      this.Accordion = hasScrollbar
-        ? {  }
-        : { height: '81vh' };
-    }
+
   },
 }
 </script>
