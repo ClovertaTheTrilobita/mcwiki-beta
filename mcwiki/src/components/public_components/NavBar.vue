@@ -176,7 +176,7 @@ export default {
 
 .MENU {
   position: absolute;
-  top: 50px;
+  top: -250px;
   right: 0px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 155px;
@@ -186,7 +186,7 @@ export default {
   padding: 10px;
   border-radius: 5px;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease;
   cursor: pointer;
   z-index: 1;
 }
@@ -202,7 +202,7 @@ export default {
 }
 
 .avater-container:hover .MENU {
-  transform: translate(0) translateX(38px);
+  transform: translate(0) translateX(38px) translateY(300px);
   opacity: 1;
 }
 
