@@ -26,43 +26,18 @@
     </div>
   </div>
 
-  <div style="display: none;">
-    <datasent v-bind:datasent="datasent" ref="datasent"></datasent>
-  </div>
-
 </template>
 
 <script>
 import { mapActions } from 'vuex';
-import SearchIndex from '../Index_components/SearchIndex.vue';
 import About from '../public_components/About.vue'
+import { useRouter } from 'vue-router';
+import { jwtDecode } from 'jwt-decode';
 
 export default {
   name: 'Login',
   components: {
-    'datasent': SearchIndex,
     About,
-  },
-
-  methods: {
-    ...mapActions(['login']),
-    async handleLogin() {
-      const user = { username: this.username, password: this.password };
-      console.log('Sending login request:', user);
-      try {
-        const response = await this.login(user);
-        console.log('Login success');
-        this.message = 'Login success, jumping';
-        this.isError = false;
-        setTimeout(() => {
-          window.location.hash = '#/home';
-        }, 2000)
-      } catch (error) {
-        console.error('Login failed:', error);
-        this.message = 'Login failed: Invalid credentials';
-        this.isError = true;
-      }
-    }
   },
   data() {
     return {
@@ -71,7 +46,40 @@ export default {
       message: '',
       isError: false,
     }
-  }
+  },
+  setup() {
+    const router = useRouter();
+    return { router };
+  },
+  methods: {
+    ...mapActions(['login']),
+    async handleLogin() {
+      const user = { username: this.username, password: this.password };
+      console.log('Sending login request:', user);
+      try {
+        const response = await this.login(user);
+        console.log('Login success');
+        const token = response.data.token;
+        console.log('Received token:', token);
+        localStorage.setItem('token', token); //存储 JWT
+        const decodedToken = jwtDecode(token);
+        console.log('Decoded token:', decodedToken);
+        localStorage.setItem('username', decodedToken.username);
+        this.message = 'Login success, jumping';
+        this.isError = false;
+        setTimeout(() => {
+          window.location.hash = '#/home';
+          setTimeout(() => {
+            window.location.reload(); // 刷新页面
+          }, 1); // 确保页面跳转后再刷新
+        }, 2000);
+      } catch (error) {
+        console.error('Login failed:', error);
+        this.message = 'Login failed: Invalid credentials';
+        this.isError = true;
+      }
+    }
+  },
 };
 </script>
 

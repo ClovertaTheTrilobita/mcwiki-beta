@@ -36,6 +36,7 @@
 							2014年9月，Minecraft及其开发公司Mojang被Microsoft收购。
 							2017年9月18日，PC/Mac版Minecraft正式更名为Minecraft:Java版（Minecraft:Java
 							Edition）,与基岩版Minecraft:Bedrock Edition这一 多平台版本区分开来。目前Minecraft可分为Java版、基岩版和教育版三个主要版本。</p>
+							<button @click="addToFavorites" class="btn btn-primary">收藏</button>
 					</div>
 				</div>
 				<div class="col-lg-3  overflow-hidden ">
@@ -55,16 +56,44 @@
 
 <script>
 
+import { mapActions, mapState } from 'vuex';
+
 export default {
 	name: 'Details',
 	props: {
 		Item: {
 			type: Object,
 		}
-	}
-}
-
-
+	},
+	computed: {
+		...mapState(['user'])
+	},
+  methods: {
+  	...mapActions(['addFavorite']),
+  	async addToFavorites() {
+    	try {
+	      const favorite = {
+          userId: localStorage.getItem('username'),
+  	      item: this.Item
+    	  };
+				const token = localStorage.getItem('token');   //读取 JWT
+				console.log('token:', token);
+				if (!token) {
+					alert('请先登录');
+					setTimeout(() => {
+          	window.location.reload();
+        	}, 1)
+					return;
+				}
+	      await this.addFavorite({ favorite, token });
+        alert('收藏成功');
+  	  } catch (error) {
+	  	  console.error('收藏失败:', error);
+      	alert('收藏失败');
+	    }
+  	},
+  },
+};
 
 </script>
 

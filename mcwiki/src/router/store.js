@@ -5,6 +5,7 @@ const store = createStore({
   state: {
     user: null,
     isLoggedIn: false,
+    favorites: []
   },
   mutations: {
     setUser(state, user) {
@@ -14,13 +15,16 @@ const store = createStore({
     clearUser(state) {
       state.user = null;
       state.isLoggedIn = false;
+    },
+    addFavorite(state, favorite) {
+      state.favorites.push(favorite);
     }
   },
   actions: {
     async login({ commit }, user) {
       try {
         const response = await axios.post('http://localhost:3000/login', user);
-        commit('setUser', response.data);
+        commit('setUser', { username: user.username, id: response.data.id });
         return response;
       } catch (error) {
         console.error('Login failed:', error);
@@ -28,16 +32,29 @@ const store = createStore({
       }
     },
     logout({ commit }) {
-      // 实现登出逻辑
       commit('clearUser');
     },
     async register({ commit }, user) {
       try {
         const response = await axios.post('http://localhost:3000/register', user);
-        commit('setUser', response.data);
+        commit('setUser', { username: user.username, id: response.data.id });
         return response;
       } catch (error) {
         console.error('Registration failed:', error);
+        throw error;
+      }
+    },
+    async addFavorite({ commit }, { favorite, token }) {
+      try {
+        const response = await axios.post('http://localhost:3000/favorites', favorite, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        commit('addFavorite', favorite);
+        return response;
+      } catch (error) {
+        console.error('Add favorite failed:', error);
         throw error;
       }
     }

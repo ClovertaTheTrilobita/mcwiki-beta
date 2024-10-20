@@ -93,16 +93,10 @@
       </nav>
     </div>
   </div>
-  <div style="display: none;">
-    <search v-bind:search="search" ref="search"></search>
-  </div>
+  <search></search>
 </template>
 
 <script>
-import Category from '../category_components/Category.vue';
-import SearchList from '../search_components/SearchList.vue';
-import { nextTick } from 'vue';
-import SearchIndex from '../Index_components/SearchIndex.vue';
 import { mapActions } from 'vuex';
 import { mapState } from 'vuex';
 
@@ -118,19 +112,21 @@ export default {
     ...mapActions(['logout']),
     handleLogout() {
       this.logout();
+      localStorage.removeItem('token');
+      window.location.reload();
       console.log('Logout successful');
     }
   },
-  data() {
-    return {
-    };
+  props: {
+    isLoggedIn: {
+      type: Boolean,
+      required: true
+    },
+    user: {
+      type: Object,
+      required: false
+    }
   },
-  components: {
-    'search': SearchList
-  },
-  computed: {
-    ...mapState(['user','isLoggedIn'])
-  }
 }
 
 </script>
@@ -197,7 +193,7 @@ export default {
 }
 
 .avater-container:hover .menu {
-  transform: translate(0) translateY(300px);
+  transform: translate(0) translateY(305px);
   opacity: 1;
 }
 
