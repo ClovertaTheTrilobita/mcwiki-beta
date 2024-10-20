@@ -3,14 +3,17 @@ import axios from 'axios';
 
 const store = createStore({
   state: {
-    user: null
+    user: null,
+    isLoggedIn: false,
   },
   mutations: {
     setUser(state, user) {
       state.user = user;
+      state.isLoggedIn = true;
     },
     clearUser(state) {
       state.user = null;
+      state.isLoggedIn = false;
     }
   },
   actions: {
@@ -18,6 +21,7 @@ const store = createStore({
       try {
         const response = await axios.post('http://localhost:3000/login', user);
         commit('setUser', response.data);
+        return response;
       } catch (error) {
         console.error('Login failed:', error);
         throw error;
@@ -31,8 +35,10 @@ const store = createStore({
       try {
         const response = await axios.post('http://localhost:3000/register', user);
         commit('setUser', response.data);
+        return response;
       } catch (error) {
         console.error('Registration failed:', error);
+        throw error;
       }
     }
   }
