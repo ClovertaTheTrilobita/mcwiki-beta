@@ -1,39 +1,47 @@
 <template>
-  <div class="container">
-    <div class="card-container">
-      <Card v-for = "item in Item" :title="item.Entry" :text="item.Text" />
-    </div>
+  <div class="card" style="background-color: #F6FFF8;">
+    <a :href="'#/' + title">
+      <img :src="img_url" class="card-img-top img-fluid Card-img" alt="Image" id="source">
+      <div class="card-body">
+        <h4 class="card-title">{{ title }}</h4>
+        <h5 class="card-text" style="font-weight: 100;">{{ text }}</h5>
+      </div>
+    </a>
   </div>
-
 </template>
 
 <script>
 
-export default {
-  name: 'Preference',
-  props: {
-    Item: {
-      type: Array,
+  export default {
+    name: "Card",
+    props: {
+      img_url: String,
+      title: String,
+      text: String,
+      //删除image
     }
-  },
-};
+  }
 
 </script>
 
 <style scoped>
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-container .card {
-  flex: 0 0 28%; /* 每行两个卡片 */
-  margin-bottom: 20px; /* 卡片之间的间距 */
+.card:hover {
+  transform:  scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-</style>
+a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+</style> 
+
 
 
 
