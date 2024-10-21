@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-center">
     <form class="d-flex" role="search" style="width: 50dvh; height: 45px;">
       <input class="form-control me-2" placeholder="Search" aria-label="Search" clearable id="myInput1"
-        ref="myInput1" style="--bs-focus-ring-color: #6cb16385;">
+        ref="myInput1">
       <button class="btn btn-success" type="submit" @click="SearchPushed">
         Search</button>
     </form>
@@ -101,8 +101,15 @@ export default {
 </script>
 
 <style scoped>
+
 .d-flex {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
+.form-control:focus {
+    border-color: rgba(108, 177, 99, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(108, 177, 99, 0.25);
+}
+
 </style>
