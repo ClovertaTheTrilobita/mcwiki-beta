@@ -1,55 +1,44 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-3" v-for="(card, index) in cards" :key="index">
-        <Card :img_url="card.img_url" :title="card.title" :text="card.text" />
-      </div>
+    <div class="card-container">
+      <Card v-for = "item in Item" :key="item.id"  :title="item.Entry" :text="item.Text" :img_url="item.Image"/>
+      <!-- 改变image_url名，和card对应 -->
     </div>
   </div>
+
 </template>
 
 <script>
+
 import Card from './Card.vue';
 
 export default {
-  name: 'App',
-  components: {
-    Card
+  name: 'Preference',
+  props: {
+    Item: {
+      type: Array,
+      default :()=>[]
+    }
   },
-  data() {
-    return {
-      cards: [
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 1', text: 'This is card 1' },
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 2', text: 'This is card 2' },
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 3', text: 'This is card 3' },
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 4', text: 'This is card 4' },
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 5', text: 'This is card 5' },
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 6', text: 'This is card 6' },
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 7', text: 'This is card 7' },
-        { img_url: 'https://via.placeholder.com/150', title: 'Card 8', text: 'This is card 8' },
-      ]
-    };
-  }
-}
+  components: {
+    Card,
+  },
+};
+
 </script>
 
-<style>
-.container {
-  padding: 20px;
+<style scoped>
+.card-container {
+  column-count: 4; /* 设置列数 */
+  column-gap: 30px; /* 列之间的间距 */
+  max-width: 2000px; /* 设置最大宽度，防止卡片过多时溢出 */
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -10px; /* 用于抵消卡片之间的间距 */
-}
-
-.col-3 {
-  flex: 0 0 25%; /* 每行4个卡片，每个卡片占25%宽度 */
-  padding: 10px; /* 卡片之间的间距 */
+.card-container .card {
+  display: inline-block; /* 确保卡片在列之间均匀分布 */
+  width: 100%; /* 卡片宽度占满列宽 */
+  margin-bottom: 20px; /* 卡片之间的间距 */
 }
 </style>
-
-
 
 
