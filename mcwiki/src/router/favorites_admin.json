@@ -52,5 +52,11 @@
     "Text": "A batato is a modified version of the bat , with a poisonous potato replacing the body and head of the mob. It has the same AI as the regular bat.",
     "Category": "Entity",
     "Image": "Images/Entity/Batato.png"
+  },
+  {
+    "Entry": "Jagged Peaks",
+    "Text": "The jagged peaks are one of three mountain peak biomes, generating in tall peaks.",
+    "Category": "Biome",
+    "Image": "Images/Biome/Jagged_Peaks.webp"
   }
 ]

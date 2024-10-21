@@ -1,31 +1,36 @@
 <template>
+
   <div class="content">
     <NavBar class="navbar" :isLoggedIn="isLoggedIn" :user="user" />
-    <component :is="comName" :Item="currentItem"></component> <!-- 使用 comName -->
+    <component :is="comName" :Item="currentItem"></component>
     <About class="about" />
   </div>
+
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'; // 导入 ref 和 onMounted
+
+import { ref, onMounted } from 'vue';
 import { jwtDecode } from 'jwt-decode';
+import axios from 'axios';
+
 import NavBar from './components/public_components/NavBar.vue';
+import About from './components/public_components/About.vue';
+
 import SearchIndex from './components/Index_components/SearchIndex.vue';
 import HomeIndex from './components/Index_components/HomeIndex.vue';
-import AccMessageIndex from './components/Index_components/AccMessageIndex.vue';
-import SysMessageIndex from './components/Index_components/SysMessageIndex.vue';
 import ContactIndex from './components/Index_components/ContactIndex.vue';
-import SpaceIndex from './components/Index_components/SpaceIndex.vue';
-import i404NotFound from './components/public_components/i404NotFound.vue';
-import About from './components/public_components/About.vue';
-import TestIndex from './components/Index_components/TestIndex.vue';
 import CategoryIndex from './components/Index_components/CategoryIndex.vue';
+
 import Login from './components/account_components/Login.vue';
 import Register from './components/account_components/Register.vue';
 import Details from './components/category_components/Details.vue';
 import Preference from './components/account_components/Preference.vue';
-import Data from './data/FinalData/Summary/AllDataFinal.json';
-import axios from 'axios';
+import NotFound404 from './components/public_components/NotFound404.vue';
+
+import Data from './data/Summary/AllDataFinal.json';
+
+
 
 export default {
   name: "App",
@@ -34,40 +39,33 @@ export default {
     Register,
     Preference,
     NavBar,
+    About,
+    Details,
+
     SearchIndex,
     HomeIndex,
-    AccMessageIndex,
-    SysMessageIndex,
     ContactIndex,
-    SpaceIndex,
-    i404NotFound,
-    About,
-    TestIndex,
     CategoryIndex,
-    Details
+
+    NotFound404,
   },
 
   setup() {
+
     const comName = ref('');
     const currentItem = ref(null);
     const isLoggedIn = ref(false);
     const user = ref(null);
     const favorites = ref([]);
 
-    // 根据 hash 初始化 comName
-    const initializeComponent = () => {
-      const hash = window.location.hash;
+    const initializeComponent = () => {      
+
+      const hash = window.location.hash;                                 // 根据 hash 初始化 comName
       const navbars = document.querySelectorAll('.navbar');
       const abouts = document.querySelectorAll('.about');
-      const decodedHash = decodeURIComponent(hash.slice(2)); // 去掉前面的 `#/` 并解码
+      const decodedHash = decodeURIComponent(hash.slice(2));             // 去掉前面的 `#/` 并解码
       const matchedItem = Data.find(Item => Item.Entry == decodedHash);
 
-      if(hash == '#/preference'){
-        abouts.forEach(function(about){
-          about.style.display='none';
-        })
-      }
-      //分离about和navbar显示控制
       if (hash == '#/login' || hash == '#/register') {
         navbars.forEach(function (navbar) {
           navbar.style.display = 'none';
@@ -131,7 +129,7 @@ export default {
             comName.value = 'Details';
             break;
           default:
-            comName.value = 'i404NotFound'; // 404 页面
+            comName.value = 'i404NotFound';                               // 404 页面
             currentItem.value = null;
             break;
         }
@@ -139,7 +137,7 @@ export default {
     };
 
     const handleHashChange = () => {
-      initializeComponent(); // 每次 hash 变化时更新 comName
+      initializeComponent();                                              // 每次 hash 变化时更新 comName
     };
 
     const checkLoginStatus = () => {
@@ -170,8 +168,8 @@ export default {
     };
 
     onMounted(() => {
-      initializeComponent(); // 初始化时设置当前组件
-      window.addEventListener('hashchange', handleHashChange); // 监听 hash 变化
+      initializeComponent();                                              // 初始化时设置当前组件
+      window.addEventListener('hashchange', handleHashChange);            // 监听 hash 变化
       checkLoginStatus();
     });
 
@@ -187,10 +185,12 @@ export default {
 </script>
 
 <style scoped>
+
 #app {
   text-align: center;
   margin-top: 0px;
 }
+
 </style>
 
 <!-- 

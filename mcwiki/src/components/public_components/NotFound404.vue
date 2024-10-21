@@ -1,4 +1,5 @@
 ﻿<template>
+
   <div class="notfound">
     <h2>404 Not Found</h2>
     <hr>
@@ -10,12 +11,15 @@
 </template>
 
 <script>
+
 export default {
   name: 'i404NotFound'
 }
+
 </script>
 
 <style scoped>
+
 .notfound {
   text-align: center;
   
@@ -30,4 +34,5 @@ export default {
 .image {
   width: 100px;
 }
+
 </style>

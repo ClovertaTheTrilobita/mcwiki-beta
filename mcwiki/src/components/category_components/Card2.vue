@@ -1,7 +1,7 @@
 <template>
   <div class="card mb-3 mx-2" style="background-color: #F6FFF8;">
     <a href="https://www.mcmod.cn/class/version/1.html?jump=276" target="_blank">
-      <img src="./media/2.png" class="card-img-top img-fluid" alt="..." id="source">
+      <img src="./images/2.png" class="card-img-top img-fluid" alt="..." id="source">
       <div class="card-body">
         <h5 class="card-title" style="font-family: STXinwei;font-weight: bold;">UPDATE</h5>
         <p class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif;color:gray">What have been the latest updates to the game? Click here to learn more and download them.</p>

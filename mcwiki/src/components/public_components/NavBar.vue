@@ -30,22 +30,6 @@
                 <a class="nav-link" href="#/contact">Contact Us</a>
               </li>
 
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#/messages" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Messages
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#/sysmessage">System Message</a></li>
-                  <li><a class="dropdown-item" href="#/test">Account Message</a></li>
-                  
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#/contact">Contact Us</a></li>
-                </ul>
-              </li> -->
-
             </ul>
 
             <div v-if="isLoggedIn" class="avater-container">
@@ -56,7 +40,6 @@
                 </div>
                 <div class="Bottom">
                   <nav class="nav flex-column">
-                    <!-- 改变account的hash值 -->
                     <a class="nav-link btn btn-light avater-link" href="#/login"  
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Account</a>
                     <a class="nav-link btn btn-light avater-link" href="#/preference"
@@ -101,18 +84,21 @@
 </template>
 
 <script>
+
 import { mapActions } from 'vuex';
-import { mapState } from 'vuex';
 
 export default {
   name: "NavBar",
   methods: {
+
     SearchJump() {
       window.location.href = '#/search'
     },
+
     categroyClicked() {
       Category.methods.categoryClicked()
     },
+
     ...mapActions(['logout']),
     handleLogout() {
       this.logout();

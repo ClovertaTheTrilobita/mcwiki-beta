@@ -1,4 +1,5 @@
 <template>
+
 	<div class="container">
 
 		<div class="row mt-5">
@@ -35,15 +36,11 @@
 					</div>
 				</div>
 				<div class="col-lg-3  overflow-hidden ">
-					<img class="rounded-lg-3" src="./media/tech.png" width="400" style="position: relative;">
+					<img class="rounded-lg-3" src="./images/tech.png" width="400" style="position: relative;">
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-	
 
 </template>
 
@@ -98,4 +95,6 @@ export default {
 
 
 
-<style scoped></style>
+<style scoped>
+
+</style>

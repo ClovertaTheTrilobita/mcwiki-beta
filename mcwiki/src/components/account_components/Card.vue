@@ -1,5 +1,5 @@
 <template>
-  <div class="card" style="background-color: #F6FFF8;">
+  <div class="card mt-4 border-success" style="background-color: #F6FFF8;">
     <a :href="'#/' + title">
       <img :src="img_url" class="card-img-top img-fluid Card-img" alt="Image" id="source">
       <div class="card-body">
@@ -18,7 +18,6 @@
       img_url: String,
       title: String,
       text: String,
-      //删除image
     }
   }
 
@@ -38,7 +37,7 @@
 a {
     text-decoration: none;
     color: #000000;
-  }
+}
 
 </style> 
 

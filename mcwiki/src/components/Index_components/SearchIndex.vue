@@ -1,4 +1,5 @@
 ﻿<template>
+
   <div class="d-flex justify-content-center">
     <form class="d-flex" role="search" style="width: 50dvh; height: 45px;">
       <input class="form-control me-2" placeholder="Search" aria-label="Search" clearable id="myInput1"
@@ -10,20 +11,25 @@
   <div>
     <search v-bind:search="search" ref="search" v-if="refresh"></search>
   </div>
+
 </template>
 
 <script>
+
 import SearchList from '../search_components/SearchList.vue';
-import AllDataFinal from '../../data/FinalData/Summary/AllDataFinal.json'
+import AllDataFinal from '../../data/Summary/AllDataFinal.json'
 
 export default {
+
   name: "SearchIndex",
+
   props: {
     datasent: {
       type: Array,
       required: true
     },
   },
+
   data() {
     return {
       users: ["Rocks", "Biome", "Blocks"],
@@ -33,12 +39,15 @@ export default {
       AllDataFinal
     }
   },
+
   components: {
     "search": SearchList
   },
+
   setup() {
 
   },
+  
   methods: {
     SearchPushed() {
       let searchcontent = document.getElementById("myInput1").value;
@@ -88,15 +97,10 @@ export default {
             break;
           }
         }
-
       }
-
       return searchresult;
     },
-
   }
-
-
 }
 </script>
 

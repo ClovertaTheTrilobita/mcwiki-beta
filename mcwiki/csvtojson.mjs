@@ -1,10 +1,8 @@
-// parse-csv.mjs
 import csv from 'csvtojson';
 import { promises as fs } from 'fs';
 
-const csvFilePath = './src/data/FinalData/Summary/AllDataFinal.csv';
-const jsonFilePath = './src/data/FinalData/Summary/AllDataFinal.json';
-
+const csvFilePath = './src/data/Summary/AllDataFinal.csv';
+const jsonFilePath = './src/data/Summary/AllDataFinal.json';
 
 csv()
   .fromFile(csvFilePath)

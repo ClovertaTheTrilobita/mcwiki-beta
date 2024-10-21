@@ -88,7 +88,7 @@ export default {
 
 .RegisterIndex {
   height: 100vh;
-  background: url('./media/background_02.png') no-repeat center center fixed;
+  background: url('./images/background_02.png') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -113,28 +113,20 @@ label {
 .form-group {
   margin-bottom: 15px;
   width: 100%;
-  /* 让输入框填满父容器 */
 }
 
 input {
   padding: 10px;
   width: 100%;
-  /* 输入框宽度自适应 */
   border: 1px solid #00bf77;
-  /* 边框 */
   border-radius: 4px;
-  /* 圆角效果 */
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  /* 内部阴影 */
   transition: border-color 0.3s;
-  /* 过渡效果 */
 }
 
 input:focus {
   border-color: #2d7054;
-  /* 输入框获得焦点时的边框颜色 */
   outline: none;
-  /* 去掉默认的外边框 */
 }
 
 button {
