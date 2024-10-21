@@ -87,9 +87,6 @@ export default {
       if (matchedItem) {
         comName.value = 'Details';
         currentItem.value = matchedItem;
-      } else if ( hash == '#/preference') {
-        comName.value = 'Preference';
-        currentItem.value = favorites.value;
       } else {
         switch (hash) {
           case '#/':
@@ -112,6 +109,9 @@ export default {
             break;
           case '#/jumpcategory':
             comName.value = 'CategoryIndex';
+            break;
+          case '#/preference':
+            comName.value = 'Preference';
             break;
           case '#/sysmessage':
             comName.value = 'SysMessageIndex';

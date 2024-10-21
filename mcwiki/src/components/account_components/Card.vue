@@ -1,10 +1,10 @@
 <template>
   <div class="card mt-4 border-success" style="background-color: #F6FFF8;">
-    <a :href="'#/' + title">
+    <a :href="'#/' + title" target="_blank">
       <img :src="img_url" class="card-img-top img-fluid Card-img" alt="Image" id="source">
       <div class="card-body">
         <h4 class="card-title">{{ title }}</h4>
-        <h5 class="card-text" style="font-weight: 100;">{{ text }}</h5>
+        <h5 class="card-text mb-2" style="font-weight: 100;">{{ text }}</h5>
       </div>
     </a>
   </div>

@@ -1,7 +1,8 @@
 <template>
+
   <div class="container">
     <div class="card-container">
-      <Card v-for = "item in Item" :key="item.id"  :title="item.Entry" :text="item.Text" :img_url="item.Image"/>
+      <Card v-for = "item in Items" :key="item.id"  :title="item.Entry" :text="item.Text" :img_url="item.Image"/>
     </div>
   </div>
 
@@ -10,18 +11,38 @@
 <script>
 
 import Card from './Card.vue';
+import axios from 'axios';
 
 export default {
   name: 'Preference',
-  props: {
-    Item: {
-      type: Array,
-      default :()=>[]
-    }
+  data() {
+    return {
+      Items: []
+    };
   },
   components: {
     Card,
   },
+  methods: {
+    fetchFavorites() {
+      const token = localStorage.getItem('token');
+      axios.get('http://localhost:3000/favorites', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      .then(response => {
+        console.log('Fetched favorites from server:', response.data);     // 显示从服务器获取的数据
+        this.Items = response.data;
+      })
+      .catch(error => {
+        console.error('Error fetching favorites:', error);
+      });
+    }
+  },
+  mounted() {
+    this.fetchFavorites();
+  }
 };
 
 </script>
