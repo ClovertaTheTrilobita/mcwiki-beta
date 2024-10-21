@@ -7,7 +7,8 @@
       <p class="lead mb-4">Build all the wonders you can think of in this sandbox game, uncover the mysteries
         of strange mysteries, and survive the long night. </p>
       <p class="lead mb-4">In <span>Minecraft</span>, every play is a different experience, and the world
-        is full of unforgettable adventures. Explore and create in an infinite world, one square at a time, a world you can shape.</p>
+        is full of unforgettable adventures. Explore and create in an infinite world, one square at a time, a world you
+        can shape.</p>
     </div>
   </div>
 
@@ -15,19 +16,17 @@
 
 <script>
 
-  export default {
-    name: "Start",
-  }
+export default {
+  name: "Start",
+}
 
 </script>
 
 <style scoped>
-
-.lead{
-  span{
+.lead {
+  span {
     font-weight: bold;
     color: #2f7054;
   }
 }
-
-</style> 
+</style>
