@@ -1,6 +1,6 @@
 <template>
   <div class="preference-list">
-    <h1>小红书风格页面</h1>
+    <h1>Preference</h1>
     <div class="preference-items">
       <PreferenceCard
         v-for="(post, index) in posts"
