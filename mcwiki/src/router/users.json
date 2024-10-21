@@ -18,5 +18,9 @@
   {
     "username": "zzh",
     "password": "123456"
+  },
+  {
+    "username": "admin",
+    "password": "damin"
   }
 ]
