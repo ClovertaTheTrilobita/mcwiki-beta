@@ -11,6 +11,7 @@
 </template>
 
 <script>
+
   export default {
     name: "Card",
     props: {
@@ -22,6 +23,7 @@
       text: String,
     },
   }
+
 </script>
 
 <style scoped>
@@ -38,7 +40,7 @@
 a {
     text-decoration: none;
     color: #000000;
-  }
+}
 
 </style>
 

@@ -1,0 +1,236 @@
+[
+  {
+    "Entry": "Amethyst Geode",
+    "Text": "An amethyst geode is a feature found in the underground of the Overworld . Amethyst geodes contain smooth basalt , calcite , and are the main source of amethyst shards and blocks of amethyst .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Amethyst_Geode.png"
+  },
+  {
+    "Entry": "Ancient City",
+    "Text": "An ancient city is a palatial structure found in deep dark biomes at layer -51, harboring chests containing some items that cannot be found anywhere else. It is also the largest structure in the game.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Ancient_City.png"
+  },
+  {
+    "Entry": "Bastion Remnant",
+    "Text": "Bastion remnants [1] are large, castle-like generated structures found in the Nether in all of the biomes except basalt deltas . They generate in four distinct variants, each with a unique structure and set of loot. Piglins and piglin brutes spawn in these structures on generation, and hoglins may also spawn on generation in the bridge and hoglin stables variants. Bastion remnants are the only place to find gilded blackstone , the Pigstep music disc , the snout banner pattern and armor trim , monster spawners which spawn magma cubes , and the netherite upgrade smithing template.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Bastion_Remnant.png"
+  },
+  {
+    "Entry": "Bonus Chest",
+    "Text": "The bonus chest is a feature that appears near the player 's spawn if the \"Bonus Chest\" option is toggled on the \" Create New World \" screen. It generates with a semi-random collection of basic items to help the player survive early on and gather necessary resources, including tools, blocks, and food.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Bonus_Chest.png"
+  },
+  {
+    "Entry": "Brick Pyramid",
+    "Text": "Brick pyramids were tall experimental generated structures made up exclusively of bricks , present in Java Edition Infdev .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Brick_Pyramid.png"
+  },
+  {
+    "Entry": "Buried Treasure",
+    "Text": "Buried treasure is a naturally generated structure that consists of a buried loot chest . The chest is buried primarily in beaches , and rarely in the ocean floor. Buried treasure is the only source of the heart of the sea , which can be used to craft a conduit . Buried treasure can be located using explorer maps .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Buried_Treasure.png"
+  },
+  {
+    "Entry": "Coral Reef",
+    "Text": "Coral reefs are features that generate in warm ocean biomes . They consist of multiple clusters of coral blocks , coral , and coral fans . These clusters come in a wide variety of shapes, sizes, and colors.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Coral_Reef.png"
+  },
+  {
+    "Entry": "Desert Pyramid",
+    "Text": "A desert pyramid is a structure found in desert biomes built mostly of sandstone . The desert pyramid contains four loot chests hidden under the floor in the center protected by a TNT trap, and a secret buried room to the side where archaeology can be performed.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Desert_Pyramid.png"
+  },
+  {
+    "Entry": "Desert Well",
+    "Text": "Desert wells are features consisting mostly of sandstone .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Desert_Well.png"
+  },
+  {
+    "Entry": "Disk",
+    "Text": "A disk is a feature consisting of a naturally generated roughly circular deposit of a soil-like block under or next to bodies of water .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Disk.png"
+  },
+  {
+    "Entry": "End City",
+    "Text": "End cities are tall structures found on the outer islands of the End . They are inhabited by shulkers and hold valuable loot , including enchanted iron and diamond tools and armor . End ships , found in some end cities, are the only source of elytra .",
+    "Category": "Structure",
+    "Image": "Images/Structure/End_City.png"
+  },
+  {
+    "Entry": "End gateway",
+    "Text": "End gateways are intradimensional portals generated in the End : some are spawned around the central island after each death of the ender dragon ; others are randomly generated throughout the outer islands .",
+    "Category": "Structure",
+    "Image": "Images/Structure/End_gateway.png"
+  },
+  {
+    "Entry": "End platform",
+    "Text": "The end platform (also called the obsidian platform ) is a 5×1×5 square of obsidian that generates when an entity enters the End through an end portal block .",
+    "Category": "Structure",
+    "Image": "Images/Structure/End_platform.png"
+  },
+  {
+    "Entry": "End spike",
+    "Text": "End spikes [1] (also known as obsidian spikes , obsidian pillars , obsidian towers , and end pillars ) are a feature in the End that are made of obsidian .",
+    "Category": "Structure",
+    "Image": "Images/Structure/End_spike.png"
+  },
+  {
+    "Entry": "Exit portal",
+    "Text": "The exit portal (also known as the end podium or end fountain ) is a feature that enables the player to return to their spawn point , activating upon each defeat of the ender dragon .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Exit_portal.png"
+  },
+  {
+    "Entry": "Forest rock",
+    "Text": "A forest rock is a feature found throughout old growth taiga biomes.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Forest_rock.png"
+  },
+  {
+    "Entry": "Fossil",
+    "Text": "A fossil is a rarely-occurring skeletal feature composed of bone blocks , coal ore , or diamond ore .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Fossil.png"
+  },
+  {
+    "Entry": "Ice Patch",
+    "Text": "Ice patches are blobs of packed ice that generate exclusively in the ice spikes biome.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Ice_Patch.png"
+  },
+  {
+    "Entry": "Ice Spike",
+    "Text": "Ice spikes are common features made of packed ice . Ice spikes only generate in the ice spikes biome.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Ice_Spike.png"
+  },
+  {
+    "Entry": "Iceberg",
+    "Text": "Iceberg may refer to:",
+    "Category": "Structure",
+    "Image": "Images/Structure/Iceberg.png"
+  },
+  {
+    "Entry": "Igloo",
+    "Text": "An igloo is a structure sometimes generated in snowy taigas , snowy plains , or snowy slopes and built mainly of snow blocks .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Igloo.png"
+  },
+  {
+    "Entry": "Jungle Pyramid",
+    "Text": "Jungle pyramids , also known as jungle temples , are structures found in jungles .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Jungle_Pyramid.png"
+  },
+  {
+    "Entry": "Mineshaft",
+    "Text": "Mineshafts are structures found primarily underground in the Overworld . They consist of interlinked 3×3 tunnels with incomplete rail lines running through them, with oak wood platforms bridging gaps or hanging in larger exposed caverns. Mineshafts are the only structures where cave spider monster spawners can be found.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Mineshaft.png"
+  },
+  {
+    "Entry": "Monster Room",
+    "Text": "A monster room [a] is a feature found underground in the Overworld . It consists of a room with cobblestone walls and a floor made of cobblestone mixed with mossy cobblestone . A monster spawner that produces either zombies , skeletons , or spiders is found in the middle.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Monster_Room.png"
+  },
+  {
+    "Entry": "Nether Fortress",
+    "Text": "A nether fortress is a large structure found in the Nether , consisting of bridges, corridors, and towers. Nether fortresses are the only place where wither skeletons and blazes spawn. They also contain nether wart .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Nether_Fortress.png"
+  },
+  {
+    "Entry": "Nether Fossil",
+    "Text": "Nether fossils are fossils that generate in soul sand valleys .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Nether_Fossil.png"
+  },
+  {
+    "Entry": "Nether Reactor",
+    "Text": "The nether reactor was a player-built structure exclusive to Pocket Edition which, when activated, created a massive structure of netherrack and spawned large quantities of normally rare or unobtainable items.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Nether_Reactor.png"
+  },
+  {
+    "Entry": "Ocean Monument",
+    "Text": "Ocean monuments , also known as simply monuments , are rare underwater generated structures found in deep ocean biomes and variants. They are inhabited by guardians and elder guardians . They are the only place where sponges can be found and one of the two places where prismarine can be found; the other being ocean ruins .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Ocean_Monument.png"
+  },
+  {
+    "Entry": "Ocean Ruins",
+    "Text": "Ocean ruins are structures primarily composed of stone bricks or sandstone . They are found in ocean biomes and rarely on beaches . They contain chests , suspicious sand , and suspicious gravel , which hold a variety of loot , notably the buried treasure map and the sniffer egg . These ruins have cold and warm underwater variants that vary from large villages to single ruined huts.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Ocean_Ruins.png"
+  },
+  {
+    "Entry": "Pile",
+    "Text": "A pile is a feature that generates up to 25 specific blocks, the type of which correspond to the theme of a given village .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Pile.png"
+  },
+  {
+    "Entry": "Pillager Outpost",
+    "Text": "A pillager outpost is an assortment of structures inhabited by pillagers .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Pillager_Outpost.png"
+  },
+  {
+    "Entry": "Ruined Portal",
+    "Text": "A ruined portal is a structure resembling a damaged nether portal , which generates in both the Nether and the Overworld . It contains some decoration and (usually) a loot chest around it.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Ruined_Portal.png"
+  },
+  {
+    "Entry": "Shipwreck",
+    "Text": "A shipwreck is a structure found in oceanic biomes that resembles a sunken sailing ship.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Shipwreck.png"
+  },
+  {
+    "Entry": "Stronghold",
+    "Text": "A stronghold is a structure that occurs naturally underground in the Overworld , and is the only place where an end portal can be found. Strongholds can be located by using an eye of ender .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Stronghold.png"
+  },
+  {
+    "Entry": "Swamp Hut",
+    "Text": "Swamp huts (also known as witch huts ) are small structures that have the ability to spawn witches and black cats .",
+    "Category": "Structure",
+    "Image": "Images/Structure/Swamp_Hut.png"
+  },
+  {
+    "Entry": "Trail Ruins",
+    "Text": "Trail ruins are buried structures that work as archaeological sites where suspicious gravel generates. They are found in heavily forested biomes and resemble ruined villages from a lost culture. [1]",
+    "Category": "Structure",
+    "Image": "Images/Structure/Trail_Ruins.png"
+  },
+  {
+    "Entry": "Trial Chambers",
+    "Text": "Trial chambers (inconsistently plural in-game [n 1] ) are underground structures that serve as a mid-game combat challenge. [1] They consist mostly of copper blocks and tuff bricks , and are the only place where trial spawners and vaults naturally generate. Trial chambers are also the only place where breezes spawn, whose breeze rods can be used to craft wind charges . Various materials such as heavy cores and certain armor trims are obtained exclusively by unlocking vaults in trial chambers. As it is the only source of breeze rods and heavy cores, the structure is also the location where maces are obtained.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Trial_Chambers.png"
+  },
+  {
+    "Entry": "Village",
+    "Text": "A village is a group or complex of buildings and other structures that generate naturally in the Overworld . A village is inhabited by villagers , as people, cats , as pets/strays, iron golems , for defense, passive livestock mobs, for farms, and wandering traders with their trader llamas . A village is a source of resources to the player , obtained from trading , loot chests , and other materials found in the village. Villages are also a target of illager raids when a player with the Bad Omen effect enters a village, transforming it into Raid Omen , triggering a raid.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Village.png"
+  },
+  {
+    "Entry": "Woodland Mansion",
+    "Text": "A woodland mansion is a massive systematically-generated structure found in dark forests , often far away from the world spawn point . A mansion is inhabited by vindicators , evokers , and allays , and is one of the only places where a totem of undying can be obtained. Besides illagers , a mansion's interior lighting is sufficiently low for other Overworld monsters to spawn.",
+    "Category": "Structure",
+    "Image": "Images/Structure/Woodland_Mansion.png"
+  }
+]

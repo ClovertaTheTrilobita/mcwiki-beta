@@ -1,4 +1,5 @@
 <template>
+
   <footer>
     <div class="container mt-4 text-center">
       <div class="row">
@@ -20,24 +21,21 @@
       </div>
     </div>
   </footer>
+
 </template>
 
 <script>
+
   export default {
     name: "About",
-    data() {
-      return{
-        
-      }
-    },
-    
   }
+
 </script>
 
 <style scoped>
 
 a {
     color: #48af3a;
-  }
+}
 
 </style>

@@ -1,0 +1,206 @@
+[
+  {
+    "Entry": "Absorption",
+    "Text": "Absorption is a status effect that pads the health bar with extra hearts.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Absorption.png"
+  },
+  {
+    "Entry": "Bad Luck",
+    "Text": "Bad Luck, also known as Unluck , is a status effect that decreases the chance of the player getting high-quality loot, contrary to Luck .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Bad_Luck.png"
+  },
+  {
+    "Entry": "Bad Omen",
+    "Text": "Bad Omen is a status effect that either transforms into Raid Omen if in a village or Trial Omen if near a non-ominous trial spawner .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Bad_Omen.png"
+  },
+  {
+    "Entry": "Blindness",
+    "Text": "Blindness is a status effect that impairs a player 's vision and prevents sprinting and critical hits . It can only be obtained in Survival by consuming suspicious stew made with an azure bluet .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Blindness.png"
+  },
+  {
+    "Entry": "Darkness",
+    "Text": "Darkness is a status effect that causes the player's vision to temporarily deteriorate. The effect is caused by the activation of a sculk shrieker , or by being within detection range of a warden .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Darkness.png"
+  },
+  {
+    "Entry": "Fatal Poison",
+    "Text": "Fatal Poison inflicts damage to entities over time, and can kill both undead and non-undead mobs, similar to Wither . The effect is actually called \"Poison,\" but its ID distinguishes it from the other Poison effect, which cannot kill. In Survival mode, the effect applies only to parrots (when feeding them a cookie) and is not obtainable by players.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Fatal_Poison.png"
+  },
+  {
+    "Entry": "Fire Resistance",
+    "Text": "Fire Resistance is a status effect that grants the affected entity complete immunity to all sources of fire damage .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Fire_Resistance.png"
+  },
+  {
+    "Entry": "Haste",
+    "Text": "Haste is a status effect that increases attack speed by 10% per level [ Java Edition only ] and increases mining speed by 20% per level‌ [ Java Edition only ] or ( 1 + 0 . 2 n ) × 1 . 2 n times of mining speed without haste ( n represents the level of haste)‌ [ Bedrock Edition only ] . Negative levels decrease mining and attack speed, similar to Mining Fatigue .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Haste.png"
+  },
+  {
+    "Entry": "Health Boost",
+    "Text": "Health Boost is an unused status effect that increases maximum health of an entity.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Health_Boost.png"
+  },
+  {
+    "Entry": "Hero of the Village",
+    "Text": "Hero of the Village (or village hero ) is a status effect granted to the player upon defeating a raid .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Hero_of_the_Village.png"
+  },
+  {
+    "Entry": "Hunger",
+    "Text": "Hunger is a status effect which causes the hunger bar to deplete faster than normal.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Hunger.png"
+  },
+  {
+    "Entry": "Infested",
+    "Text": "Infested is a status effect that causes silverfish to spawn on an entity that is taking damage. This effect can also be found during ominous trials when the effect is applied by randomly spawned lingering potions .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Infested.png"
+  },
+  {
+    "Entry": "Instant Damage",
+    "Text": "Instant Damage is an instant status effect that decreases health for players and living mobs and heals the undead .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Instant_Damage.png"
+  },
+  {
+    "Entry": "Instant Health",
+    "Text": "Instant Health is an instant status effect that increases health for living mobs and damages the undead .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Instant_Health.png"
+  },
+  {
+    "Entry": "Invisibility",
+    "Text": "Invisibility is a status effect that turns entities invisible.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Invisibility.png"
+  },
+  {
+    "Entry": "Jump Boost",
+    "Text": "Jump Boost is a status effect that temporarily increases the jump height of the player.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Jump_Boost.png"
+  },
+  {
+    "Entry": "Mining Fatigue",
+    "Text": "Mining Fatigue is an effect that reduces mining and attack speed, opposite to Haste .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Mining_Fatigue.png"
+  },
+  {
+    "Entry": "Nausea",
+    "Text": "Nausea is an effect that warps and wobbles the player 's vision similar to a nether portal . The effect does not change its power as its potency changes. It can be obtained only from eating a pufferfish . Drinking milk removes the effect. In Bedrock Edition and Minecraft Education , it can also be cured with tonic .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Nausea.png"
+  },
+  {
+    "Entry": "Night Vision",
+    "Text": "Night Vision is a status effect that enhances the player's ability to see in darkness and underwater.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Night_Vision.png"
+  },
+  {
+    "Entry": "Oozing",
+    "Text": "Oozing is a status effect that causes two medium-sized slimes to spawn upon an entity's death. This effect can be found during ominous trials which is applied by randomly spawned lingering potions .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Oozing.png"
+  },
+  {
+    "Entry": "Poison",
+    "Text": "Poison is an effect that inflicts damage over time. It is similar to Wither , but it drains health faster and it cannot kill (it does, however, reduce the player 's health all the way to 1 ( )).",
+    "Category": "Effect",
+    "Image": "Images/Effect/Poison.png"
+  },
+  {
+    "Entry": "Raid Omen",
+    "Text": "Raid Omen is a status effect that causes raids to start.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Raid_Omen.png"
+  },
+  {
+    "Entry": "Regeneration",
+    "Text": "Regeneration is a status effect that restores an entity 's health over time.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Regeneration.png"
+  },
+  {
+    "Entry": "Resistance",
+    "Text": "Resistance is a status effect that reduces incoming damage .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Resistance.png"
+  },
+  {
+    "Entry": "Saturation",
+    "Text": "Saturation is an instant status effect that reduces the need for eating. It also prevents death by hunger if the player has no food.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Saturation.png"
+  },
+  {
+    "Entry": "Slowness",
+    "Text": "Slowness is a status effect that decreases walking speed, opposite of Speed .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Slowness.png"
+  },
+  {
+    "Entry": "Speed",
+    "Text": "Speed is a status effect that increases an entity's walking speed by 20% multiplied by the effect level.  It expands a player's field of view (FOV) accordingly.  Negative levels decrease speed, like slowness .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Speed.png"
+  },
+  {
+    "Entry": "Strength",
+    "Text": "Strength is a status effect which increases attack damage.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Strength.png"
+  },
+  {
+    "Entry": "Trial Omen",
+    "Text": "Trial Omen is a variant of the Bad Omen effect , which is granted when a non-ominous trial spawner enters the line of sight of a player with Bad Omen . Trial Omen causes nearby trial spawners to become ominous trial spawners .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Trial_Omen.png"
+  },
+  {
+    "Entry": "Water Breathing",
+    "Text": "Water Breathing is a status effect that prevents or delays drowning , and allows waterlogged beds ‌ [ Bedrock Edition only ] to be used. It also prevents or delays squid , glow squid , salmon , cod , pufferfish , tropical fish , and tadpoles from taking suffocation damage from being on land.‌ [ Bedrock Edition only ]",
+    "Category": "Effect",
+    "Image": "Images/Effect/Water_Breathing.png"
+  },
+  {
+    "Entry": "Weakness",
+    "Text": "Weakness is an effect that decreases melee damage. It is required to cure zombie villagers .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Weakness.png"
+  },
+  {
+    "Entry": "Weaving",
+    "Text": "Weaving is a status effect that makes cobwebs spawn upon an entity's death, and reduces the speed decrease from being in a cobweb. Lingering potions of weaving can be spawned as a projectile by an ominous trial spawner .",
+    "Category": "Effect",
+    "Image": "Images/Effect/Weaving.png"
+  },
+  {
+    "Entry": "Wind Charged",
+    "Text": "Wind Charged is a status effect that causes an entity to release a burst of wind upon death. This effect can be found during ominous trials when the effect is applied by randomly spawned lingering potions . This effect can be used to help knock back hordes of enemies, but can also startle the player if they are not expecting it.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Wind_Charged.png"
+  },
+  {
+    "Entry": "Wither",
+    "Text": "Wither is a status effect that inflicts damage over time. It acts similarly to Poison , save for the fact that it acts slower, can do so against the undead, and can kill on any difficulty level. It also turn the player's health to black, making their health harder to track.",
+    "Category": "Effect",
+    "Image": "Images/Effect/Wither.png"
+  }
+]

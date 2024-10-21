@@ -1,12 +1,9 @@
 ﻿<template>
   <div class="container">
+
     <Start v-if="currentHash !== '#/jumpcategory'" />
 
-
-    <!-- 卡片 -->
     <Cards v-if="currentHash !== '#/jumpcategory'" />
-
-
 
     <br><br><br><br>
     <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">When you play</h1>
@@ -30,7 +27,6 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <!-- copy -->
               <div class="container" id="cardd">
                 <div class="card" v-for="block in Blocks_Items" style="--bs-card-height: 162px;">
                   <a :href="'#/' + block.Entry" target="_blank">
@@ -41,7 +37,6 @@
                   </a>
                 </div>
               </div>
-              <!-- copy end-->
             </div>
           </div>
         </div>
@@ -58,7 +53,6 @@
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <div class="container" id="cardd">
-
                 <div class="card" v-for="block in Biome" style="--bs-card-height: 115px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
@@ -68,7 +62,6 @@
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -260,38 +253,29 @@ import Card3 from './Card3.vue';
 import Card4 from './Card4.vue';
 import Start from './Start.vue';
 import Cards from './Cards.vue';
-import placeHolders1 from './placeHolders1.vue';
-import Entry from '../../data/entry.json';
-import Biome from '../../data/FinalData/Biome/Biome.json'
-import Blocks_Items from '../../data/FinalData/Blocks_Items/Blocks_Items.json'
-import DIM from'../../data/FinalData/DIM/DIM.json'
-import Entity from '../../data/FinalData/Entity/Entity.json'
-import Enchantment from '../../data/FinalData/Enchantment/Enchantment.json'
-import Effect from '../../data/FinalData/Effect/Effect.json'
-import Structure from '../../data/FinalData/Structure/Structure.json'
-import Features from '../../data/FinalData/Features/Features.json'
-import GameSettings from '../../data/FinalData/GameSettings/GameSettings.json'
+import Biome from '../../data/Biome/Biome.json'
+import Blocks_Items from '../../data/Blocks_Items/Blocks_Items.json'
+import DIM from'../../data/DIM/DIM.json'
+import Entity from '../../data/Entity/Entity.json'
+import Enchantment from '../../data/Enchantment/Enchantment.json'
+import Effect from '../../data/Effect/Effect.json'
+import Structure from '../../data/Structure/Structure.json'
+import Features from '../../data/Features/Features.json'
+import GameSettings from '../../data/GameSettings/GameSettings.json'
 
 export default {
   name: 'Category',
   components: {
     Card1, Card2, Card3, Card4, Cards,
-    placeHolders1,
     Start,
   },
   data() {
     return {
-      Entry,Biome,Blocks_Items,DIM,Entity,Enchantment,Effect,Structure,Features,GameSettings,
+      Biome,Blocks_Items,DIM,Entity,Enchantment,Effect,Structure,Features,GameSettings,
       currentHash: window.location.hash,
     };
   },
   methods: {
-    categoryClicked() {
-      // do{
-      //   console.log("waiting");
-
-      // }while(modernizrCustom.methods.function.b.documentElement == 'undefined');
-    },
     CheckImg(){
       console.log(this.Biome[0].Image)
     }
@@ -311,14 +295,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
-  /* 卡片之间的间距 */
+  gap: 16px;                       /* 卡片之间的间距 */
 }
 
 .card {
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: calc(12.5% - 14px);/* 减去间距，确保8张卡片并排 */
+  width: calc(12.5% - 14px);       /* 减去间距，确保8张卡片并排 */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #F6FFF8;
