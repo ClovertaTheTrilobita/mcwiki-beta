@@ -30,9 +30,18 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <a v-for="block in Entry" :href="'#/' + block.Entry" target="_blank" class="mx-2">
-                {{block.Entry }}
-              </a>
+              <!-- copy -->
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in Blocks_Items" style="--bs-card-height: 162px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- copy end-->
             </div>
           </div>
         </div>
@@ -49,7 +58,8 @@
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <div class="container" id="cardd">
-                <div class="card" v-for="block in Biome" style="--bs-card-height: 150px;">
+
+                <div class="card" v-for="block in Biome" style="--bs-card-height: 115px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
                       <img class="card-img" :src=block.Image > <!--Image-->
@@ -58,6 +68,7 @@
                   </a>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -73,7 +84,16 @@
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              World dimention.
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in DIM" style="--bs-card-height: 150px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -89,7 +109,16 @@
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Minecraft Entities.
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in Entity" style="--bs-card-height: 135px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="75px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -105,7 +134,16 @@
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Enchantment for tools will appear here.
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in Enchantment" style="--bs-card-height: 162px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -121,7 +159,16 @@
           </h2>
           <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample" bg-light>
             <div class="accordion-body">
-              Buffs&Debuffs appears here.
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in Effect" style="--bs-card-height: 150px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -137,7 +184,16 @@
           </h2>
           <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Block Structres.
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in Structure" style="--bs-card-height: 115px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="65px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,7 +209,16 @@
           </h2>
           <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              The MC Game Backstories.
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in Features" style="--bs-card-height: 155px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -169,7 +234,16 @@
           </h2>
           <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              The new game settings appeared.
+              <div class="container" id="cardd">
+                <div class="card" v-for="block in GameSettings" style="--bs-card-height: 155px;">
+                  <a :href="'#/' + block.Entry" target="_blank">
+                    <div class="card-body">
+                      <img  :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -191,6 +265,14 @@ import Cards from './Cards.vue';
 import placeHolders1 from './placeHolders1.vue';
 import Entry from '../../data/entry.json';
 import Biome from '../../data/FinalData/Biome/Biome.json'
+import Blocks_Items from '../../data/FinalData/Blocks_Items/Blocks_Items.json'
+import DIM from'../../data/FinalData/DIM/DIM.json'
+import Entity from '../../data/FinalData/Entity/Entity.json'
+import Enchantment from '../../data/FinalData/Enchantment/Enchantment.json'
+import Effect from '../../data/FinalData/Effect/Effect.json'
+import Structure from '../../data/FinalData/Structure/Structure.json'
+import Features from '../../data/FinalData/Features/Features.json'
+import GameSettings from '../../data/FinalData/GameSettings/GameSettings.json'
 
 export default {
   name: 'Category',
@@ -201,7 +283,7 @@ export default {
   },
   data() {
     return {
-      Entry,Biome,
+      Entry,Biome,Blocks_Items,DIM,Entity,Enchantment,Effect,Structure,Features,GameSettings,
       currentHash: window.location.hash,
     };
   },
