@@ -88,11 +88,11 @@ app.post('/favorites', (req, res) => {
       }
 
       const favorites = data ? JSON.parse(data) : [];
-      // const itemExists = favorites.some(fav => fav.Enttry === item.Enttry);
+      const itemExists = favorites.some(fav => fav.Entry === item.Entry);
 
-      // if (itemExists) {
-      //   return res.status(409).json({ error: 'Item already exists in favorites' });
-      // }
+      if (itemExists) {
+        return res.status(409).json({ error: 'Item already exists in favorites' });
+      }
 
       favorites.push( item );
 
