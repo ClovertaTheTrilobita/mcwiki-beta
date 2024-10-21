@@ -83,7 +83,7 @@
           </div>
           <div id="menu3" class="container tab-pane fade">
             <div class="row row-cols-2 row-cols-lg-4">
-              <div class="col" v-for = "item in present"><Card :img_url="item.url" :text="item.descriptions" :title="item.title"/></div>
+              <div class="col" v-for = "item in course"><CardCourse :img="item.Image" :text="item.Text" :url="item.Url"/></div>
             </div>
           </div>
         </div>
@@ -95,6 +95,7 @@
 <script>
 
   import Card from './Card.vue';
+  import CardCourse from './Cardcourse.vue';
   import img1 from './images/present/card_01.png';
   import img2 from './images/present/card_02.png';
   import img3 from './images/present/card_03.png';
@@ -104,14 +105,16 @@
   import img7 from './images/present/card_07.png';
   import img8 from './images/present/card_08.png';
   import img9 from './images/present/card_09.png';
+  import course from './data/course.json';
 
   export default {
     name: "tabsCard",
     components: {
-      Card,
+      Card,CardCourse
     },
     setup() {
       return {
+        course,
         present: [
           {
             "title": "Items&Blocks",
@@ -165,6 +168,6 @@
 
 </script>
 
-<style>
+<style scoped>
 
 </style>

@@ -2,13 +2,9 @@
 
 	<div class="container">
 
-		<div class="row mt-5">
-			<div class="col-md-3 offset-md-10 "><img src="../images/MC-Logo_300x51.svg"
-					class="img-fluid Logo mx-auto d-block"></div>
-		</div>
 		<!-- hero组件1 -->
-		<div class="px-4 pt-3 my-5 text-center ">
-			<h1 class="display-4 fw-bold">{{ Item.Entry }}</h1>
+		<div class="px-4 pt-3 my-5 text-center">
+			<h1 class="display-4 fw-bold" style="margin-top: 100px;">{{ Item.Entry }}</h1>
 			<div class="col-lg-6 mx-auto">
 				<p class="lead mb-4">{{ Item.Category }}</p>
 				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
@@ -24,20 +20,22 @@
 
 
 		<!-- hero组件2 -->
-		<div style="background-color: white;position: relative;top: -20px;" class="container my-5">
+		<div style="background-color: white;position: relative;top: -15px;" class="container my-5">
 			<!-- <div style="background-color: white;position: relative;" class="container my-5"> -->
 			<div class=" row p-5 pb-0 pe-lg-0 pt-lg-5 rounded-3 border shadow-lg">
-				<h3 class=" fw-bold lh-1">Intro</h3>
+				<h3 class=" fw-bold lh-1" style="font-size: 35px;">Intro</h3>
 				<div class="col-lg-9 p-lg-5 pt-lg-1">
-					<p class="lead">A breif introduction</p>
+					<p class="lead" style="font-size:22px;">A breif introduction</p>
 					<div class="d-grid d-md-flex justify-content-md-start mb-2 mb-lg-1">
-						<p>{{ Item.Text }}</p>
-						<button @click="addToFavorites" class="btn btn-primary">收藏</button>
+						<p style="font-size:18px;">&nbsp;{{ Item.Text }}</p>
 					</div>
+					<button @click="addToFavorites" class="btn btn-success Button">like</button>
 				</div>
 				<div class="col-lg-3  overflow-hidden ">
-					<img class="rounded-lg-3" src="./images/tech.png" width="400" style="position: relative;">
+					<img class="rounded-lg-3" src="./images/tech.png" width="350" height="350" style="position: relative;">
 				</div>
+				<div class="col-md-3" style=" margin-bottom: 45px;"><img src="../images/MC-Logo_300x51.svg"
+					class="img-fluid Logo mx-auto d-block"></div>
 			</div>
 		</div>
 	</div>
@@ -95,4 +93,6 @@ export default {
 
 
 
-<style scoped></style>
+<style scoped>
+
+</style>
