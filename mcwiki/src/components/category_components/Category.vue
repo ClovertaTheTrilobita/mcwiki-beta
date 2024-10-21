@@ -179,7 +179,7 @@
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
               style="--bs-accordion-btn-bg: #0c8672; --bs-accordion-active-bg: #0c8672;font-size: 18px;">
-              Multiblocked Structures
+              Structure
             </button>
           </h2>
           <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -204,7 +204,7 @@
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
               style="--bs-accordion-btn-bg: #067b72; --bs-accordion-active-bg: #067b72;font-size: 18px;">
-              Features
+              Feature
             </button>
           </h2>
           <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -229,7 +229,7 @@
             <button class="accordion-button focus-ring collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
               style="--bs-accordion-btn-bg: #007271; --bs-accordion-active-bg: #007271;font-size: 18px;">
-              Game Settings
+              GameSettings
             </button>
           </h2>
           <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -250,9 +250,7 @@
       </div>
     </div>
   </div>
-  <div>
-    <button @click="CheckImg">Check</button>
-  </div>
+
 </template>
 
 <script>

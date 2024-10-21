@@ -3,7 +3,7 @@
   <div class="RegisterIndex">
     <div class="content">
       <div class="register_container" style="color: #eefdf1;">
-        <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Join us</h1>
+        <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Join Us</h1>
         <div class="form_container">
           <form @submit.prevent="handleRegister">
             <div class="form-group">
@@ -18,7 +18,7 @@
               {{ message }}
             </div>
             <a class="btn btn-secondary Register" href="#/login"><span class="mx-1 login">Login</span></a>
-            <button class="btn btn-success" type="submit" style="color: #eefdf1">Signup</button>
+            <button class="btn btn-success" type="submit" style="color: #eefdf1">Sign up</button>
           </form>
         </div>
         <About class="fixed-bottom"/>
