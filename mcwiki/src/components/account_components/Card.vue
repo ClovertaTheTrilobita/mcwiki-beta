@@ -1,4 +1,97 @@
 <template>
+
+  <div class="card" style="background-color: #F6FFF8;">
+    <a :href="'#/' + title">
+      <img :src="img_url" class="card-img-top img-fluid Card-img" alt="Image" id="source">
+      <div class="card-body">
+        <h4 class="card-title">{{ title }}</h4>
+        <h5 class="card-text" style="font-weight: 100;">{{ text }}</h5>
+      </div>
+    </a>
+  </div>
+
+</template>
+
+<script>
+
+  export default {
+    name: "Card",
+    props: {
+      img_url: String,
+      title: String,
+      text: String,
+    }
+  }
+
+</script>
+
+<style scoped>
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform:  scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+</style> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <template>
   <div class="preference-card">
     <img :src="post.image" alt="文章图片" class="post-image" />
     <div class="post-content">
@@ -104,4 +197,4 @@ button:hover {
 }
 </style>
 
-  
+   -->
