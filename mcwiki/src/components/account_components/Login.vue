@@ -3,123 +3,83 @@
   <div class="LoginIndex">
     <div class="content">
       <div class="login_container" style="color: #eefdf1;">
-        <div class="row fixed-top">
-          <div class="col-1 signln">
-            <!-- ----------以下代码正在测试，请勿改动---------- -->
-            <input type="file" @change="handleFileUpload">
-            <!-- ----------以上代码正在测试，请勿改动---------- -->
-          </div>
-        </div>
         <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Login</h1>
-        <form @submit.prevent="handleLogin">
-          <div class="form-group">
-            <label for="username" class="label">Username:</label>
-            <input type="text" v-model="username" id="username" required placeholder="Enter username" />
-          </div>
-          <div class="form-group">
-            <label for="password" class="label">Password:</label>
-            <input type="password" v-model="password" id="password" required placeholder="Enter password" />
-          </div>
-          <button type="submit" style="color: #eefdf1">Login</button>
-        </form>
+        <div class="form_container">
+          <form @submit.prevent="handleLogin">
+            <div class="form-group">
+              <label class="label">Username:</label>
+              <input type="text" v-model="username" required placeholder="Enter username" />
+            </div>
+            <div class="form-group">
+              <label class="label">Password:</label>
+              <input type="password" v-model="password" required placeholder="Enter password" />
+            </div>
+            <div v-if="message" class="alert" :class="{'alert-danger': isError, 'alert-success': !isError}" role="alert" style="--bs-alert-padding-y: 10px">
+              {{ message }}
+            </div>
+            <a class="btn btn-secondary Register" href="#/register">Signup</a>
+            <button class="btn btn-success" type="submit"><a class="mx-1 login">Login</a></button>
+          </form>
+        </div>
         <About class="fixed-bottom"/>
       </div>
     </div>
   </div>
 
-  <div style="display: none;">
-    <datasent v-bind:datasent="datasent" ref="datasent"></datasent>
-  </div>
-
 </template>
 
 <script>
-import { ref } from 'vue';
 import { mapActions } from 'vuex';
-import SearchIndex from '../Index_components/SearchIndex.vue';
 import About from '../public_components/About.vue'
+import { useRouter } from 'vue-router';
+import { jwtDecode } from 'jwt-decode';
 
 export default {
   name: 'Login',
   components: {
-    'datasent': SearchIndex,
     About,
-  },
-
-  /* --------------------以下代码正在测试，请勿改动-------------------- */
-  methods: {
-    handleFileUpload(event) {
-      // 获取用户选择的文件
-      const file = event.target.files[0];
-
-      // 创建一个新的FileReader对象
-      const reader = new FileReader();
-
-      // 监听文件读取完成事件
-      reader.onload = () => {
-        // 将读取的文件内容传递给处理CSV数据的函数
-        this.parseCSVData(reader.result);
-      };
-
-      // 读取文件内容
-      reader.readAsText(file);
-    },
-
-    parseCSVData(data) {
-      // 解析CSV文件内容，并将其转换为对应的数据结构
-      // 例如，将CSV中的每一行转换为一个对象
-      const rows = data.split('\n');
-      const headers = rows[0].split(',');
-      const csvData = [];
-
-      for (let i = 1; i < rows.length; i++) {
-        const row = rows[i].split(',');
-        const rowData = {};
-
-        for (let j = 0; j < headers.length; j++) {
-          if (j > 0){
-            rowData[headers[j].substring(1, headers[j].length - 1)] = row[j];
-          }else{
-            rowData[headers[j]] = row[j];
-          }
-        }
-
-        csvData.push(rowData);
-        console.log("rowData:")
-        console.log(rowData)
-      }
-
-      // 在控制台中打印CSV数据
-      console.log(csvData);
-      this.datasent = csvData;
-      console.log(this.datasent)
-      this.sendTOParent()
-    },
-    sendTOParent() {
-      this.$emit('listenToChildEvent', this.datasent)
-    },
-    ...mapActions(['login']),
-    async handleLogin() {
-      const user = { username: this.username, password: this.password };
-      try {
-        await this.login(user);
-        console.log('Login successful');
-      } catch (error) {
-        console.error('Login failed:', error);
-      }
-    }
   },
   data() {
     return {
-      datasent: [],
       username: '',
       password: '',
+      message: '',
+      isError: false,
     }
-  }
-  /* --------------------以上代码正在测试，请勿改动-------------------- */
-
-
-
+  },
+  setup() {
+    const router = useRouter();
+    return { router };
+  },
+  methods: {
+    ...mapActions(['login']),
+    async handleLogin() {
+      const user = { username: this.username, password: this.password };
+      console.log('Sending login request:', user);
+      try {
+        const response = await this.login(user);
+        console.log('Login success');
+        const token = response.data.token;
+        console.log('Received token:', token);
+        localStorage.setItem('token', token); //存储 JWT
+        const decodedToken = jwtDecode(token);
+        console.log('Decoded token:', decodedToken);
+        localStorage.setItem('username', decodedToken.username);
+        this.message = 'Login success, jumping';
+        this.isError = false;
+        setTimeout(() => {
+          window.location.hash = '#/home';
+          setTimeout(() => {
+            window.location.reload(); // 刷新页面
+          }, 1); // 确保页面跳转后再刷新
+        }, 2000);
+      } catch (error) {
+        console.error('Login failed:', error);
+        this.message = 'Login failed: Invalid credentials';
+        this.isError = true;
+      }
+    }
+  },
 };
 </script>
 
@@ -159,7 +119,7 @@ input {
   padding: 10px;
   width: 100%;
   /* 输入框宽度自适应 */
-  border: 1px solid #851111;
+  border: 1px solid #00bf77;
   /* 边框 */
   border-radius: 4px;
   /* 圆角效果 */
@@ -170,7 +130,7 @@ input {
 }
 
 input:focus {
-  border-color: #42b983;
+  border-color: #2d7054;
   /* 输入框获得焦点时的边框颜色 */
   outline: none;
   /* 去掉默认的外边框 */
@@ -178,28 +138,22 @@ input:focus {
 
 button {
   padding: 10px 15px;
-  background-color: #42b983;
-  color: rgb(206, 30, 30);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  /* 按钮的过渡效果 */
+  position: absolute;
+            bottom: 0;
+            right: 0;
 }
 
-button:hover {
-  background-color: #369d73;
-  /* 按钮悬停时的颜色 */
+.Register {
+  padding: 10px 15px;
 }
 
-.signln {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.form_container {
+  position: relative;
 }
 
-.signln:hover {
-  transform: translate(0);
-  opacity: 1;
+.login {
+    color: #eefdf1;
+    text-decoration: none;
 }
 
 </style>

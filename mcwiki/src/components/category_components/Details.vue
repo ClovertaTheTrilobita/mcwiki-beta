@@ -13,8 +13,7 @@
 				<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
 				</div>
 			</div>
-			
-			<div class="overflow-hidden border-bottom" style="max-height: 15vh; ">
+			<div>
 				<div class="container px-5">
 					<img src="./media/Weel.png" class="img-fluid border rounded-3 shadow-lg mb-4" width="192"
 						height="192" loading="lazy">
@@ -24,7 +23,7 @@
 
 
 		<!-- hero组件2 -->
-		<div style="background-color: white;position: relative;top: -49px;" class="container my-5">
+		<div style="background-color: white;position: relative;top: -20px;" class="container my-5">
 		<!-- <div style="background-color: white;position: relative;" class="container my-5"> -->
 			<div class=" row p-5 pb-0 pe-lg-0 pt-lg-5 rounded-3 border shadow-lg">
 				<h3 class=" fw-bold lh-1">Intro</h3>
@@ -36,6 +35,7 @@
 							2014年9月，Minecraft及其开发公司Mojang被Microsoft收购。
 							2017年9月18日，PC/Mac版Minecraft正式更名为Minecraft:Java版（Minecraft:Java
 							Edition）,与基岩版Minecraft:Bedrock Edition这一 多平台版本区分开来。目前Minecraft可分为Java版、基岩版和教育版三个主要版本。</p>
+							<button @click="addToFavorites" class="btn btn-primary">收藏</button>
 					</div>
 				</div>
 				<div class="col-lg-3  overflow-hidden ">
@@ -55,16 +55,48 @@
 
 <script>
 
+import { mapActions, mapState } from 'vuex';
+
 export default {
 	name: 'Details',
 	props: {
 		Item: {
 			type: Object,
 		}
-	}
-}
-
-
+	},
+	computed: {
+		...mapState(['user'])
+	},
+  methods: {
+  	...mapActions(['addFavorite']),
+  	async addToFavorites() {
+    	try {
+	      const favorite = {
+          userId: localStorage.getItem('username'),
+  	      item: this.Item
+    	  };
+				const token = localStorage.getItem('token');   //读取 JWT
+				console.log('token:', token);
+				if (!token) {
+					alert('请先登录');
+					setTimeout(() => {
+          	window.location.reload();
+        	}, 1)
+					return;
+				}
+	      await this.addFavorite({ favorite, token });
+        alert('收藏成功');
+  	  } catch (error) {
+	  	  if (error.response && error.response.status === 409) {
+					alert('该项目已经在收藏列表中');
+				} else {
+					console.error('收藏失败:', error);
+      		alert('收藏失败');
+				}
+	    }
+  	},
+  },
+};
 
 </script>
 

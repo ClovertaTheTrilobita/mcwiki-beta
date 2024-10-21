@@ -5,7 +5,7 @@
       <div class="card-body">
         <h5 class="card-title" style="font-family: STXinwei;font-weight: bold;">CN WEBSITE</h5>
         <p class="card-text" style="font-family: Georgia, 'Times New Roman', Times, serif;color:gray">This is a website
-          provided by My World China agent NetEase. Click to learn more.</p>
+          provided by Minecraft China agent NetEase. Click to find out more.</p>
       </div>
     </a>
   </div>

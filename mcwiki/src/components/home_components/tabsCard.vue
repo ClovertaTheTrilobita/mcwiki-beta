@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" style="background-color: #2d7054; height: 80px;"></div>
+  <div class="container-fluid" style="background-color: #2d7054; height: 60px;"></div>
   <div class="container mt-5">
     <div class="mb-5">
       <h1 style="text-align: center; font-family: STHupo; font-size: 4em;">Minecraft Materials</h1>
@@ -8,25 +8,19 @@
       <div class="card-header" style="background-color: #009978;">
         <ul class="nav nav-tabs card-header-tabs" role="tablist" style="--bs-nav-link-color: #eefdf1; --bs-nav-link-hover-color: #eefdf1; --bs-nav-tabs-link-active-border-color: #eefdf1; --bs-nav-tabs-link-hover-border-color: #eefdf1">
           <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="tab" aria-current="true" href="#home">原版资料</a>
+            <a class="nav-link active" data-bs-toggle="tab" aria-current="true" href="#menu1">原版介绍</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu1">原版介绍</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">原版资料</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu2">原版教程</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#menu3">原版教程</a>
           </li>
         </ul>
       </div>
       <div class="card-body" style="text-align: left; background-color: #eefdf1;">
         <div class="tab-content">
-          <div id="home" class="container tab-pane active show fade"> 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-              <!-- sm md lg xl xxl -->
-              <div class="col" v-for = "item in present"><Card :img_url="item.url" :text="item.descriptions" :title="item.title"/></div>
-            </div>
-          </div>
-          <div id="menu1" class="container tab-pane fade">
+          <div id="menu1" class="container tab-pane active show fade">
             
             <div class="row mt-5 mb-3">
               <div class="col-md-6 offset-md-3"><img src="../images/MC-Logo_300x51.svg" class="img-fluid Logo mx-auto d-block"></div>
@@ -81,7 +75,13 @@
               <p>可以在<a>CurseForge</a>和<a>Modrinth</a>等网站寻找模组。</p>
 
           </div>
-          <div id="menu2" class="container tab-pane fade">
+          <div id="menu2" class="container tab-pane fade"> 
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+              <!-- sm md lg xl xxl -->
+              <div class="col" v-for = "item in present"><Card :img_url="item.url" :text="item.descriptions" :title="item.title"/></div>
+            </div>
+          </div>
+          <div id="menu3" class="container tab-pane fade">
             <div class="row row-cols-2 row-cols-lg-4">
               <div class="col" v-for = "item in present"><Card :img_url="item.url" :text="item.descriptions" :title="item.title"/></div>
             </div>

@@ -10,9 +10,6 @@
   <div>
     <search v-bind:search="search" ref="search" v-if="refresh"></search>
   </div>
-  <!-- <div>
-    <button @click="CheckData">check</button>
-  </div> -->
 </template>
 
 <script>
@@ -46,23 +43,12 @@ export default {
   },
   methods: {
     SearchPushed() {
-      //console.log(Entry)
       let searchcontent = document.getElementById("myInput1").value;
       console.log("Searched: " + searchcontent)
-      let searchresult = []; var j = 0;
-      console.log(AllData[0])
-      var text = ['a', 'b', 'c', 'd', 'a', 'a']
-      // for (var i = 0; i < AllData.length; i++) {
-      //   if (AllData[i].Entry == searchcontent) {
-      //     searchresult[j] = AllData[i];
-      //     j++;
-      //   }
-      // }
-      searchresult = this.BFSearch(searchcontent, AllData)
-      this.search = searchresult
-      console.log("Search received: " + searchcontent)
+      this.search = this.BFSearch(searchcontent, AllData);
       console.log("Search result: ")
       console.log(this.search)
+
       this.refresh = false
       this.$nextTick(() => {
         // 2. 再调用子组件的方法使用该属性
@@ -75,37 +61,41 @@ export default {
       console.log(this.datasent)
     },
 
-    BFSearch(searchcontent, searchdata) {
+    BFSearch(searchcontent1, searchdata1) {
+      console.log("Search received: " + searchcontent1);
       var l = 0; var searchresult = []; var flag = new Boolean(false);
-      console.log("Starting search.")
-      
-      for (var i = 0; i < searchdata.length; i++) {
-        for (var k = 0; k < searchdata[i].Entry.length; k++) {
+      console.log("Starting search.");
+      var searchcontent = searchcontent1.toLowerCase();
+
+      for (var i = 0; i < searchdata1.length; i++) {  // BF Search
+        var searchdata = searchdata1[i].Entry.toLowerCase();
+        for (var k = 0; k < searchdata.length; k++) {
           flag = false;
           for (var j = 0; j < searchcontent.length; j++) {
-            if (searchcontent[j] == searchdata[i].Entry[k + j]) {
+            if (searchcontent[j] == searchdata[k + j]) {
               flag = true;
-              console.log("flag:" + flag)
+              console.log("flag:" + flag);
               continue;
-              //console.log(searchcontent[j]+ "==" + AllData[i].Text[k])
             } else {
               flag = false;
               break;
             }
           }
-          if (flag) {
-            console.log("Got:")
 
-            searchresult[l] = searchdata[i];
-            console.log(searchresult[l])
+          if (flag) {
+            console.log("Got:");
+            searchresult[l] = searchdata1[i];
+            console.log(searchresult[l]);
             l++;
             break;
           }
         }
 
       }
+
       return searchresult;
-    }
+    },
+
   }
 
 
