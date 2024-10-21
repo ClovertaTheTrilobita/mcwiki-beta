@@ -10,7 +10,7 @@
             <a href="https://github.com/ClovertaTheTrilobita/mcwiki-beta" target="_blank" rel="nofollow noreferrer">Github repository</a>&nbsp; 
             Developed by
           </p>
-          <p class="copyleft">Group 3 &nbsp;|&nbsp; 
+          <p class="copyleft">Group one &nbsp;|&nbsp; 
             <a href="https://github.com/ATwhiteIIIQwQ" >Laur</a>&nbsp;
             <a href="https://github.com/ClovertaTheTrilobita" >Steve</a>&nbsp;
             <a href="https://github.com/Theo-polis">Raydon</a>&nbsp;
