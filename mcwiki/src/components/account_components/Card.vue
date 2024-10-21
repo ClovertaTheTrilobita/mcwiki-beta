@@ -9,17 +9,12 @@
 
 <script>
 
-import Card from './Card.vue';
-
 export default {
   name: 'Preference',
   props: {
     Item: {
       type: Array,
     }
-  },
-  components: {
-    Card,
   },
 };
 
