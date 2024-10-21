@@ -1,9 +1,9 @@
 ﻿<template>
   <div class="d-flex justify-content-center">
-    <form class="d-flex" role="search" style="width: 50dvh; height: 45px;" onsubmit="return false;">
-      <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" clearable id="myInput1"
-        ref="myInput1">
-      <button class="btn btn-success" type="button" @click="SearchPushed">
+    <form class="d-flex" role="search" style="width: 50dvh; height: 45px;">
+      <input class="form-control me-2" placeholder="Search" aria-label="Search" clearable id="myInput1"
+        ref="myInput1" style="--bs-focus-ring-color: #6cb16385;">
+      <button class="btn btn-success" type="submit" @click="SearchPushed">
         Search</button>
     </form>
   </div>
@@ -14,8 +14,6 @@
 
 <script>
 import SearchList from '../search_components/SearchList.vue';
-import Entry from '../../data/entry.json'
-import AllData from '../../data/sum/AllData.json'
 import AllDataFinal from '../../data/FinalData/Summary/AllDataFinal.json'
 
 export default {
@@ -32,8 +30,6 @@ export default {
       update: true,
       refresh: true,
       search: [],
-      Entry,
-      AllData,
       AllDataFinal
     }
   },

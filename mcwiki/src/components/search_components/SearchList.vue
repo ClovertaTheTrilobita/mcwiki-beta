@@ -21,10 +21,6 @@
       </div>
     </div>
   </div>
-  <!-- <div v-for="sea in search" style="background-color: aqua;">
-    <p>SeachInput:</p>
-    <p>{{ sea }}</p>
-  </div> -->
 </template>
 
 <script>

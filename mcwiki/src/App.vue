@@ -24,7 +24,7 @@ import Login from './components/account_components/Login.vue';
 import Register from './components/account_components/Register.vue';
 import Details from './components/category_components/Details.vue';
 import Preference from './components/account_components/Preference.vue';
-import Data from './data/entry.json';
+import Data from './data/FinalData/Summary/AllDataFinal.json';
 import axios from 'axios';
 
 export default {
