@@ -9,22 +9,22 @@
       <div class="carousel-item active">
         <img src="./images/Carousel/Slide01.png" class="d-block w-100 Slide img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1 >Cherry Grove</h1>
-          <p >樱花树林是山地的特殊繁茂变种，在Java版1.19.4快照23w07a（内置数据包）中加入。这里生长着大量樱花树，地表被草方块覆盖着，且地表上会生成众多装饰性的粉红色花簇，这儿的草色调较暖。猪、绵羊、蜜蜂会在此生物群系生成。</p>
+          <h1>Cherry Grove</h1>
+          <p>Cherry blossom tree forest is a special lush variant of the mountainous terrain, added in Java version 1.19.4 snapshot 23w07a (built-in datapack). A large number of cherry trees grow here, the surface is covered with grass cubes and numerous decorative pink flower clusters are generated on the surface, the grass here is warmer in tone. Pigs, sheep, and bees spawn in this biome.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="./images/Carousel/Slide02.png" class="d-block w-100 Slide img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1>The Nether</h1>
-          <p>下界是一个封闭、危险的维度，充斥着火焰、熔岩、菌类植被以及许多敌对生物，是一个和主世界存在于不同维度的世界，也是一个洞穴维度。</p>
+          <p>The Nether is a closed, dangerous dimension filled with fire, lava, fungal vegetation, and many hostile creatures, a world that exists in a different dimension than the main world, also a cave dimension.</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="./images/Carousel/Slide03.png" class="d-block w-100 Slide img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h1>Woodland Mansion</h1>
-          <p>林地府邸会非常罕见地在黑森林生物群系中生成，通常距离出生点有几万个方块远，玩家可以通过向制图师村民用绿宝石购买林地探险家地图寻找它们</p>
+          <p>Woodland Mansions spawn very rarely in the Black Forest biome, usually tens of thousands of blocks away from the birth point, and players can find them by purchasing Woodland Explorer maps from cartographer villagers with emeralds.</p>
         </div>
       </div>
     </div>
