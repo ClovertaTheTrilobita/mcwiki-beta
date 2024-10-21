@@ -103,7 +103,12 @@ export default {
     handleLogout() {
       this.logout();
       localStorage.removeItem('token');
-      window.location.reload();
+      setTimeout(() => {
+          window.location.hash = '#/home';
+          setTimeout(() => {
+            window.location.reload();
+          }, 1);
+        }, 2);
       console.log('Logout successful');
     }
   },

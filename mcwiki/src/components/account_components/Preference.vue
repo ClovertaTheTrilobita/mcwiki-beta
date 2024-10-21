@@ -1,11 +1,14 @@
 <template>
-
   <div class="container">
-    <div class="card-container">
-      <Card v-for = "item in Items" :key="item.id"  :title="item.Entry" :text="item.Text" :img_url="item.Image"/>
+    <div class="container">
+      <div v-if="Items.length === 0" class="preference" style="text-align: center; font-family: STHupo; font-size: 4em;">
+        <span>Oh, you don't have a favourite item yet, click <a href="#category">here</a> to go for it!</span>
+      </div>
+      <div v-else class="card-container">
+        <Card v-for = "item in Items" :key="item.id"  :title="item.Entry" :text="item.Text" :img_url="item.Image"/>
+      </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -59,6 +62,20 @@ export default {
   display: inline-block;
   width: 100%;
   margin-bottom: 9px;
+}
+
+.preference {
+  height: 83.2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+a {
+    color: #48af3a;
+    text-decoration: none;
 }
 
 </style>

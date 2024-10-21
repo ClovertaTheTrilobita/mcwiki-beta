@@ -12,7 +12,6 @@
 
 import { ref, onMounted } from 'vue';
 import { jwtDecode } from 'jwt-decode';
-import axios from 'axios';
 
 import NavBar from './components/public_components/NavBar.vue';
 import About from './components/public_components/About.vue';
@@ -56,7 +55,6 @@ export default {
     const currentItem = ref(null);
     const isLoggedIn = ref(false);
     const user = ref(null);
-    const favorites = ref([]);
 
     const initializeComponent = () => {      
 
@@ -146,24 +144,9 @@ export default {
         const decodedToken = jwtDecode(token);
         user.value = { username: decodedToken.username };
         isLoggedIn.value = true;
-        fetchFavorites(token);
       } else {
         isLoggedIn.value = false;
         user.value = null;
-      }
-    };
-
-    const fetchFavorites = async (token) => {
-      try {
-        const response = await axios.get('http://localhost:3000/favorites', {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        });
-        favorites.value = response.data;
-        console.log('Fetched favorites:', favorites.value);
-      } catch (error) {
-        console.error('Failed to fetch favorites:', error);
       }
     };
 
@@ -178,7 +161,6 @@ export default {
       currentItem,
       isLoggedIn,
       user,
-      favorites,
     };
   },
 }
