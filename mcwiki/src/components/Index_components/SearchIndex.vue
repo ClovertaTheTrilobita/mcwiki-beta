@@ -17,7 +17,6 @@ import SearchList from '../search_components/SearchList.vue';
 import Entry from '../../data/entry.json'
 import AllData from '../../data/sum/AllData.json'
 
-
 export default {
   name: "SearchIndex",
   props: {
@@ -34,7 +33,6 @@ export default {
       search: [],
       Entry,
       AllData,
-      Biome
     }
   },
   components: {
