@@ -1,4 +1,5 @@
 ﻿<template>
+
   <div v-for="data in search" class="d-flex justify-content-center" id="searchresult">
     <div class="card" style="width: 80rem;">
       <div class="row g-0">
@@ -15,12 +16,12 @@
               {{ data.Text }}......
             </p>
             <a :href="'#/' + data.Entry" class="btn btn-success" style="" target="_blank">Take a look</a>
-            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -46,6 +47,7 @@ export default {
 </script>
 
 <style scoped>
+
 #searchresult {
   margin-top: 10px;
 }
@@ -90,8 +92,6 @@ export default {
   }
 }
 
-
-
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -100,4 +100,5 @@ export default {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(32, 119, 112);
 }
+
 </style>

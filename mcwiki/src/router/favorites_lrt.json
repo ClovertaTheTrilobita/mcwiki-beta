@@ -1,0 +1,32 @@
+[
+  {
+    "Entry": "Barnacle",
+    "Text": "Mob A, the Barnacle , [1] also called \"The Monster of the Ocean Depths\",  was a proposed mob featured in the Mob Vote during MINECON Earth 2017 , alongside the great hunger , the phantom and the wildfire . [2]",
+    "Category": "Entity",
+    "Image": "Images/Entity/Barnacle.png"
+  },
+  {
+    "Entry": "Crab",
+    "Text": "The crab was a proposed mob featured in the Mob Vote during Minecraft Live 2023 , alongside the armadillo and penguin . [1] It would have spawned in mangrove swamps , and had a large arm that it could lose, dropping a crab claw. The crab claw could be used to place blocks from further away. Crabs could be bred with kelp . Crabs occasionally waved at players and other crabs.",
+    "Category": "Entity",
+    "Image": "Images/Entity/Crab.png"
+  },
+  {
+    "Entry": "Batato",
+    "Text": "A batato is a modified version of the bat , with a poisonous potato replacing the body and head of the mob. It has the same AI as the regular bat.",
+    "Category": "Entity",
+    "Image": "Images/Entity/Batato.png"
+  },
+  {
+    "Entry": "Diamond Chicken",
+    "Text": "Diamond chickens were a rare joke variant of chicken present in the April Fool's Java Edition 2.0 . They lay lapis lazuli and diamonds instead of eggs .",
+    "Category": "Entity",
+    "Image": "Images/Entity/Diamond_Chicken.png"
+  },
+  {
+    "Entry": "MINECON",
+    "Text": "MINECON Earth 2018 was a livestream that was streamed for an hour and a half from 16:00 to 17:30 UTC on September 29, 2018. [1] It featured Erin Wayne (Aureylian), Martyn Littlewood (InTheLittlewood), Yasmin Ayesha (Yammy), Chad Johnson (OMGchad), and Anthony (BigBStatz) as the co-hosts of the show. [2]",
+    "Category": "Entity",
+    "Image": "Images/Entity/MINECON.png"
+  }
+]

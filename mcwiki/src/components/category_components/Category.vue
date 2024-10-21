@@ -1,12 +1,9 @@
 ﻿<template>
   <div class="container">
+
     <Start v-if="currentHash !== '#/jumpcategory'" />
 
-
-    <!-- 卡片 -->
     <Cards v-if="currentHash !== '#/jumpcategory'" />
-
-
 
     <br><br><br><br>
     <h1 style="text-align: center; font-family: STHupo; font-size: 2.5em;">When you play</h1>
@@ -24,24 +21,22 @@
           <h2 class="accordion-header">
             <button class="accordion-button focus-ring" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
-              style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;font-size: 18px;" >
+              style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;font-size: 18px;">
               Blocks&Items
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <!-- copy -->
               <div class="container" id="cardd">
                 <div class="card" v-for="block in Blocks_Items" style="--bs-card-height: 162px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="100px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
               </div>
-              <!-- copy end-->
             </div>
           </div>
         </div>
@@ -58,17 +53,15 @@
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <div class="container" id="cardd">
-
                 <div class="card" v-for="block in Biome" style="--bs-card-height: 115px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img class="card-img" :src=block.Image > <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img class="card-img" :src=block.Image> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -88,8 +81,8 @@
                 <div class="card" v-for="block in DIM" style="--bs-card-height: 150px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="100px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -113,8 +106,8 @@
                 <div class="card" v-for="block in Entity" style="--bs-card-height: 135px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="75px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="75px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -138,8 +131,8 @@
                 <div class="card" v-for="block in Enchantment" style="--bs-card-height: 162px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="100px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -163,8 +156,8 @@
                 <div class="card" v-for="block in Effect" style="--bs-card-height: 150px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="100px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -188,8 +181,8 @@
                 <div class="card" v-for="block in Structure" style="--bs-card-height: 115px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="65px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="65px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -213,8 +206,8 @@
                 <div class="card" v-for="block in Features" style="--bs-card-height: 155px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="100px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -238,8 +231,8 @@
                 <div class="card" v-for="block in GameSettings" style="--bs-card-height: 155px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img  :src=block.Image height="100px"> <!--Image-->
-                      <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
+                      <img :src=block.Image height="100px"> <!--Image-->
+                      <p class="card-content">{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
                 </div>
@@ -260,39 +253,30 @@ import Card3 from './Card3.vue';
 import Card4 from './Card4.vue';
 import Start from './Start.vue';
 import Cards from './Cards.vue';
-import placeHolders1 from './placeHolders1.vue';
-import Entry from '../../data/entry.json';
-import Biome from '../../data/FinalData/Biome/Biome.json'
-import Blocks_Items from '../../data/FinalData/Blocks_Items/Blocks_Items.json'
-import DIM from'../../data/FinalData/DIM/DIM.json'
-import Entity from '../../data/FinalData/Entity/Entity.json'
-import Enchantment from '../../data/FinalData/Enchantment/Enchantment.json'
-import Effect from '../../data/FinalData/Effect/Effect.json'
-import Structure from '../../data/FinalData/Structure/Structure.json'
-import Features from '../../data/FinalData/Features/Features.json'
-import GameSettings from '../../data/FinalData/GameSettings/GameSettings.json'
+import Biome from '../../data/Biome/Biome.json'
+import Blocks_Items from '../../data/Blocks_Items/Blocks_Items.json'
+import DIM from '../../data/DIM/DIM.json'
+import Entity from '../../data/Entity/Entity.json'
+import Enchantment from '../../data/Enchantment/Enchantment.json'
+import Effect from '../../data/Effect/Effect.json'
+import Structure from '../../data/Structure/Structure.json'
+import Features from '../../data/Features/Features.json'
+import GameSettings from '../../data/GameSettings/GameSettings.json'
 
 export default {
   name: 'Category',
   components: {
     Card1, Card2, Card3, Card4, Cards,
-    placeHolders1,
     Start,
   },
   data() {
     return {
-      Entry,Biome,Blocks_Items,DIM,Entity,Enchantment,Effect,Structure,Features,GameSettings,
+      Biome, Blocks_Items, DIM, Entity, Enchantment, Effect, Structure, Features, GameSettings,
       currentHash: window.location.hash,
     };
   },
   methods: {
-    categoryClicked() {
-      // do{
-      //   console.log("waiting");
-
-      // }while(modernizrCustom.methods.function.b.documentElement == 'undefined');
-    },
-    CheckImg(){
+    CheckImg() {
       console.log(this.Biome[0].Image)
     }
   }
@@ -318,14 +302,15 @@ a {
 .card {
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: calc(12.5% - 14px);/* 减去间距，确保8张卡片并排 */
+  width: calc(12.5% - 14px);
+  /* 减去间距，确保8张卡片并排 */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #F6FFF8;
 }
 
 .card:hover {
-  transform:  scale(1.01);
+  transform: scale(1.01);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -344,16 +329,15 @@ a {
 }
 
 a {
-    text-decoration: none;
-    color: #000000;
-  }
+  text-decoration: none;
+  color: #000000;
+}
 
 .accordion-body {
   text-align: left;
 }
 
-.card-body{
+.card-body {
   text-align: center;
 }
-
 </style>

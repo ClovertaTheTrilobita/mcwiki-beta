@@ -1,22 +1,10 @@
 [
   {
-    "username": "atwhite",
-    "password": "114514"
+    "username": "admin",
+    "password": "admin"
   },
   {
-    "username": "zxcv",
-    "password": "zxcv"
-  },
-  {
-    "username": "helloworld",
-    "password": "123456"
-  },
-  {
-    "username": "Cloverta",
-    "password": "123456"
-  },
-  {
-    "username": "zzh",
-    "password": "123456"
+    "username": "white",
+    "password": "white"
   }
 ]
