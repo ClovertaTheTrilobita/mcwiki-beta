@@ -49,10 +49,10 @@
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <div class="container" id="cardd">
-                <div class="card" v-for="block in Entry" style="--bs-card-height: 150px;">
+                <div class="card" v-for="block in Biome" style="--bs-card-height: 150px;">
                   <a :href="'#/' + block.Entry" target="_blank">
                     <div class="card-body">
-                      <img class="card-img" src="./media/Weel.png" > <!--Image-->
+                      <img class="card-img" :src=block.Image > <!--Image-->
                       <p class="card-content" >{{ block.Entry }}</p> <!--Name-->
                     </div>
                   </a>
@@ -176,6 +176,9 @@
       </div>
     </div>
   </div>
+  <div>
+    <button @click="CheckImg">Check</button>
+  </div>
 </template>
 
 <script>
@@ -187,6 +190,7 @@ import Start from './Start.vue';
 import Cards from './Cards.vue';
 import placeHolders1 from './placeHolders1.vue';
 import Entry from '../../data/entry.json';
+import Biome from '../../data/FinalData/Biome/Biome.json'
 
 export default {
   name: 'Category',
@@ -197,7 +201,7 @@ export default {
   },
   data() {
     return {
-      Entry,
+      Entry,Biome,
       currentHash: window.location.hash,
     };
   },
@@ -208,6 +212,9 @@ export default {
 
       // }while(modernizrCustom.methods.function.b.documentElement == 'undefined');
     },
+    CheckImg(){
+      console.log(this.Biome[0].Image)
+    }
   }
 }
 

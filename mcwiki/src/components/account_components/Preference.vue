@@ -1,8 +1,8 @@
 <template>
-
   <div class="container">
     <div class="card-container">
       <Card v-for = "item in Item" :title="item.Entry" :text="item.Text" />
+>>>>>>> bdf7dfbbdf6fc1b48704212d2268bfc4f4c537a5
     </div>
   </div>
 
