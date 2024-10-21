@@ -2,9 +2,9 @@
   <div v-for="data in search" class="d-flex justify-content-center" id="searchresult">
     <div class="card" style="width: 80rem;">
       <div class="row g-0">
-        <div class="col-sm-2">
+        <div class="col-sm-2 justify-content-center">
           <div style="font-size: 70%;">
-            <img src="..\images\Minecraft_logo.png" alt="..." class="w-100">
+            <img :src="data.Image" alt="img" style="height: 180px;" class="w-90 justify-content-center">
           </div>
 
         </div>

@@ -16,6 +16,7 @@
 import SearchList from '../search_components/SearchList.vue';
 import Entry from '../../data/entry.json'
 import AllData from '../../data/sum/AllData.json'
+import AllDataFinal from '../../data/FinalData/Summary/AllDataFinal.json'
 
 export default {
   name: "SearchIndex",
@@ -33,6 +34,7 @@ export default {
       search: [],
       Entry,
       AllData,
+      AllDataFinal
     }
   },
   components: {
@@ -45,7 +47,7 @@ export default {
     SearchPushed() {
       let searchcontent = document.getElementById("myInput1").value;
       console.log("Searched: " + searchcontent)
-      this.search = this.BFSearch(searchcontent, AllData);
+      this.search = this.BFSearch(searchcontent, AllDataFinal);
       console.log("Search result: ")
       console.log(this.search)
 
