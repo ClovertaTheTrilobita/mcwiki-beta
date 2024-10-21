@@ -1,0 +1,8 @@
+[
+  {
+    "Entry": "Bed",
+    "Text": "A bed is a block that can be dyed . It allows a player to sleep and reset their spawn point to within a few blocks of the bed in the Overworld . If the bed is obstructed or removed, the player spawns at the default world spawning location.",
+    "Category": "Block",
+    "Image": "Images/Blocks_Items/Bed.png"
+  }
+]
