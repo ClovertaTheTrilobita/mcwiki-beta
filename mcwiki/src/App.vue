@@ -87,7 +87,7 @@ export default {
         currentItem.value = matchedItem;
       } else {
         switch (hash) {
-          case '#/':
+          case '':
             comName.value = 'HomeIndex';
             break;
           case '#/login':
