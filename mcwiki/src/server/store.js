@@ -31,9 +31,11 @@ const store = createStore({
         throw error;
       }
     },
+
     logout({ commit }) {
       commit('clearUser');
     },
+    
     async register({ commit }, user) {
       try {
         const response = await axios.post('http://localhost:3000/register', user);
