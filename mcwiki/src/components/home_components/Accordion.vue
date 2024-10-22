@@ -7,44 +7,42 @@
       <div class="accordion-item">
         <h2 class="accordion-header" >
           <button class="accordion-button focus-ring" style="--bs-accordion-btn-bg: #00ac78; --bs-accordion-active-bg: #00ac78;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            MC 直播总结
+            MC Live Streaming Summary
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <h3>新特性</h3><hr>
+            <h3>New Features</h3><hr>
 
             <ul>
-              <li>基岩版极限模式</li>
-              <li>收纳袋</li>
-            </ul>
+              <li>Bedrock Edition Hardcode Mode</li>
+              <li>Bundle</li>
+            </ul><br>
 
-            <h4>新群系——Pale Garden</h4>
-
-            <em>文中所有括号中名称仅为方便大家理解的翻泽，请以正式泽名为准！</em>
+            <h4>New Biome——Pale Garden</h4>
 
             <ul>
-              <li>拥有苍白树木的略微恐怖的森林</li>
-              <li>会生成敌对生物Creaking
+              <li>Slightly scary forest with pale trees</li>
+              <li>Spawns hostile creatures Creaking
                 <ul>
-                  <li>恐怖的木头人</li>
-                  <li>仅会在夜晚生成</li>
-                  <li>在被玩家看见的时候不能移动</li>
-                  <li>需要在树中挖掘Creaking Heart才能击败</li>
-                  <li>Creaking所属的Creaking Heart会有粒子指引</li>
-                  <li>挖下的Creaking Heart上下为Pale原木时能够重新激活，激活时才能生成Creaking,但仅在破坏其本身时才能失活</li>
+                  <li>Scary Woodman</li>
+                  <li>It's only generated at night</li>
+                  <li>An activated Creaking will not move if a player is looking at it</li>
+                  <li>When the Creaking Heart block the Creaking is connected to is destroyed, the Creaking is removed</li>
+                  <li>Creaking Heart, to which Creaking belongs, will have a particle guide</li>
+                  <li>The Creaking Heart can be reactivated when it is dug up and down into a Pale Log, and it can be reactivated to create Creaking, but it can only be deactivated by destroying itself</li>
                 </ul>
               </li>
-              <li>Pale Oak（苍白橡木）木系列</li>
-              <li>Pale Carpet（苍白苔藓地毯）</li>
-              <li>Hanging moss（悬吊苔藓）</li>
-            </ul>
+              <li>Pale Oak Set</li>
+              <li>Pale Carpet</li>
+              <li>Pale Hanging moss</li>
+            </ul><br>
             
-            <h3>其他内容</h3><hr>
+            <h3>Other Contents</h3><hr>
 
             <ul>
-              <li>电影预热与幕后</li>
-              <li>村民新闻联动短片</li>
+              <li>Movie Previews and Behind the Scenes</li>
+              <li>Villager News Link Video</li>
             </ul>
             
           </div>
@@ -53,195 +51,196 @@
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" style="--bs-accordion-btn-bg: #00bf77; --bs-accordion-active-bg: #00bf77;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            最新快照版 - 24w40a
+            Latest Snapshot - 24w40a
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
 
-            <h3>实验性特性</h3><hr>
-
-            <p>此项Pale Garden生物群系实验性特性可被"冬季小更新（<em>Winter Drop</em>）"实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<a href="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition" target="_blank">此处</a>找到更多关于实验性开关的信息。</p>
-            <p>我们喜欢听见你们对新的Pale Garden群系和新敌对生物Creaking的反馈。</p>
-            <p>Creaking反馈链接：<a href="https://aka.ms/mccreakingfeedback" target="_blank">https://aka.ms/mccreakingfeedback</a></p>
-            <p>Pale Garden反馈链接：<a href="https://aka.ms/mcpalegardenfeedback" target="_blank">https://aka.ms/mcpalegardenfeedback</a></p>
+            <h3>Experimental Feature</h3><hr>
+            <p>This Pale Garden biome experimental feature is enabled by the experimental feature switch <em>"Winter Drop"</em>. You can turn this switch on from the Experimental Traits screen of the world you are creating. These experimental traits have no effect unless they are enabled. You can click <a href="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition" target="_blank">here</a> to find more information about the experimental</p>
+            <p>We love hearing your feedback on the new Pale Garden swarm and the new hostile creature Creaking</p>
+            <p>Creaking feedback link: <a href="https://aka.ms/mccreakingfeedback" target="_blank">https://aka.ms/mccreakingfeedback</a></p>
+            <p>Pale Garden feedback link: <a href="https://aka.ms/mcpalegardenfeedback" target="_blank">https://aka.ms/mcpalegardenfeedback</a></p><br>
             
-            <h4>冬季小更新</h4>
+            <h4>Winter Drop</h4>
 
             <ul>
-              <li>增加了Pale Garden生物群系，苍白橡树，苍白苔藓块，苍白夏地苔藓，苍白垂藤以及苍白橡树系列</li>
-              <li>增加了Creaking生物，Creaking刷怪蛋和Creaking Heart方块</li>
-            </ul>
+              <li>Added Pale Garden Biome, Pale Oak tree, Pale Moss block, Pale Moss carpet, Pale Hanging Moss and Pale Oak wood set</li>
+              <li>Added Creaking mob, Creaking Spawn Egg and Creaking Heart block</li>
+            </ul><br>
 
             <h4>Pale Garden</h4>
 
-            <p>Pale Garden是一个黑森林的生物群系变种，拥有以下独特特性：</p>
+            <p>Pale Garden is a biome variation of Dark Forest. Unique features:</p>
             <ul>
-              <li>苍白橡树在此生成</li>
-              <li>苍白苔藓块与苍白覆地苔藓在此处地面生成</li>
-              <li>苍白垂藤在苍白橡树树叶悬挂生成</li>
-              <li>动物不会在Pale Garden生物群系自然生成</li>
-              <li>新的生物群系拥有独特的环境音效</li>
-              <li>Creaking Heart方块在苍白橡树中生成</li>
-            </ul>
+              <li>Pale Oaks generate here</li>
+              <li>Pale Moss blocks/carpet generate on the ground here</li>
+              <li>Hanging Pale Moss generate hanging from the foliage of Pale Oaks</li>
+              <li>Animal mobs do not spawn naturally in Pale Gardens</li>
+              <li>New biome specific ambient sounds</li>
+              <li>Creaking Heart block can generate in Pale Oaks</li>
+            </ul><br>
             
-            <h4>苍白橡树</h4>
+            <h4>Pale Oak Tree</h4>
 
             <ul>
-              <li>苍白橡树树叶掉落苍白橡树树苗，可以2x2种植长成苍白橡树</li>
-              <li>苍白橡树原木可以被制成苍白橡树系列：
+              <li>Pale Oak Leaves drop Pale Oak Saplings that can be planted in a 2x2 configuration to grow Pale Oak trees</li>
+              <li>Pale Oaks logs can be crafted into the Pale Oak wood set:
                 <ul>
-                  <li>门</li>
-                  <li>栅栏</li>
-                  <li>栅栏门</li>
-                  <li>木板</li>
-                  <li>告示牌</li>
-                  <li>悬挂告示牌</li>
-                  <li>台阶</li>
-                  <li>楼梯</li>
-                  <li>活板门</li>
-                  <li>木头</li>
-                  <li>去皮原木</li>
-                  <li>去皮木头</li>
-                  <li>按钮</li>
-                  <li>压力板</li>
-                  <li>船</li>
-                  <li>运输船</li>
+                  <li>Door</li>
+                  <li>Fence</li>
+                  <li>Fence Gate</li>
+                  <li>Plank</li>
+                  <li>Sign</li>
+                  <li>Hanging Sign</li>
+                  <li>Slab</li>
+                  <li>Stairs</li>
+                  <li>Trapdoor</li>
+                  <li>Wood</li>
+                  <li>Stripped Log</li>
+                  <li>Stripped Wood</li>
+                  <li>Button</li>
+                  <li>Pressure Plate</li>
+                  <li>Boat</li>
+                  <li>Boat with Chest</li>
                 </ul>
               </li>
-            </ul>
+            </ul><br>
             
-            <h4>苍白苔藓块</h4>
+            <h4>Pale Moss Block</h4>
 
-            <p>苍白苔藓块在Pale Garden生物群系自然生成</p>
+            <p>Pale Moss block generates naturally in the Pale Garden biome</p><br>
             
-            <h4>苍白覆地苔藓</h4>
+            <h4>Pale Moss Carpet</h4>
 
-            <p>苍白覆地苔藓在Pale Garden生物群系自然生成，独特特性：</p>
+            <p>Pale Moss block generates naturally in the Pale Garden biome. Unique features:</p>
             <ul>
-              <li>当放置时，苍白覆地苔藓沿着紧挨着的任何方块的实心面生长两个方块</li>
-              <li>苍白覆地苔藓撒上骨粉可以在紧挨着的任何方块的所有实心面上长满</li>
-            </ul>
+              <li>When placed, Pale Moss Carpet grows up to two blocks on the solid faces of any block that borders it</li>
+              <li>Pale Moss Carpet can be bone-mealed to grow to full on all solid faces of any block that borders it</li>
+            </ul><br>
             
-            <h4>苍白垂藤</h4>
+            <h4>Pale Hanging Moss</h4>
 
-            <p>苍白垂藤在Pale Garden生物群系的苍白橡树树叶下悬挂生成</p>
-            <ul><li>苍白垂藤不会接受随机刻生长，但可以散骨粉向下生长</li></ul>
+            <p>Pale Hanging Moss generates naturally in the Pale Garden biome under the foliage of Pale Oaks</p>
+            <ul><li>Pale Hanging Moss does not grow randomly, but can be bone-mealed to grow down</li></ul><br>
             
-            <h4>Creaking 生物</h4>
+            <h4>Creaking Mob</h4>
 
-            <p>如果Creaking Heart方块在苍白橡树中生成，Creaking生物会在夜晚的Pale Garden生物群系生成。游戏中特性：</p>
+            <p>The Creaking mob spawns at night in the Pale Garden biome if there is a Creaking Heart block that has been generated in a Pale Oak tree. Gameplay features:</p>
             <ul>
-              <li>当玩家盯着它时它不会移动</li>
-              <li>Creaking免疫伤害</li>
-              <li>当击中该生物时，会显示一串粒子踪迹连接该生物和与生物连接的Creaking Heart</li>
-              <li>当Creaking连接的Creaking Heart被破坏时，Creaking会消失</li>
-              <li>其生成不会被光照等级所影响，而是基于昼夜循环，白天消失晚上出现</li>
-              <li>Creaking不能乘船</li>
-              <li>由Creaking Heart生成的Creaking不能通过传送门传送</li>
-              <li>Creaking刷怪蛋会生成一只不连接Creaking Heart的Creaking。Creaking将会在昼夜、保存和加载时一直存在，并且会受到攻击带来的或其它来源的伤害。它拥有一点（半颗心）的生命值</li>
-              <li>被Creaking Heart生成的Creaking不能使用刷怪蛋生成，也不能被指令生成。它只能像Creaking Heart方块的一部分那样存在。</li>
-              <li>戴有雕刻南瓜的玩家盯着Creaking不会阻止其移动</li>
-            </ul>
+              <li>An activated Creaking will not move if a player is looking at it</li>
+              <li>Creaking is invulnerable to damage</li>
+              <li>When hit, a particle trail is shown between the Creaking and the Creaking Heart block it is connected to</li>
+              <li>When the Creaking Heart block the Creaking is connected to is destroyed,the Creaking is removed</li>
+              <li>Is not affected by light levels but spawns and despawns based on day/night cycle</li>
+              <li>Creaking cannot enter Boats</li>
+              <li>Creaking spawned from a Creaking Heart can not go through portals</li>
+              <li>The Creaking Spawn Egg will spawn a Creaking mob that is not connected to a Creaking Heart. The Creaking mob will persist through day and night, loads and saves, and will take damage from attacks and other damage sources. It has one point of health (half a heart)</li>
+              <li>Creaking summoned from the Creaking Heart cannot be spawned with a spawn egg, nor can it be summoned with commands. It can only exist as a part of the Creaking Heart block</li>
+              <li>Player wearing a carved pumpkin on their head can look at Creaking without it freezing in place</li>
+            </ul><br>
             
             <h4>Creaking Heart</h4>
 
-            <p>Creaking Heart是一个“活着"的方块，在苍白橡树中生成，所有的面都被苍白橡树原木所遮盖。当夜幕降临时，如果它被放置于正好对齐的两个苍白橡树原木方块中间，则它可以生成一只Creaking。</p>
+            <p>A Creaking Heart is a "living" block generating in Pale Oak trees, covered on all sides by Pale Oak wood logs. It can spawn a Creaking mob when it is night time, and it is placed between two correctly aligned Pale Oak log blocks</p>
             <ul>
-              <li>在夜晚激活，在白天失活</li>
-              <li>当Creaking被玩家击中时会发送一串粒子链接其与Creaking</li>
-              <li>当Creaking Heart被破坏时，与其连接的Creaking也会消失</li>
-            </ul>
+              <li>Is active during night and dormant during day</li>
+              <li>Sends a trail of particles towards the connected Creaking when the Creaking gets hit by the player</li>
+              <li>When Creaking Heart block is destroyed, the connected Creaking is removed</li>
+            </ul><br>
             
-            <h4>用于Pale Garden环境音效的新系统</h4>
+            <h4>New system for Pale Garden ambient sounds</h4>
 
-            <p>在Pale Garden中环境音效并不源自生物群系设置而是产生于在生物群系中的方块*当苍白垂藤接触到苍白橡树原木以及苍白橡树树叶时散发微小的环境音效*当夜晚时并且六面全被原木遮盖，Creaking Heart方块会散发一系列的怪异恐怖的音效</p>
+            <p>Ambient sounds in the Pale Garden biome do not come from the biome settings but are generated by blocks found in the biome</p><br>
             
-            <h3>更改</h3><hr>
+            <h3>Variation</h3><hr>
 
               <ul>
-                <li>收纳袋染色配方现在由染料解锁而非未染色的收纳袋物品解锁</li>
-                <li>潜影盒与收纳袋配方在试图对其染相同颜色时不再生效</li>
-                <li>增加了一个无障碍选项使指向的方块边线更加可见</li>
-              </ul>
+                <li>Bundle dye recipes are now unlocked by dyes instead of undyed bundle items</li>
+                <li>Shulker box and bundle recipes no longer work when attempting to dye them the same color</li>
+                <li>Added an accessibility option to make the edges of pointing blocks more visible</li>
+              </ul><br>
             
             <h4>Realms</h4>
             
-            <ul><li>若适用，Realms主界面会显示Realm中最新活动的世界的游戏模式</li></ul>
+            <ul><li>If applicable, the Realms main screen displays the game mode for the latest active world in Realm</li></ul><br>
             
-            <h3>技术性更改</h3><hr>
+            <h3>Technical Variation</h3><hr>
             
             <ul>
-              <li>数据包版本现在为 56</li>
-              <li>资源包版本现在为 40</li>
-            </ul>
+              <li>The packet version is now 56</li>
+              <li>The resource package version is now 40</li>
+            </ul><br>
 
-            <h3>数据包版本 56</h3><hr>
+            <h3>The packet version 56</h3><hr>
             
-            <ul><li>新的粒子效果：<kbd>block_crumble</kbd>和<kbd>trai1</kbd></li></ul>
+            <ul><li>New particle effects:<kbd>block_crumble</kbd>and<kbd>trai1</kbd></li></ul><br>
             
-            <h4>命令</h4>
+            <h4>Commands</h4>
             
             <ul>
-              <li>你再也无法通过<kbd>ride</kbd>命令乘坐拴绳结、闪电束以及浮漂</li>
-              <li>增加了<kbd>rotate</kbd>命令</li>
-            </ul>
+              <li>You can no longer ride tether knots, lightning harnesses, and floats with the <kbd>ride</kbd> command!</li>
+              <li>Added <kbd>rotate</kbd> command</li>
+            </ul><br>
 
-            <h5><kbd>rotate</kbd>命令</h5>
-            <p>用于旋转实体的新命令</p>
-            <p>语法：</p>
-            <kbd>rotate (目标) (角度)</kbd><br>
-            <kbd>rotate (目标) facing (朝向位置)</kbd><br>
-            <kbd>rotate (目标) facing entity (朝向目标) [(朝向锚点)]</kbd>
-            <p>参数：</p>
+            <h5><kbd>rotate</kbd>command</h5>
+            <p>New command for rotating entities</p>
+            <p>Grammar:</p>
+            <kbd>rotate (Objective) (Perspective)</kbd><br>
+            <kbd>rotate (Objective) facing (facing position)</kbd><br>
+            <kbd>rotate (Objective) facing entity (facing target) [(facing anchor)]</kbd>
+            <br><br><p>Parameters:</p>
             <ul>
-              <li>目标：待旋转的实体</li>
-              <li>角度：两个旋转角度值表示垂直旋转和水平旋转角度
-                <ul><li>可使用相对(<kbd>~</kbd>)坐标符号以指定当前上下文的旋转角度</li></ul>
+              <li>Target: Entity to be rotated</li>
+              <li>Angle: two rotation angle values indicate vertical and horizontal rotation angles
+                <ul><li>Relative (<kbd>~</kbd>) coordinate notation can be used to specify the rotation angle of the current context</li></ul>
               </li>
-              <li>朝向位置：实体需要朝向的世界位置的坐标</li>
-              <li>朝向目标：实体需要朝向的实体</li>
-              <li>朝向锚点：决定实体朝向目标实体的那哪个锚点 - <kbd>feet</kbd>（脚）或<kbd>eyes</kbd>（眼）（默认为<kbd>feet</kbd>）</li>
+              <li>Facing Position: the coordinates of the world position towards which the entity needs to be oriented</li>
+              <li>Facing Target: the entity towards which the entity needs to be directed</li>
+              <li>Facing Anchor: determines which anchor the entity faces toward the target entity - <kbd>feet</kbd> (feet) or <kbd>eyes</kbd> (defaults to <kbd>feet</kbd>)</li>
             </ul>
-            <p>提示：参数拥有与<kbd>teleport</kbd>命令相同的含义</p>
+            <p>Tip: The parameters have the same meaning as the <kbd>teleport</kbd> command</p><br>
             
-            <h4>附魔效果</h4>
+            <h4>Enchantment Effect</h4>
             
-            <ul><li>将效果类型<kbd>damage_item</kbd>重命名为<kbd>change_item_damage</kbd>,现在同时支持负值</li></ul>
+            <ul><li>Renamed effect type <kbd>damage_item</kbd> to <kbd>change_item_damage</kbd>, now also supports negative values</li></ul><br>
 
-            <h4>标签</h4>
-            <h5>物品标签</h5>
-            <ul><li><kbd>gaze_disguise_equipment</kbd>：可以用于遮掩玩家，避免与其它生物进行视线交流的物品</li></ul>
-            <h5>粒子</h5>
+            <h4>Label</h4><br>
+            <h5>Item Labels</h5>
+            <ul><li><kbd>gaze_disguise_equipment</kbd>: Items that can be used to conceal the player from line-of-sight communication with other creatures</li></ul><br>
+            <h5>Particle</h5>
             <ul>
-              <li>增加了<kbd>block_crumble</kbd>粒子，拥有以下选项：
-                <ul><li><kbd>block state</kbd> - 粉碎的方块的状态</li></ul>
+              <li>Added <kbd>block_crumble</kbd> particle with the following options:
+                <ul><li><kbd>block state</kbd> - The state of the crushed block</li></ul>
               </li>
-              <li>增加了<kbd>trail</kbd>粒子，拥有以下选项：
+              <li>Added <kbd>trail</kbd> particle with the following options:
                 <ul>
-                  <li><kbd>color</kbd> - 轨迹的额色</li>
-                  <li><kbd>target</kbd> - 轨迹要到达的目标位置</li>
+                  <li><kbd>color</kbd> - Color of the track</li>
+                  <li><kbd>target</kbd> - Target position to be reached by the track</li>
                 </ul>
               </li>
-            </ul>
+            </ul><br>
 
-            <h3>资源包版本 40</h3><hr>
-            <p>增加了对新实验性特性更改的支持</p>
+            <h3>The resource package version 40</h3><hr>
+
+            <p>Added support for new experimental feature variation</p>
+
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button focus-ring collapsed" style="--bs-accordion-btn-bg: #39d275; --bs-accordion-active-bg: #39d275;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            最新正式版 - 1.21.1
+            The latest Official Version - 1.21.1
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <h3>更改</h3><hr>
+            <h3>Variation</h3><hr>
             <ul>
-              <li>增加了索西语与白俄罗斯语（拉丁）的支持</li>
-              <li>修复可能会被用于使服务器崩溃的关键漏洞</li>
+              <li>Added support for Sorsi and Belarusian (Latin) languages</li>
+              <li>Fixes critical vulnerabilities that could be used to crash servers</li>
             </ul>
           </div>
         </div>

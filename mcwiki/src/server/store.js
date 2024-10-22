@@ -24,20 +24,22 @@ const store = createStore({
     async login({ commit }, user) {
       try {
         const response = await axios.post('http://localhost:3000/login', user);
-        commit('setUser', { username: user.username, id: response.data.id });
+        commit('setUser', { username: user.username });
         return response;
       } catch (error) {
         console.error('Login failed:', error);
         throw error;
       }
     },
+
     logout({ commit }) {
       commit('clearUser');
     },
+    
     async register({ commit }, user) {
       try {
         const response = await axios.post('http://localhost:3000/register', user);
-        commit('setUser', { username: user.username, id: response.data.id });
+        commit('setUser', { username: user.username });
         return response;
       } catch (error) {
         console.error('Registration failed:', error);

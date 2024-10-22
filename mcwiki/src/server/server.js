@@ -15,7 +15,7 @@ app.post('/register', (req, res) => {
   const user = { username, password };
 
   // 读取现有的用户数据
-  fs.readFile('users.json', (err, data) => {
+  fs.readFile('./users/users.json', (err, data) => {
     if (err && err.code !== 'ENOENT') {
       res.writeHead(500, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ error: 'Internal Server Error' }));
@@ -34,7 +34,7 @@ app.post('/register', (req, res) => {
     users.push(user);
 
     // 将用户数据写入JSON文件
-    fs.writeFile('users.json', JSON.stringify(users, null, 2), err => {
+    fs.writeFile('./users/users.json', JSON.stringify(users, null, 2), err => {
       if (err) {
         res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ error: 'Internal Server Error' }));
@@ -52,7 +52,7 @@ app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
   // 读取现有的用户数据
-  fs.readFile('users.json', (err, data) => {
+  fs.readFile('./users/users.json', (err, data) => {
     if (err) {
       res.status(500).json({ error: 'Internal Server Error' });
       return;
@@ -79,7 +79,7 @@ app.post('/favorites', (req, res) => {
 
     const { item } = req.body;
     const username = decoded.username;
-    const filePath = `favorites_${username}.json`;
+    const filePath = `./favorites/favorites_${username}.json`;
 
     fs.readFile(filePath, (err, data) => {
       if (err && err.code !== 'ENOENT') {
@@ -117,7 +117,7 @@ app.get('/favorites', (req, res) => {
     }
 
     const username = decoded.username; // 使用用户名
-    const filePath = `favorites_${username}.json`;
+    const filePath = `./favorites/favorites_${username}.json`;
 
     fs.readFile(filePath, (err, data) => {
       if (err) {

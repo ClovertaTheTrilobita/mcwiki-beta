@@ -40,7 +40,7 @@
                 </div>
                 <div class="Bottom">
                   <nav class="nav flex-column">
-                    <a class="nav-link btn btn-light avater-link" href="#/login"  
+                    <a class="nav-link btn btn-light avater-link"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Account</a>
                     <a class="nav-link btn btn-light avater-link" href="#/preference"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>

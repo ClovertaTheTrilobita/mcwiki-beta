@@ -31,7 +31,6 @@
 <script>
 import { mapActions } from 'vuex';
 import About from '../public_components/About.vue'
-import { useRouter } from 'vue-router';
 import { jwtDecode } from 'jwt-decode';
 
 export default {
@@ -46,10 +45,6 @@ export default {
       message: '',
       isError: false,
     }
-  },
-  setup() {
-    const router = useRouter();
-    return { router };
   },
   methods: {
     ...mapActions(['login']),

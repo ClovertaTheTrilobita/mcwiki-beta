@@ -8,13 +8,13 @@
       <div class="card-header" style="background-color: #009978;">
         <ul class="nav nav-tabs card-header-tabs" role="tablist" style="--bs-nav-link-color: #eefdf1; --bs-nav-link-hover-color: #eefdf1; --bs-nav-tabs-link-active-border-color: #eefdf1; --bs-nav-tabs-link-hover-border-color: #eefdf1">
           <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="tab" aria-current="true" href="#menu1">原版介绍</a>
+            <a class="nav-link active" data-bs-toggle="tab" aria-current="true" href="#menu1">Introduction</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu2">原版资料</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">Materials</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu3">原版教程</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#menu3">Tutorials</a>
           </li>
         </ul>
       </div>
@@ -26,53 +26,63 @@
               <div class="col-md-6 offset-md-3"><img src="../images/MC-Logo_300x51.svg" class="img-fluid Logo mx-auto d-block"></div>
             </div>
             
-            <h3>概述</h3><hr>
+            <h3>Outlined</h3><hr>
 
-              <p>Minecraft于2009年5月13日正式发行，并且在2016年1月正式译作「我的世界」，是一款沙盒建造游戏，玩家可以在一个三维世界里进行随机的
-                探索和用各种方块建造建筑物。Minecraft的创造者为瑞典游戏设计师<a>马库斯阿列克谢·泊松</a>，也就是Notch。</p>
-              <p>2014年9月，Minecraft及其开发公司Mojang被<a>Microsoft</a>收购。</p>
-              <p>2017年9月18日，PC/Mac版Minecraft正式更名为<a>Minecraft:Java版</a>（Minecraft:Java Edition）,与<a>基岩版</a>（Minecraft:Bedrock Edition）这一
-                多平台版本区分开来。目前Minecraft可分为<a>Java版</a>、<a>基岩版</a>和<a>教育版</a>三个主要版本。</p>
-              <p>Minecraft<a>中国版</a>的代理商为<a>网易</a>。</p>
-              <p>Minecraft<a>教育版</a>中国代理为<a>网易有道</a>，并推出了“Minecraft教育个人版”。</p>
-              <p>Minecraft目前处于半开源状态，只有Brigadier（命令解释器）和DataFixerUpper（数据修复器）开源，Blaze3D（完全重写的游戏渲染引擎）正在准
-                备开源。Java版的源码或许被存放在了GitHub上叫做“Mojang/Minecraft'”的私有仓库中，这曾由<a>Bartosz Bok</a>在Brigadier开源发布前的开发中提到。</p>
+              <p>Officially released on May 13, 2009, and officially translated as “My World” in January 2016, Minecraft is a sandbox building game that allows players to randomize a three-dimensional world by
+                exploring and constructing buildings out of various cubes.Minecraft was created by Swedish game designer <a>Markus Alexei Poisson</a>, also known as Notch.</p><br>
+              <p>In September 2014, Minecraft and its development company Mojang were acquired by <a>Microsoft</a>. </p><br>
+              <p>On September 18, 2017, the PC/Mac version of Minecraft was officially renamed <a>Minecraft:Java Edition</a> (Minecraft:Java Edition), to distinguish it from the <a>Bedrock Edition</a>, a
+                Minecraft:Bedrock Edition, a multi-platform version of Minecraft. Currently Minecraft can be categorized into <a>Java Edition</a>, <a>Bedrock Edition</a>, and <a>Educational Edition</a>. </p><br>
+              <p>Minecraft <a>China</a> is distributed by <a>NetEase</a>. </p><br>
+              <p>Minecraft <a>Educational Edition</a> in China is represented by <a>Netease Yudao</a>, and has launched the “Minecraft Educational Personal Edition”. </p><br>
+              <p>Minecraft is currently semi-open-source, with only Brigadier (command interpreter) and DataFixerUpper open-source, and Blaze3D (a completely rewritten game rendering engine) being prepared for open-source.
+                The source code for the Java version may be stored in a private repository on GitHub called “Mojang/Minecraft'”, which was mentioned by <a>Bartosz Bok</a> in the development of Brigadier prior to its open source release. </p><br>
 
-            <h4>购买</h4>
 
-              <p>对于Java版，在<a>官网</a>以$29.99（约￥212）的价格对Minecraft for Windows和Java版捆绑出售，若玩家于此前就已购买Minecraft for Windows或
-                者Java版，则官方会免费赠送您未获得的版本。</p>
-              <p>对于基岩版，不同平台的版本会在不同平台的商场出售，例如在Microsoft Store、App Store、Google Play、Xbox Store等网站会以S6.99-$29.99
-                （约￥49-￥212）的价格进行出售，Vindows10/11和Xbox One平台的基岩版可以通过订阅Xbox Game Pass免费游玩。若玩家已经购买Xbox One、
-                Nintendo或PS4平台上的原主机版且满足一定要求后，或是已经购买了Java版时，可免费获得对应平台的基岩版。</p>
-              <p>正版Minecraft享有多人游戏、专属的游戏启动器等，其他启动器也可以启动正版MC,而这些启动器启动的离线版的Minecraf什只能进行单机游戏，但
-                依旧可以正常游玩，有条件请去官网支持正版。</p>
 
-            <h4>系统要求</h4>
 
-              <p>在Java中的一些版本中，更改了最低Java版本要求：</p>
+            <h4>Purchase</h4>
+
+              <p>For the Java version, the <a>official website</a> sells Minecraft for Windows and Java as a bundle for $29.99 (~$212), and if players have previously purchased Minecraft for Windows or
+                If you have already purchased Minecraft for Windows or Java, you will get the version you didn't get for free. </p><br>
+              <p>For the Bedrock Edition, versions for different platforms will be sold in different platform shopping centers, such as the Microsoft Store, App Store, Google Play, Xbox Store and other websites for S6.99-$29.99 (about $49-$212), or S6.99-$29.99 (about $10.99-$10.99).
+                (about ¥ 49-¥ 212) price for sale, Vindows 10/11 and Xbox One platforms of the Cornerstone Edition can be free to play through a subscription to the Xbox Game Pass. If players have already purchased Xbox One,
+                Nintendo or PS4 platform on the original host version and meet certain requirements, or have purchased the Java version, you can get the corresponding platform of the Cornerstone Edition for free. </p><br>
+              <p>Genuine Minecraft enjoys multiplayer, exclusive game launcher, etc., other launchers can also start the genuine MC, and these launchers start the offline version of Minecrafsh can only be single-player, but still can play normally.
+                Still can play normally, have the condition please go to the official website to support the genuine version. </p><br>
+
+
+
+            <h4>System Requirements</h4>
+
+              <p>In some versions of Java, the minimum Java version requirement was changed:</p>
               <ul>
-                <li>从1.12快照<b>17w13a版本</b>开始，运行Minecraft的最低要求是Java8;</li>
-                <li>从1.17快照<b>21w19a版本</b>开始，运行Minecraft的最低要求是Java16;</li>
-                <li>从1.18快照<b>1.18-pre2版本</b>开始，运行Minecraft的最低要求是Java17;</li>
-                <li>从1.20.5快照<b>24w14a版本</b>开始，运行Minecraft的最低要求是Java21,且操作系统要求为64位。</li>
-              </ul>
+                <li>Starting with snapshot 1.12, version <b>17w13a</b>, the minimum requirement to run Minecraft is Java 8;</li>
+                <li>Starting with snapshot 1.17, version <b>21w19a</b>, the minimum requirement to run Minecraft is Java 16;</li>
+                <li>Starting with snapshot 1.18, version <b>1.18-pre2</b>, the minimum requirement to run Minecraft is Java 17;</li>
+                <li>Starting with snapshot 1.20.5, version <b>24w14a</b>, the minimum requirement to run Minecraft is Java 21, and the operating system is 64-bit. </li>
+              </ul><br>
 
-            <h4>衍生作品</h4>
 
-              <p>Minecraft有非常多的衍生作品，如小说、周边、电影等。</p>
-              <p>目前Minecraft拥有5个衍生游戏，包括Minecraft Dungeons（Minecraft:地下城）、Minecraft Legends（Minecraft:传奇）、Minecraft:Story
-                Mode（Minecraft:故事模式）、Minecraft:Story Mode-Season Two（Minecraft:故事模式第二季）和Minecraft Earth。</p>
 
-            <h3>关于模组</h3><hr>
+            <h4>Derivative Works</h4>
 
-              <p>模组是一种增加游戏内容的机制，大多仅限应用于Java版，少数模组可应用于基岩版。</p>
-              <p>对于Java版，少数远古模组采用特别的安装方法，例如ModLoader、.ModLoaderMP等模组以核心覆盖的方式安装，目前大多数模组需要使用Forge、
-                NeoForge（目前最新版本及以后版本）、Fabric（1.14版本及以后）、Liteloader（1.12.2版本或更低的版本）、Rift（仅限1.13.X版本）或Quilt
-                （1.14版本及以后）等作为前置。除此之外，在1.13版本及以后，还可以使用<a>数据包</a>这一原版模组机制。</p>
-              <p>大部分基岩版的模组叫做Add-on（<a>附加包</a>），附加包包含<a>资源包</a>、<a>行为包</a>和<a>皮肤包</a>等。</p>
-              <p>在服务器中，拥有与模组类似功能的叫插件。</p>
-              <p>可以在<a>CurseForge</a>和<a>Modrinth</a>等网站寻找模组。</p>
+              <p>Minecraft has a very large number of derivative works, such as novels, peripherals, movies and so on. </p><br>
+              <p>Currently Minecraft has five spin-off games, including Minecraft Dungeons, Minecraft Legends, Minecraft:Story Mode, Minecraft:Story Mode-Season Two, and Minecraft:Story Mode-Season Two.
+                Mode (Minecraft:Story Mode), Minecraft:Story Mode-Season Two (Minecraft:Story Mode Season Two), and Minecraft Earth.</p><br>
+            
+            <h3>About Mods</h3><hr>
+
+              <p>Mods are a mechanism for adding content to the game, mostly limited to the Java version, with a few mods available for the Bedrock version. </p><br>
+              <p>For the Java version, a few Far Cry mods use special installation methods, such as ModLoader, .ModLoaderMP, etc. Mods are installed as core overrides, and most mods currently require the use of Forge,
+                NeoForge (current version and later), Fabric (version 1.14 and later), Liteloader (version 1.12.2 or lower), Rift (version 1.13.X only) or Quilt
+                (version 1.14 and later), etc. as frontends. In addition to this, <a>Packets</a>, the original module mechanism, is available in version 1.13 and later. </p><br>
+              <p>Most of the Bedrock Edition mods are called Add-on (<a>Additional Packs</a>), which contain <a>Resource Packs</a>, <a>Behavior Packs</a>, and <a>Skin Packs</a>, among others. </p><br>
+              <p>In the server, those that have similar functionality to mods are called add-ons. </p><br>
+              <p>Mods can be found at sites like <a>CurseForge</a> and <a>Modrinth</a>. </p><br>
+
+
+
 
           </div>
           <div id="menu2" class="container tab-pane fade"> 
@@ -83,7 +93,7 @@
           </div>
           <div id="menu3" class="container tab-pane fade">
             <div class="row row-cols-2 row-cols-lg-4">
-              <div class="col" v-for = "item in present"><Card :img_url="item.url" :text="item.descriptions" :title="item.title"/></div>
+              <div class="col" v-for = "item in course"><CardCourse :img="item.Image" :text="item.Text" :url="item.Url"/></div>
             </div>
           </div>
         </div>
@@ -95,6 +105,7 @@
 <script>
 
   import Card from './Card.vue';
+  import CardCourse from './Cardcourse.vue';
   import img1 from './images/present/card_01.png';
   import img2 from './images/present/card_02.png';
   import img3 from './images/present/card_03.png';
@@ -104,14 +115,16 @@
   import img7 from './images/present/card_07.png';
   import img8 from './images/present/card_08.png';
   import img9 from './images/present/card_09.png';
+  import course from './data/course.json';
 
   export default {
     name: "tabsCard",
     components: {
-      Card,
+      Card,CardCourse
     },
     setup() {
       return {
+        course,
         present: [
           {
             "title": "Items&Blocks",
@@ -165,6 +178,6 @@
 
 </script>
 
-<style>
+<style scoped>
 
 </style>
