@@ -69,20 +69,20 @@ export default {
 				const token = localStorage.getItem('token');   //读取 JWT
 				console.log('token:', token);
 				if (!token) {
-					alert('请先登录');
+					alert('Please login!');
 					setTimeout(() => {
 						window.location.reload();
 					}, 1)
 					return;
 				}
 				await this.addFavorite({ favorite, token });
-				alert('收藏成功');
+				alert('Liked!');
 			} catch (error) {
 				if (error.response && error.response.status === 409) {
-					alert('该项目已经在收藏列表中');
+					alert('Already in your favorites!');
 				} else {
-					console.error('收藏失败:', error);
-					alert('收藏失败');
+					console.error('Failed:', error);
+					alert('Failed!');
 				}
 			}
 		},

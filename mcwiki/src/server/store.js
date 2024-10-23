@@ -39,7 +39,6 @@ const store = createStore({
     async register({ commit }, user) {
       try {
         const response = await axios.post('http://localhost:3000/register', user);
-        commit('setUser', { username: user.username });
         return response;
       } catch (error) {
         console.error('Registration failed:', error);

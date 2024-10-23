@@ -2,8 +2,7 @@
 
   <div class="d-flex justify-content-center">
     <form class="d-flex" role="search" style="width: 50dvh; height: 45px;">
-      <input class="form-control me-2" placeholder="Search" aria-label="Search" clearable id="myInput1"
-        ref="myInput1">
+      <input class="form-control me-2" placeholder="Search" aria-label="Search" clearable id="myInput1" ref="myInput1">
       <button class="btn btn-success" type="submit" @click="SearchPushed">
         Search</button>
     </form>
@@ -15,7 +14,6 @@
 </template>
 
 <script>
-
 import SearchList from '../search_components/SearchList.vue';
 import AllDataFinal from '../../data/Summary/AllDataFinal.json'
 
@@ -32,8 +30,6 @@ export default {
 
   data() {
     return {
-      users: ["Rocks", "Biome", "Blocks"],
-      update: true,
       refresh: true,
       search: [],
       AllDataFinal
@@ -47,7 +43,7 @@ export default {
   setup() {
 
   },
-  
+
   methods: {
     SearchPushed() {
       let searchcontent = document.getElementById("myInput1").value;
@@ -58,14 +54,8 @@ export default {
 
       this.refresh = false
       this.$nextTick(() => {
-        // 2. 再调用子组件的方法使用该属性
-        // 如果不使用 nextTick的话，子组件方法内获取到的有可能是这次赋值之前的值，下次调用时才能获取到此次赋值的值（应该是跟 Vue的异步事件队列有关系）
         this.refresh = true
       })
-    },
-
-    CheckData() {
-      console.log(this.datasent)
     },
 
     BFSearch(searchcontent1, searchdata1) {
@@ -105,15 +95,13 @@ export default {
 </script>
 
 <style scoped>
-
 .d-flex {
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
 .form-control:focus {
-    border-color: rgba(108, 177, 99, 0.25);
-    box-shadow: 0 0 0 0.25rem rgba(108, 177, 99, 0.25);
+  border-color: rgba(108, 177, 99, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(108, 177, 99, 0.25);
 }
-
 </style>
