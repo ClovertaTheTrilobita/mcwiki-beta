@@ -32,28 +32,28 @@
 
             </ul>
 
-            <div v-if="isLoggedIn" class="avater-container">
-              <img src="../images/95122414.jpg" alt="Avater" class="avater">
+            <div v-if="isLoggedIn" class="avatar-container">
+              <img src="../images/95122414.jpg" alt="Avatar" class="avatar">
               <div class="menu">
                 <div class="container text-center mt-4 mb-3">
                   <p>{{ user.username }}</p>
                 </div>
                 <div class="Bottom">
                   <nav class="nav flex-column">
-                    <a class="nav-link btn btn-light avater-link"
+                    <a class="nav-link btn btn-light avatar-link"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Account</a>
-                    <a class="nav-link btn btn-light avater-link" href="#/preference"
+                    <a class="nav-link btn btn-light avatar-link" href="#/preference"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">My Stars</a>
                     <hr>
-                    <button class="nav-link btn btn-light avater-link" href="#/404" @click="handleLogout"
+                    <button class="nav-link btn btn-light avatar-link" href="#/404" @click="handleLogout"
                       style="--bs-nav-link-color: #000000a8; --bs-nav-link-hover-color: #000000a8">Log Out</button>
                   </nav>
                 </div>
               </div>
             </div>
 
-            <div v-else class="avater-container">
-              <img src="../images/default_avater.png" alt="Avater" class="avater">
+            <div v-else class="avatar-container">
+              <img src="../images/default_avatar.png" alt="Avatar" class="avatar">
               <div class="MENU">
                 <div class="container text-center mt-4 mb-3">
                   <p>Log in to use more features</p>
@@ -133,7 +133,7 @@ export default {
   height: 24px;
 }
 
-.avater {
+.avatar {
   position: absolute;
   top: 8px;
   right: 70px;
@@ -182,22 +182,22 @@ export default {
   z-index: 1;
 }
 
-.avater-container:hover .avater {
+.avatar-container:hover .avatar {
   transform: translateY(15px) translateX(-18px) scale(2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.avater-container:hover .menu {
+.avatar-container:hover .menu {
   transform: translate(0) translateY(305px);
   opacity: 1;
 }
 
-.avater-container:hover .MENU {
+.avatar-container:hover .MENU {
   transform: translate(0) translateX(38px) translateY(300px);
   opacity: 1;
 }
 
-.avater-link {
+.avatar-link {
   text-align: left;
 }
 
