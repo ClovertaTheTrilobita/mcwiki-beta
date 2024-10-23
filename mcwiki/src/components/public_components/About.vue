@@ -26,16 +26,16 @@
 
 <script>
 
-  export default {
-    name: "About",
-  }
+export default {
+  name: "About",
+}
 
 </script>
 
 <style scoped>
 
 a {
-    color: #48af3a;
+  color: #48af3a;
 }
 
 </style>

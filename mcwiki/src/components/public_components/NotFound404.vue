@@ -22,7 +22,6 @@ export default {
 
 .notfound {
   text-align: center;
-  
   top: 200px;
   bottom: 0;
   left: 0;
