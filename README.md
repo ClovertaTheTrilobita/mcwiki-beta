@@ -29,6 +29,7 @@ npm install
 待项目依赖安装完成之后，输入
 
 ```
+node server.js
 npm run dev
 ```
 
