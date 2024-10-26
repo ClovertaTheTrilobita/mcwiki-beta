@@ -26,10 +26,16 @@ git clone https://github.com/ClovertaTheTrilobita/mcwiki-beta.git
 npm install
 ```
 
-待项目依赖安装完成之后，输入
+待项目依赖安装完成之后，在文件资源管理器中打开项目文件夹，找到
+
+*./mcwiki/src/server/run server.bat*
+
+双击该批处理文件启动小型后端。
+
+最后在终端输入
 
 ```
 npm run dev
 ```
 
-启动项目
+启动项目。
